@@ -1,0 +1,16 @@
+IF
+Global("BFSSolSpawn","AR5500",0)
+!InParty("dorn")  
+ReputationGT(Player1,13)
+OR(4)
+        Alignment(Player1,LAWFUL_GOOD)
+        Alignment(Player1,NEUTRAL_GOOD)
+        Alignment(Player1,CHAOTIC_GOOD)
+        Alignment(Player1,LAWFUL_NEUTRAL)
+THEN
+    RESPONSE #100
+CreateCreatureObject("BFSSOL",Player1,0,0,0)
+SetGlobal("BFSSolSpawn","AR5500",1)
+Continue()
+END
+
