@@ -11,14 +11,15 @@ A: The quest kicks off when you enter Amkethran. A Planetar of Justice will appe
 
 ### Q: Any known bugs?
 
-A: *Yes*. This literally steals Dorn's TOB quest & alters the content so Lunia functions without him. That means, if you have Dorn in your party, the quest **won't start**. 
+A: *Yes*. This literally steals Dorn's TOB quest & alters the content so Lunia can be accessed without him. That means, if you have Dorn in your party, the quest **won't start**. And, if the mod is installed, then Dorn's normal quest won't fuction as intended. *Please* don't install this if you intend to use him as a companion.
 
 ### Q: Any future plans?
 
 A: 
 
 * Version 1.0 will allow the party to travel to Lunia & complete an altered version of Dorn's questline. 
-* Version 2.0 & beyond will expand Lunia with new sidequests. E.g. meeting Mercy Whitedove instead of Bolard Firejaw, hunting down fugitives on the Scroll of Retribution, & new ways to empower weapons bearing the Eye of Tyr upgrade. 
+* Version 2.0 will expand Lunia with new sidequests. E.g. meeting Mercy Whitedove instead of Bolard Firejaw, hunting down fugitives on the Scroll of Retribution, & add new ways to empower weapons with the Eye of Tyr upgrade. 
+* Version 3.0 will provide compatibility without taking a sledgehammer to the dialogue & area scripts. Aka allow you to install the mod without breaking Dorn in TOB. 
 
 ## CHANGELOG
 
