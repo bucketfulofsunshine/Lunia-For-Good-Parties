@@ -1,23 +1,28 @@
 # Lunia-For-Good-Parties
-Allows Lawful Good, Neutral Good, Chaotic Good & Lawful Neutral characters, that have a reputation of 14 or above, to travel to Lunia. 
+Lunia's map is a refreshing contrast to the many hellish locales present in Baldur's Gate 2. Unfortunately only parties who travel with Dorn, typically those of neutral-or-evil alignment, gain access to it. 
+
+This mod provides an alternate path for Lawful Good, Neutral Good, Chaotic Good & Lawful Neutral characters - with a reputation of 14 or above - to enter Lunia & assist Tyr's faithful in doling out his justice. 
 
 ## FAQ
 
-### Q: When do I start the quest? 
+### Q: When does the quest start? 
 
-A: Upon entering Amkethran: a Planetar of Justice will spawn & start a dialogue. If you accept the quest, then the party will receive a feather & can use it to Plane Shift. 
+A: The quest kicks off when you enter Amkethran. A Planetar of Justice will appear & initiate a dialogue with your party. If you choose to accept, you'll receive a feather that allows you to Plane Shift to Lunia.
 
 ### Q: Any known bugs?
 
-A: Yes. This literally steals Dorn's TOB quest & alters the content so Lunia functions without his presence. That means, if you have Dorn in the party, the quest **will not work**. And, if you have the mod installed, then the vanilla quest for Dorn won't function as intended. *Please* only install this mod if you don't plan to have him as a companion. Otherwise wait for a future version with better compatiblity. 
+A: *Yes*. This literally steals Dorn's TOB quest & alters the content so Lunia functions without him. That means, if you have Dorn in your party, the quest **won't start**. And, if you have the mod installed, then the vanilla quest for Dorn won't function as intended. *Please* only install this if you don't plan to have him as a companion. 
 
 ### Q: Any future plans?
 
-A: Version 1.0 will allow the party to travel to Lunia & complete an altered version of Dorn's quest. For Version 2.0+ I intend to add sidequests that explore Lunia further (e.g. have the party partake in bounties to track down criminals, offer a path to further empower any weapon that has the Eye of Tyr upgrade, etc). 
+A: 
+
+* Version 1.0 will allow the party to travel to Lunia & complete an altered version of Dorn's questline. 
+* Version 2.0 and beyond will expand Lunia with new sidequests. E.g. meeting Mercy Whitedove instead of Bolard Firejaw, hunting down fugitives on the Scroll of Retribution, & new ways to empower weapons bearing the Eye of Tyr upgrade. 
 
 ## CHANGELOG
 
-* **20250718 - Alpha**. I still need to alter several dialogues & actually test then upload the mod. 
+* **20250718 - Alpha**. The altered questline isn't fully implemented. Several dialogues still need adjustments & the new enemies haven't been added.
 
 ## LICENSING
 * This mod is open source. That means anyone is free to fork, make pull requests, etc. While I'd prefer people approach me if they want new content (e.g. changing what I've written), crossmod is free real estate. 
