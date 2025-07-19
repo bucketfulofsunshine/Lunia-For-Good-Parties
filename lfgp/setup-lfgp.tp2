@@ -1,0 +1,46 @@
+BACKUP ~lfgp/backup~
+AUTHOR ~bucketfulofsunshine~
+VERSION ~nightly~
+
+AUTO_TRA ~lfgp/tra/%s~ 
+
+LANGUAGE ~English~
+         ~english~   
+         ~lfgp/tra/english/Journal.tra~
+
+BEGIN ~Lunia for Good Parties~
+REQUIRE_PREDICATE GAME_IS ~bg2ee~ ~This mod requires BG2EE~
+
+/* CamDawg's code for State.ids */
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ADD_JOURNAL TITLE (@100000) @100001 USING ~lfgp/tra/english/Journal.tra~ 
+
+/* creatures & areas */ 
+COPY ~lfgp/creature~ ~override~
+COPY ~lfgp/area~ ~override~
+
+/* scripts */
+COMPILE EVALUATE_BUFFER ~lfgp/scripts/BFSSOL.baf~
+                        ~lfgp/scripts/OH5500.baf~
+EXTEND_BOTTOM ~AR5500.bcs~   ~lfgp/scripts/AR5500.baf~
+
+/* make feather conversable for plane shifts between lunia & amkethran */
+OUTER_SET label = RESOLVE_STR_REF(~Travel~)
+APPEND ~ITEMDIAL.2da~
+~bffea %label% bffea~
+UNLESS ~bffea~
+
+/* dialogues */ 
+COMPILE EVALUATE_BUFFER ~lfgp/d~
+
+/* compile plane shift cutscenes */ 
+COMPILE ~lfgp/cutscenes~ 
+
+/* items */ 
+/* feather of plane shift */ 
+COPY ~lfgp/items/bffea.ITM~ ~override~
+SAY 0x0c ~Feather of Celestial Passage~
+SAY 0x54 ~This feather, gifted to you by a Planetar of Justice, resonates with the essence of Lunia itself. When held by one deemed worthy, it permits instant passage to the shining shores of the Silver Heaven.~
+
