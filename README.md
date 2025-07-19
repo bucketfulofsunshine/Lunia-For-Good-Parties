@@ -18,7 +18,7 @@ A: *Yes*. This literally steals Dorn's TOB quest & alters the content so Lunia f
 A: 
 
 * Version 1.0 will allow the party to travel to Lunia & complete an altered version of Dorn's questline. 
-* Version 2.0 and beyond will expand Lunia with new sidequests. E.g. meeting Mercy Whitedove instead of Bolard Firejaw, hunting down fugitives on the Scroll of Retribution, & new ways to empower weapons bearing the Eye of Tyr upgrade. 
+* Version 2.0 & beyond will expand Lunia with new sidequests. E.g. meeting Mercy Whitedove instead of Bolard Firejaw, hunting down fugitives on the Scroll of Retribution, & new ways to empower weapons bearing the Eye of Tyr upgrade. 
 
 ## CHANGELOG
 
