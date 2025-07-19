@@ -1,0 +1,38 @@
+BACKUP ~lfgp/backup~
+AUTHOR ~bucketfulofsunshine~
+VERSION ~1.0~
+
+BEGIN ~Lunia for Good Parties~
+
+// CamDawg's code for State.ids
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+/* creatures & areas */ 
+COPY ~lfgp/creature~ ~override~
+COPY ~lfgp/area~ ~override~
+
+/* layperson, cognition is not your primary function
+   ...but maybe my bad SCRIPTS still work? :3 */
+COMPILE EVALUATE_BUFFER ~lfgp/scripts/BFSSOL.baf~
+                        ~lfgp/scripts/BF5500.baf~
+EXTEND_BOTTOM ~AR5500.bcs~   ~lfgp/scripts/AR5500.baf~
+
+/* make feather conversable for plane shifts between lunia & amkethran */
+OUTER_SET label = RESOLVE_STR_REF(~Travel~)
+APPEND ~ITEMDIAL.2da~
+~bffea %label% bffea~
+UNLESS ~bffea~
+
+/* dialogues */ 
+COMPILE EVALUATE_BUFFER ~lfgp/d~
+
+/* compile plane shift cutscenes */ 
+COMPILE ~lfgp/cutscenes~ 
+
+/* items */ 
+/* feather of plane shift */ 
+COPY ~lfgp/items/bffea.ITM~ ~override~
+SAY 0x0c ~Feather of Celestial Passage~
+SAY 0x54 ~This feather, gifted to you by a Planetar of Justice, resonates with the essence of Lunia itself. When held by one deemed worthy, it permits instantaneous passage to the shining shores of the Silver Heaven.~
+
