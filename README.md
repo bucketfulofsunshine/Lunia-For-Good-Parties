@@ -22,7 +22,7 @@ A:
 
 ## CHANGELOG
 
-* **20250718 - Alpha**. The altered questline isn't fully implemented. Several dialogues still need adjustments & the new enemies haven't been added.
+* **20250723 - Alpha**. Nearing full release. Mercy Whitedove & final conversation adjustments (+enemies) still have to be added.
 
 ## LICENSING
 * This mod is open source. That means anyone is free to fork, make pull requests, etc. While I'd prefer people approach me if they want new content (e.g. changing what I've written), crossmod is free real estate. 
