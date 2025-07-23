@@ -19,7 +19,7 @@ A: *Yes*. This literally steals Dorn's TOB quest & alters the content so Lunia c
 
 ### Q: So would this break custom companion interjections?
 
-A: In theory no. The vanilla talks I bypass have new file names. That means you won't see the companion interjections at all. Any talks that fire when checking for the AreaName ("OH5500") will still fire though. And will have tonal discrepancies. All of this will cease being a problem in V2.0 since I'll be renaming both the area & all the scripts / characters I use. 
+A: In theory no. The vanilla talks I bypass have new file names. That means you won't see the companion interjections at all. Any talks that check for the AreaName ("OH5500") will still fire though. And will have tonal discrepancies. All of this will cease being a problem in V2.0 since I'll be renaming both the area & all the scripts / characters I use. 
 
 ### Q: Any future plans?
 
