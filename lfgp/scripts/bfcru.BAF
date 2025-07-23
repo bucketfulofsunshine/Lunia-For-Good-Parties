@@ -1,0 +1,18 @@
+IF
+    AreaCheck("OH5500")  // Dorn - Lunia
+    !Global("OHD_finished","GLOBAL",1)
+    Delay(10)
+THEN
+    RESPONSE #100
+        RandomWalk()
+END
+
+IF
+    Dead("bfbald")  // Baldwin
+    Global("OHD_finished","GLOBAL",1)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
