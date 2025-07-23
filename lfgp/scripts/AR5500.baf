@@ -1,6 +1,6 @@
 IF
 Global("BFSSolSpawn","AR5500",0)
-!InParty("dorn")  
+!InParty("dorn")
 ReputationGT(Player1,13)
 OR(4)
         Alignment(Player1,LAWFUL_GOOD)

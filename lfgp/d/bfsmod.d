@@ -12,12 +12,12 @@ CHAIN IF ~Global("bfslawquest","GLOBAL",0)~ THEN bfsmod bfs.dueprocess
 DO ~SetGlobal("bfslawquest","GLOBAL",1)~
 END
 ++ ~Are you malfunctioning?~ EXTERN BFSMOD bfs.lawquest
-++ ~It seems you're in a bit of a moral conundrum.~ EXTERN BFSMOD bfs.lawquest 
+++ ~It seems you're in a bit of a moral conundrum.~ EXTERN BFSMOD bfs.lawquest
 ++ ~I'm not getting dragged into your personal crisis. I have enough problem of my own.~ EXIT
 
 CHAIN BFSMOD bfs.lawquest
 ~System Error: Relation between justice and mercy. You will supply clarification.~
-== BFSMOD ~Define the difference between a just ruler and a tyrant. Do both not follow the law?~ 
+== BFSMOD ~Define the difference between a just ruler and a tyrant. Do both not follow the law?~
 == NEERA25J IF ~InParty("NEERA") InMyArea("NEERA") !StateCheck("NEERA",CD_STATE_NOTVALID)~ ~Why do we need to be ruled at all? Just let people figure things out for themselves.~
 END
 ++ ~Merciful rulers enforce the law to protect everyone. Tyrants use it to raise themselves above others.~ EXTERN BFSMOD bfs.lawfulgood
@@ -70,5 +70,5 @@ CHAIN BFSMOD bfs.lawquestconclude
 = ~Error: Mercy Not Found. System restarting.~
 = ~...~
 = ~My Judgment Protocol has been restored. Gratitude uploaded.~
-= ~May your equations balance.~ 
+= ~May your equations balance.~
 DO ~SetGlobal("bfslawquest","GLOBAL",2) AddJournalEntry(@9001, QUEST_DONE) GiveItemCreate("bfcog",Player1,1,0,0) EscapeAreaNoSee()~ EXIT

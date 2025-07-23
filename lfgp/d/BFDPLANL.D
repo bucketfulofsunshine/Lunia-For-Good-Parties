@@ -1,24 +1,24 @@
 BEGIN ~BFDPLANL~
 
-IF ~Global("OHD_pavilion","OH5500",0)~ THEN BEGIN 19 
+IF ~Global("OHD_pavilion","OH5500",0)~ THEN BEGIN 19
   SAY #89695 /* ~You are the few who answered my call. You handful of righteous men and women will enforce the laws of Tyr, carrying out his judgments where other mortal agents fail.~ [OH89695] */
 IF ~~ THEN GOTO 20
 END
 
-IF ~~ THEN BEGIN 20 
+IF ~~ THEN BEGIN 20
   SAY #89698 /* ~For each of you, I have a sigil granting permission to enter the White Pavilion.~ [OH89698] */
   IF ~~ THEN GOTO 21
 END
 
-IF ~~ THEN BEGIN 21 
+IF ~~ THEN BEGIN 21
   SAY #89700 /* ~Come now, and receive Tyr's gift.~ [OH89700] */
   IF ~~ THEN DO ~SetGlobal("OHD_pavilion","OH5500",1)
 ~ EXIT
 END
 
-/* traitor check */ 
+/* traitor check */
 
-IF ~GlobalGT("OHD_pavilion","OH5500",1) Global("bfsspoketoscribe","GLOBAL",1) Global("bfsplanetaraccused","LOCALS",0) !Global("bfstraitorconvo","GLOBAL",1)~ THEN BEGIN bfs.traitorcheck 
+IF ~GlobalGT("OHD_pavilion","OH5500",1) Global("bfsspoketoscribe","GLOBAL",1) Global("bfsplanetaraccused","LOCALS",0) !Global("bfstraitorconvo","GLOBAL",1)~ THEN BEGIN bfs.traitorcheck
 SAY ~Speak, <CHARNAME>. What burden weighs upon your soul?~
 ++ ~Did you command Naiman Alore to write down my name?~ DO ~SetGlobal("bfsplanetaraccused","LOCALS",1)~ + bfs.traitorcheckfalse
 END
@@ -32,15 +32,15 @@ END
 /* general introduction */
 
 CHAIN IF ~Global("OHD_pavilion","OH5500",1)~ THEN BFDPLANL bfs.youstandaccused
-~What is your name, Champion of Tyr?~ [OH89701] 
+~What is your name, Champion of Tyr?~ [OH89701]
 END
-++ ~I am <CHARNAME>.~ EXTERN BFDPLANL bfs.lunianewpath 
+++ ~I am <CHARNAME>.~ EXTERN BFDPLANL bfs.lunianewpath
 + ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ + ~Keldorn Firecam.~ EXTERN BFDPLANL bfs.veryfunny
 
-CHAIN BFDPLANL bfs.veryfunny 
-~I know this name. But - you are a paladin of Torm.~ [OH89703] 
+CHAIN BFDPLANL bfs.veryfunny
+~I know this name. But - you are a paladin of Torm.~ [OH89703]
 == KELDO25J ~I believe they inquired after your name not mine. But, if names must be shared, then grant me the priviledge of introducing you. This is <CHARNAME>, <PRO_HESHE> leads our party with courage and honor.~
-END 
+END
 IF ~~ EXTERN BFDPLANL bfs.lunianewpath
 
 CHAIN BFDPLANL bfs.lunianewpath

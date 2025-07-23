@@ -1,17 +1,17 @@
 BEGIN ~OHDSCROL~
 
-IF ~ NumTimesTalkedTo(0)~ THEN BEGIN 0 
+IF ~ NumTimesTalkedTo(0)~ THEN BEGIN 0
   SAY #92037 /* ~As you near the Scroll of Retribution, you can feel its power rolling over you in waves. The divine wrath it represents is a palpable energy that fills the air of the Pavilion.~ */
   IF ~~ THEN GOTO 1
 END
 
-IF ~~ THEN BEGIN 1 
-  SAY ~With the sacred sand entrusted to you, the ink fades from the scroll, leaving it unblemished.~ 
+IF ~~ THEN BEGIN 1
+  SAY ~With the sacred sand entrusted to you, the ink fades from the scroll, leaving it unblemished.~
 IF ~~ THEN GOTO 2
 END
 
-IF ~~ THEN BEGIN 2 
-  SAY ~There is a space in which you could inscribe another name in your stead.~ 
+IF ~~ THEN BEGIN 2
+  SAY ~There is a space in which you could inscribe another name in your stead.~
 IF ~  !Dead("sendai")
 Global("SaradushSacked","GLOBAL",1)
 ~ THEN REPLY #92076 /* ~Do you inscribe Sendai's name?~ */ DO ~SetGlobal("OHD_inscribed_sendai","GLOBAL",1)
@@ -34,7 +34,7 @@ Global("BalthazarFights","GLOBAL",1)
 END
 
 IF ~~ THEN BEGIN 13
-  SAY ~The air around you seems to curdle like milk yet nobody else seems affected. Whether doom or deliverance follows, a new die has been cast.~ 
+  SAY ~The air around you seems to curdle like milk yet nobody else seems affected. Whether doom or deliverance follows, a new die has been cast.~
   IF ~~ THEN DO ~TakePartyItem("OHDINK") SetGlobal("OHD_finished","GLOBAL",1)
 ~ EXIT
 END
