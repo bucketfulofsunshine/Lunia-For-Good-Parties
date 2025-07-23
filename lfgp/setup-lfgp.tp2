@@ -1,8 +1,8 @@
 BACKUP ~lfgp/backup~
-AUTHOR ~bucketfulofsunshine~
+SUPPORT ~bucketfulofsunshine~
 VERSION ~nightly~
 
-AUTO_TRA ~%MOD_FOLDER%/tra/%s~
+AUTO_TRA ~lfgp/tra/%s~
 
 LANGUAGE ~English~
          ~english~
@@ -38,6 +38,7 @@ SAY NAME1 ~False Crusader~
 SAY NAME2 ~False Crusader~
 
 COPY ~%MOD_FOLDER%/creature/BFSTYR.cre~ ~override~
+
 SAY NAME1 ~Tyr~
 SAY NAME2 ~Tyr~
 
@@ -48,6 +49,7 @@ COPY ~%MOD_FOLDER%/sound~ ~override~
 
 /* shop */
 COPY ~%MOD_FOLDER%/store~ ~override~
+
 SAY 0xc ~Trinkets of the Sea~
 
 /* bams */

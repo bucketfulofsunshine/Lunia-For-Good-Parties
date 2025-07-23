@@ -21,7 +21,7 @@ END
 IF ~~ EXTERN bfssol bfs.iobject
 
 CHAIN bfssol bfs.iobject
-~The greatest charge laid against you is thus: the destruction of Saradush and the death of those trapped within its walls.~ 
+~The greatest charge laid against you is thus: the destruction of Saradush and the death of those trapped within its walls.~
 == bfssol ~Yet even in Lunia word of your righteous deeds have reached us. Many faithful believe that you wouldn't partake in such a massacre.~
 == bfssol ~You are summoned, as a guest not a condemned soul, to help us ascertain the truth. Speak in your defense. Aid in finding those who would make a mockery of Tyr's justice.~
 == KELDO25J IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~To be named on the Scroll of Retribution is no trivial matter. But I have taken your measure, <CHARNAME>, and I will stand beside you wherever your path leads.~
@@ -36,7 +36,7 @@ END
 ++ ~I won't be dragged into this. Let those who accuse me find their own answers.~ EXTERN bfssol bfs.luniaquestignore
 
 CHAIN bfssol bfs.luniaquestaccept
-~Take this feather with my gratitude. It permits those it deems worthy to enter Lunia.~ 
+~Take this feather with my gratitude. It permits those it deems worthy to enter Lunia.~
 = ~Walk with Tyr's blessing.~
 DO ~AddJournalEntry(@100001, QUEST) SetGlobal("bfsluniaaccepted","GLOBAL",1) GiveItemCreate("bffea",Player1,1,0,0) CreateVisualEffectObject("SPUNHOLY",Myself) PlaySound("CAS_M08") Wait(2) DestroySelf()~ EXIT
 

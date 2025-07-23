@@ -2,7 +2,7 @@ IF
     Global("OHD_finished","GLOBAL",1)
 	Global("bfstraitorconvo","GLOBAL",1)
 	Global("bfstyrtalkfirst","GLOBAL",1)
-    Global("OHD_silver_save","OH5500",0)  	
+    Global("OHD_silver_save","OH5500",0)
 THEN
     RESPONSE #100
         SetGlobal("OHD_silver_save","OH5500",1)  
@@ -13,13 +13,13 @@ IF
     Global("OHD_finished","GLOBAL",1)
 	Global("bfstyrtalkfirst","GLOBAL",1)
 	Global("bfstraitorconvo","GLOBAL",1)
-    Global("OHD_silver","OH5500",0)  	
+    Global("OHD_silver","OH5500",0)
 THEN
     RESPONSE #100
-        SetGlobal("OHD_silver","OH5500",1)  
+        SetGlobal("OHD_silver","OH5500",1)
         SetMusic(COMBAT_NORMAL,Dorn1)
-        CreateCreature("BFDOLR",[1817.2338],NE)  // Dolrassa 
-        CreateCreature("BFDIXTH",[2049.2469],N)  // Ixthezzys 
+        CreateCreature("BFDOLR",[1817.2338],NE)  // Dolrassa
+        CreateCreature("BFDIXTH",[2049.2469],N)  // Ixthezzys
         CreateCreature("BFBALD",[1972.2215],SW)  // Baldwin
         // CreateCreature("OHDCHAN1",[1273.2925],SW)  // Petitioner
         // CreateCreature("OHDCHAN2",[1320.2953],SW)  // Petitioner
@@ -43,14 +43,14 @@ THEN
 END
 
 IF
-    Global("OHD_silver","OH5500",2)  
+    Global("OHD_silver","OH5500",2)
 THEN
     RESPONSE #100
         ClearAllActions()
         StartCutSceneMode()
         CutSceneId(Player1)
         MoveViewObject("BFBALD",BD_SLOW)  // Baldwin
-        SetGlobal("OHD_silver","OH5500",3)  
+        SetGlobal("OHD_silver","OH5500",3)
         ActionOverride("BFBALD",MoveToPointNoInterrupt([1384.2871]))
         Wait(2)
         FadeToColor([20.0],0)
@@ -263,7 +263,7 @@ SetGlobal("BFSMercySpawn","OH5500",1)
 Continue()
 END
 
-/* spawn traitor after speaking to naiman */ 
+/* spawn traitor after speaking to naiman */
 IF
 Global("BFSTraitorSpawn","OH5500",0)
 Global("bfsspoketoscribe","GLOBAL",1)

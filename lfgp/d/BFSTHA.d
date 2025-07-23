@@ -25,7 +25,7 @@ END
 
 IF ~~ bfs.thalhub
 SAY ~Is there aught you want to ask?~
-++ ~Let me see what you've gathered.~ DO ~StartStore("BFELF",LastTalkedToBy())~ EXIT 
+++ ~Let me see what you've gathered.~ DO ~StartStore("BFELF",LastTalkedToBy())~ EXIT
 + ~Global("bfsaskedaboutharp","LOCALS",0)~ + ~A harp bow? That seems unusual.~ DO ~SetGlobal("bfsaskedaboutharp","LOCALS",1)~ + bfs.thalharp
 + ~Global("bfsaskedaboutfaith","LOCALS",0)~ + ~What brings you to Lunia? Are you one of the faithful?~ DO ~SetGlobal("bfsaskedaboutfaith","LOCALS",1)~ + bfs.thalfaith
 ++ ~Farewell.~ EXIT
