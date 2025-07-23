@@ -15,7 +15,7 @@ A: The quest kicks off when you enter Amkethran. A Planetar of Justice will appe
 
 ### Q: Any known bugs?
 
-A: *Yes*. This literally steals Dorn's TOB quest & alters the content so Lunia can be accessed without him. That means, if you have Dorn in your party, the quest **won't start**. And, if the mod is installed, then Dorn's normal quest won't fuction as intended. *Please* don't install this if you intend to use him as a companion.|
+A: *Yes*. This literally steals Dorn's TOB quest & alters the content so Lunia can be accessed without him. That means, if you have Dorn in your party, the quest **won't start**. And, if the mod is installed, then Dorn's normal quest won't function as intended. *Please* don't install this if you intend to use him as a companion.
 
 ### Q: So would this break custom companion interjections?
 
