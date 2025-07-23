@@ -23,8 +23,6 @@ A: In theory no. The vanilla talks I bypass have new file names. That means you 
 
 ### Q: Any future plans?
 
-A: 
-
 * Version 1.0 will allow the party to travel to Lunia & complete an altered version of Dorn's questline. 
 * Version 2.0 will provide compatibility without taking a sledgehammer to the dialogue & area scripts. Aka allow you to install the mod without breaking ALL THE THINGS.
 
