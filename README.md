@@ -34,3 +34,8 @@ A: In theory no. The vanilla talks I bypass have new file names. That means you 
 ## LICENSING
 
 * This mod is open source. That means anyone is free to fork, make pull requests, etc. While I'd prefer people approach me if they want new content (e.g. changing what I've written), crossmod is free real estate.
+
+## CREDITS
+
+* *RoyalProtector* for fixing all my coding errors & offering expertise on item design.
+* *Zenblack* for teaching me how to create custom BAM files & creating an image for the Harp-Bow - taken from [Critical Role](https://criticalrole.fandom.com/wiki/Harp_of_Valor).
