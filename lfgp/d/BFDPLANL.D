@@ -11,7 +11,7 @@ IF ~~ THEN BEGIN 20
 END
 
 IF ~~ THEN BEGIN 21
-  SAY #89700 ~Come now and receive Tyr's gift.~ [OH89700]
+  SAY ~Come now and receive Tyr's gift.~ [OH89700]
   IF ~~ THEN DO ~SetGlobal("OHD_pavilion","OH5500",1)
 ~ EXIT
 END
