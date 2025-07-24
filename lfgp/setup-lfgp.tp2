@@ -84,6 +84,7 @@ Special: Allows planar travel to Lunia
 Weight: 1~
 
 /* holy water */
+COPY ~%MOD_FOLDER%/items/bfwatvfx.SPL~ ~override~
 COPY ~%MOD_FOLDER%/items/bfwat.ITM~ ~override~
 SAY 0x08 ~Essence of Lunia~ // for consistency
 SAY 0x0c ~Essence of Lunia~
