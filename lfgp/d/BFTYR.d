@@ -5,7 +5,7 @@ CHAIN IF ~Global("bfstyrtalkfirst","GLOBAL",0)~ THEN BFTYR bfs.divinereckoning
 = ~Even in Lunia, there are those who would twist the law to serve their own ends. Know that I was not blind to this treachery - I placed my faith in those who would recognize injustice.~
 = ~My faithful have acted as I had hoped. As have you. But the reckoning is not yet complete.~
 = ~Many of Cyric's brood still linger, and I will tolerate their presence no longer. The last of these deceivers must be struck down. Will you take up this task, <CHARNAME>? Will you aid me in delivering judgment?~
-== SAREV25J IF ~InParty("SAREVOK") InMyArea("SAREVOK") !StateCheck("SAREVOK",CD_STATE_NOTVALID) Alignment("SAREVOK",CHAOTIC_EVIL)~ THEN ~The god of justice petitions a spawn of murder for help. Tell me, <CHARNAME>, does the irony not amuse you?~
+== SAREV25J IF ~InParty("SAREVOK") InMyArea("SAREVOK") !StateCheck("SAREVOK",CD_STATE_NOTVALID)~ THEN ~The god of justice petitions a spawn of murder for help. Tell me, <CHARNAME>, does the irony not amuse you?~
 == IMOEN25J IF ~InParty("IMOEN2") InMyArea("IMOEN2") !StateCheck("IMOEN2",CD_STATE_NOTVALID)~ THEN ~Being spoken to by a god is… kind of terrifying. I don't think I'll ever get used to it. But we've made it this far, right?~
 == MINSC25J IF ~InParty("MINSC") InMyArea("MINSC") !StateCheck("MINSC",CD_STATE_NOTVALID)~ THEN ~We shall hunt down these traitors and give them swift hamster justice!~
 END
