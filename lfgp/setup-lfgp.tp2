@@ -213,3 +213,30 @@ Charge abilities:
   Area of Effect: 30-ft. radius
 
 Weight: 0~
+
+// should be organized better to avoid having to multiply COPY statements (TODO!)
+COPY ~%MOD_FOLDER%/items/bftplat1.EFF~ ~override~
+     ~%MOD_FOLDER%/items/bftplat2.EFF~ ~override~
+     ~%MOD_FOLDER%/items/bftplat3.EFF~ ~override~
+     ~%MOD_FOLDER%/items/bftplat4.EFF~ ~override~
+     ~%MOD_FOLDER%/items/bftplat5.SPL~ ~override~
+     ~%MOD_FOLDER%/items/bftplat6.EFF~ ~override~
+
+COPY ~%MOD_FOLDER%/items/bftplat0.ITM~ ~override~
+SAY 0x0c ~Super awesome plate by Tyr (patent pending)~
+SAY 0x54 ~text
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2 vs. chaotically aligned creatures
+– Rebuke: Chaotic or evil enemies hitting the wearer take 1d6 magic damage
+– +5 Hit Points (triple for paladins)
+– +2 bonus to damage and THAC0 vs. chaotically aligned creatures (paladins only)
+– +10% Magic Resistance (paladins only)
+
+Armor Class: 1 (-3 vs. slashing, -2 vs. piercing and missile)
+Requires:
+ 15 Strength
+
+Weight: 70~
