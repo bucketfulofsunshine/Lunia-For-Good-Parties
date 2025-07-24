@@ -114,12 +114,11 @@ Combat abilities:
 
 THAC0: +5
 Damage: +2 piercing, +1d12 cold, +6 extra vs. chaotic evil
-Damage Type: Missile
 Speed Factor: 3
 Proficiency Type: Longbow
 Type: Two-handed
 Requires:
- 3 Strength
+ 6 Strength
 
 Weight: 2~
 
