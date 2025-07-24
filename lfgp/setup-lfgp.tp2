@@ -84,6 +84,7 @@ Special: Allows planar travel to Lunia
 Weight: 1~
 
 /* holy water */
+COPY ~%MOD_FOLDER%/items/bfwatvfx.SPL~ ~override~
 COPY ~%MOD_FOLDER%/items/bfwat.ITM~ ~override~
 SAY 0x08 ~Essence of Lunia~ // for consistency
 SAY 0x0c ~Essence of Lunia~
@@ -91,8 +92,8 @@ SAY 0x50 ~A vial of holy water drawn from the Silver Sea itself.
 
 STATISTICS:
 
-Special: Cures poison and disease and heals 30 Hit Points
-Applies Bless for 6 rounds
+Special: Completely heals and removes disease, poison, blindness, deafness, and level drain from the user
+Blessed for 1 hour
 
 Weight: 1~
 
