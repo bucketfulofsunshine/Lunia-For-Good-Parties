@@ -6,7 +6,7 @@ IF ~ NumTimesTalkedTo(0)~ THEN BEGIN 0
 END
 
 IF ~~ THEN BEGIN 1
-  SAY ~With the sacred sand entrusted to you, the ink fades from the scroll, leaving it unblemished.~
+  SAY ~With the sacred sand entrusted to you, the ink upon the scroll fades, leaving its surface unblemished.~ 
 IF ~~ THEN GOTO 2
 END
 
@@ -34,7 +34,7 @@ Global("BalthazarFights","GLOBAL",1)
 END
 
 IF ~~ THEN BEGIN 13
-  SAY ~The air around you seems to curdle like milk yet nobody else seems affected. Whether doom or deliverance follows, a new die has been cast.~
+  SAY ~The air around you curdles like milk, yet no one else seems to notice. Whether doom or deliverance awaits, a new die has been cast.~
   IF ~~ THEN DO ~TakePartyItem("OHDINK") SetGlobal("OHD_finished","GLOBAL",1)
 ~ EXIT
 END

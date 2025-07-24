@@ -17,25 +17,27 @@ CHAIN BFDNAIMA bfs.trial2
 ~Rare is the mortal who is given such a chance. Were your name placed by divine decree, I would not contest it. Yet, in this instance, a Planetar spoke your name and I sensed a greater purpose behind the request.~
 == BFDNAIMA ~Yet Tyr's justice is not without mercy. Your alleged transgressions are as follows.~
 /* add more options based on EVIL choices in SOA / TOB */
-== BFDNAIMA IF ~GlobalGT("SlavingJerk","GLOBAL",0)~ THEN ~Complicity in the slave treade of Athkatla.~
+== BFDNAIMA IF ~GlobalGT("SlavingJerk","GLOBAL",0)~ THEN ~Complicity in Athkatla's slave trade.~
 /* ends list of possible crimes, the next line always shows up */
 == BFDNAIMA ~The destruction of Saradush and all who dwelled within it.~
 == BFDNAIMA ~You stand accused. What say you in your defense?~
 END
-+ ~GlobalLT("bfsreptrial","GLOBAL",1) ReputationGT(Player1,17)~ + ~My reputation speaks for itself. Everywhere I've travelled, I've helped those in need.~ DO ~IncrementGlobal("bfsreptrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.flawlessreputation
 + ~NumInPartyGT(0)~ + ~My companions will vouch for me.~ EXTERN BFDNAIMA bfs.companionhub
++ ~GlobalLT("bfsreptrial","GLOBAL",1) ReputationGT(Player1,17)~ + ~My reputation speaks for itself. Everywhere I've travelled, I've helped those in need.~ DO ~IncrementGlobal("bfsreptrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.flawlessreputation
 + ~GlobalLT("bfschatrial","GLOBAL",1) CheckStatGT(Player1,16,CHR)~ + ~Look at me. How can you not trust this face?~ DO ~IncrementGlobal("bfschatrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.okaynarcissus
 + ~GlobalLT("bfsinttrial","GLOBAL",1) CheckStatGT(Player1,16,INT)~ + ~If I were complicit in Saradush's destruction, why would I risk coming here to stand trial?~ DO ~IncrementGlobal("bfsinttrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.checkmate
 + ~GlobalLT("bfswistrial","GLOBAL",1) CheckStatGT(Player1,16,WIS)~ + ~Wisdom guides my thoughts as well as my actions.~ DO ~IncrementGlobal("bfswistrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.wisewords
 + ~GlobalLT("bfslegallyblondtrial","GLOBAL",1) OR(3) Alignment(Player1,CHAOTIC_GOOD) Alignment(Player1,NEUTRAL_GOOD) Alignment(Player1,LAWFUL_GOOD)~ + ~I am a good person. And good people don't just destroy cities.~ DO ~IncrementGlobal("bfslegallyblondtrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.goodpoint /* aka the 'happy people just don't shoot their husbands' option :3 */
-/* add more options based on GOOD choices in SOA / TOB */
+/* add more options to improve the score based on GOOD choices in SOA / TOB */
 + ~GlobalLT("bfscctrial","GLOBAL",1) GlobalGT("FreeSlaves","GLOBAL",0)~ + ~I broke the chains of slavery in Athkatla, freeing many who were held captive within the Copper Coronet.~ DO ~IncrementGlobal("bfscctrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.strikeone
-+ ~GlobalLT("bfscogtrial","GLOBAL",1) Global("bfslawquest","GLOBAL",2)~ + ~I assisted the the malfunctioning Inevitable in restoring its function. Does that not prove I'm inclined to help others?~ DO ~IncrementGlobal("bfscogtrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.coginwheel
++ ~GlobalLT("bfssuldtrial","GLOBAL",1)~ + ~I assisted in saving the elven city of Suldanessellar.~ DO ~IncrementGlobal("bfssuldtrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.strikethree
 + ~GlobalLT("bfasatrial","GLOBAL",1) !Global("amasanaDead","GLOBAL",1) Global("AsanaPlot","GLOBAL",3)~ + ~I paid a group of mercenaries, using my personal coin, to save the life of an innocent. I upheld the spirit of the law without condemning others to needlessly suffer.~ DO ~IncrementGlobal("bfasatrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.striketwo
+/* add options to improve the score based on quests completed in lunia itself */
++ ~GlobalLT("bfscogtrial","GLOBAL",1) Global("bfslawquest","GLOBAL",2)~ + ~I assisted the malfunctioning Inevitable in restoring its function. Does that not prove I'm inclined to help others?~ DO ~IncrementGlobal("bfscogtrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.coginwheel
 ++ ~I have no further proof.~ EXTERN BFDNAIMA bfs.ihavedonenothingwrong
 
 CHAIN BFDNAIMA bfs.flawlessreputation
-~I have heard of your deeds. Some among the faithful pledged to investigate the truth of this matter. It is likely one of them summoned you here. How irresponsible of me to overlook such a detail.~
+~I have heard of your deeds. Some among the faithful swore adding your name to the scroll would be an injustice. It is likely one of them summoned you here. How irresponsible of me to overlook such a detail.~
 END
 IF ~~ EXTERN BFDNAIMA bfs.trialhub
 
@@ -66,6 +68,11 @@ IF ~~ EXTERN BFDNAIMA bfs.trialhub
 
 CHAIN BFDNAIMA bfs.striketwo
 ~Such compassion, exercised through personal sacrifice, is a noble calling. I shall count it in your favor.~
+END
+IF ~~ EXTERN BFDNAIMA bfs.trialhub
+
+CHAIN BFDNAIMA bfs.strikethree
+~It is strange that you would choose to protect one city but destroy another. I will take this anomaly into account.~
 END
 IF ~~ EXTERN BFDNAIMA bfs.trialhub
 
@@ -105,7 +112,7 @@ END
 IF ~~ EXTERN BFDNAIMA bfs.companionhub
 
 CHAIN ANOME25J bfsanolgtrial
-~Under Helm's watchful gaze, I swear, <CHARNAME> has upheld justice and virtue. During my darkest hours, <PRO_HESHE> steered me to walk the path of honour and not vengeance.~
+~Under Helm's watchful gaze, I swear, <CHARNAME> has upheld justice and virtue. During my darkest hours, <PRO_HESHE> steered me to walk the path of honor and not vengeance.~
 == BFDNAIMA ~The vow of Helm's faithful is highly valued in Lunia. I welcome your account.~
 END
 IF ~~ EXTERN BFDNAIMA bfs.companionhub
@@ -129,7 +136,7 @@ END
 IF ~~ EXTERN BFDNAIMA bfs.companionhub
 
 CHAIN IMOEN25J bfsimmytrialsar
-~You want proof? I grew up with <CHARNAME>. As <PRO_HISHER> sister, I know <PRO_HIMHER> better than anyo...~
+~You want proof? I grew up with <CHARNAME>. As <PRO_HISHER> sister, I know <PRO_HIMHER> better than anyone—~
 == BFDNAIMA ~Am I to understand that you are *related*? I must discount your testimony. A sibling's plea carries natural bias.~
 == IMOEN25J ~That's not fair! You didn't stop Sarevok from speaking freely.~
 == BFDNAIMA ~I wasn't aware of a connection, so I thank you for your candour. His testimony will also be duly discarded.~
@@ -149,13 +156,13 @@ END
 IF ~~ EXTERN BFDNAIMA bfs.companionhub
 
 CHAIN KELDO25J bfskeldorntrial
-~<CHARNAME> acts with compassion and honour. Torm as my witness, I could ask for no finer companion.~
+~<CHARNAME> acts with compassion and honor. Torm as my witness, I could ask for no finer companion.~
 == BFDNAIMA ~The vow of Torm's faithful is highly valued in Lunia. I welcome your account.~
 END
 IF ~~ EXTERN BFDNAIMA bfs.companionhub
 
 CHAIN MAZZY25J bfsmazzytrial
-~<CHARNAME> helped me avenge the deaths of my stalward companions. If this Scroll of Retribution truly names only the vilest of criminals, then <PRO_HISHER> name has no place among it.~
+~<CHARNAME> helped avenge the deaths of my stalwart companions. If this Scroll of Retribution names only the vilest of criminals, then <PRO_HISHER> name has no place among it.~
 == BFDNAIMA ~You are small of stature, halfling, but large of heart. I sense the truth in your words and will give them due consideration.~
 END
 IF ~~ EXTERN BFDNAIMA bfs.companionhub
@@ -198,7 +205,7 @@ IF ~~ EXTERN BFDNAIMA bfs.companionhub
 
 CHAIN VALYG25J bfsvalygartrial
 ~Athkatla breeds cruelty, but <CHARNAME> has risen above its temptations. That alone makes <PRO_HIMHER> better than most.~
-== BFDNAIMA ~You seem an honourable man. I welcome your account.~
+== BFDNAIMA ~You seem an honorable man. I welcome your account.~
 END
 IF ~~ EXTERN BFDNAIMA bfs.companionhub
 
@@ -215,16 +222,18 @@ CHAIN BFDNAIMA bfs.trialhub
 ~Do you have anything else to say in your defense?~
 END
 /* paste the above options over again */
-+ ~GlobalLT("bfsreptrial","GLOBAL",1) ReputationGT(Player1,17)~ + ~My reputation speaks for itself. Everywhere I've travelled, I've helped those in need.~ DO ~IncrementGlobal("bfsreptrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.flawlessreputation
 + ~NumInPartyGT(0)~ + ~My companions will vouch for me.~ EXTERN BFDNAIMA bfs.companionhub
++ ~GlobalLT("bfsreptrial","GLOBAL",1) ReputationGT(Player1,17)~ + ~My reputation speaks for itself. Everywhere I've travelled, I've helped those in need.~ DO ~IncrementGlobal("bfsreptrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.flawlessreputation
 + ~GlobalLT("bfschatrial","GLOBAL",1) CheckStatGT(Player1,16,CHR)~ + ~Look at me. How can you not trust this face?~ DO ~IncrementGlobal("bfschatrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.okaynarcissus
 + ~GlobalLT("bfsinttrial","GLOBAL",1) CheckStatGT(Player1,16,INT)~ + ~If I were complicit in Saradush's destruction, why would I risk coming here to stand trial?~ DO ~IncrementGlobal("bfsinttrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.checkmate
 + ~GlobalLT("bfswistrial","GLOBAL",1) CheckStatGT(Player1,16,WIS)~ + ~Wisdom guides my thoughts as well as my actions.~ DO ~IncrementGlobal("bfswistrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.wisewords
 + ~GlobalLT("bfslegallyblondtrial","GLOBAL",1) OR(3) Alignment(Player1,CHAOTIC_GOOD) Alignment(Player1,NEUTRAL_GOOD) Alignment(Player1,LAWFUL_GOOD)~ + ~I am a good person. And good people don't just destroy cities.~ DO ~IncrementGlobal("bfslegallyblondtrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.goodpoint /* aka the 'happy people just don't shoot their husbands' option :3 */
-/* add more options based on GOOD choices in SOA / TOB */
+/* add more options to improve the score based on GOOD choices in SOA / TOB */
 + ~GlobalLT("bfscctrial","GLOBAL",1) GlobalGT("FreeSlaves","GLOBAL",0)~ + ~I broke the chains of slavery in Athkatla, freeing many who were held captive within the Copper Coronet.~ DO ~IncrementGlobal("bfscctrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.strikeone
-+ ~GlobalLT("bfscogtrial","GLOBAL",1) Global("bfslawquest","GLOBAL",2)~ + ~I assisted the the malfunctioning Inevitable in restoring its function. Does that not prove I'm inclined to help others?~ DO ~IncrementGlobal("bfscogtrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.coginwheel
++ ~GlobalLT("bfssuldtrial","GLOBAL",1)~ + ~I assisted in saving the elven city of Suldanessellar.~ DO ~IncrementGlobal("bfssuldtrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.strikethree
 + ~GlobalLT("bfasatrial","GLOBAL",1) !Global("amasanaDead","GLOBAL",1) Global("AsanaPlot","GLOBAL",3)~ + ~I paid a group of mercenaries, using my personal coin, to save the life of an innocent. I upheld the spirit of the law without condemning others to needlessly suffer.~ DO ~IncrementGlobal("bfasatrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.striketwo
+/* add options to improve the score based on quests completed in lunia itself */
++ ~GlobalLT("bfscogtrial","GLOBAL",1) Global("bfslawquest","GLOBAL",2)~ + ~I assisted the malfunctioning Inevitable in restoring its function. Does that not prove I'm inclined to help others?~ DO ~IncrementGlobal("bfscogtrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN BFDNAIMA bfs.coginwheel
 ++ ~I have no further proof.~ EXTERN BFDNAIMA bfs.ihavedonenothingwrong
 
 CHAIN BFDNAIMA bfs.ihavedonenothingwrong /* aka the closing arguments */
@@ -247,7 +256,7 @@ CHAIN BFDNAIMA bfs.iknowthisandloveyou
 DO ~AddJournalEntry(@100003, QUEST) SetGlobal("bfsinnocenceproven","GLOBAL",1) GiveItem("OHDINK",Player1) EscapeAreaNoSee()~ EXIT
 
 CHAIN BFDNAIMA bfs.doesntengendertrust
-~You have offered your arguments but I am unconvinced. Your name will remain on the list unless you find irrefutable proof.~
+~You have offered your arguments but I am unconvinced. Your name shall remain inscribed unless you offer irrefutable proof.~
 == BFDNAIMA ~Seek out the Planetar who first spoke against you. Perhaps, in doing so, you will find the clarity.~
 == BFDNAIMA ~Fare you well on the remainder of your quest.~
 DO ~AddJournalEntry(@100004, QUEST) SetGlobal("bfsinnocenceprovesnothing","GLOBAL",1)~ EXIT
@@ -255,16 +264,15 @@ DO ~AddJournalEntry(@100004, QUEST) SetGlobal("bfsinnocenceprovesnothing","GLOBA
 /* second talk */
 CHAIN IF ~Global("bfsspoketoscribe","GLOBAL",1)~ THEN BFDNAIMA bfs.secondattempt
 ~Good evening to you, <CHARNAME>. Have you returned with further testimony or evidence?~ [BFLU1]
-DO ~SetGlobal("bfsspoketoscribe","GLOBAL",1)~
 END
-+ ~PartyHasItem("bftea")~ + ~I found the Planetar who was responsible. I don't have any concrete proof outside of their confession but, after they attacked me, they dropped this gem.~ EXTERN BFDNAIMA bfs.tearsoftriad
++ ~PartyHasItem("bftea")~ + ~I found the Planetar responsible. I have no concrete proof beyond their confession, but after attacking me, they dropped this gem.~ EXTERN BFDNAIMA bfs.tearsoftriad
 ++ ~I'll return later.~ EXIT
 
 CHAIN BFDNAIMA bfs.tearsoftriad
 ~You hold a Tear of the Triad. A gem formed when divine servants act in error or stray from justice. Such a token, when shrouded in shadow, marks Tyr's disapproval.~
-== BFDNAIMA ~But to see one so utterly devoid of light is rare. If this was held by the Planetar who named you, then I must accept the error of my own judgement.~
+== BFDNAIMA ~But to see one so utterly devoid of light is rare. If this was held by the Planetar who named you, then I must accept the error of my own judgment.~
 == BFDNAIMA ~<CHARNAME>, I was wrong to doubt you. Your name does not belong upon the Scroll of Divine Retribution.~
 == BFDNAIMA ~Please take this ink and sand - the tools by which names are recorded or erased. Use them to amend the list. I offer my sincerest apologies for this injustice.~
 == BFDNAIMA ~I must report this oversight to my superiors. Such a travesty cannot be repeated.~
-DO ~AddJournalEntry(@100005, QUEST) SetGlobal("bfsinnocenceproven","GLOBAL",1) TakePartyItem("bftea")  GiveItem("OHDINK",Player1) EscapeAreaNoSee()~
+DO ~AddJournalEntry(@100006, QUEST) SetGlobal("bfsinnocenceproven","GLOBAL",1) TakePartyItem("bftea")  GiveItem("OHDINK",Player1) EscapeAreaNoSee()~
 EXIT
