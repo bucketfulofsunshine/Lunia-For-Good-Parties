@@ -197,7 +197,7 @@ Charge abilities:
 Weight: 0~
 
 COPY ~%MOD_FOLDER%/items/bfprl3.ITM~ ~override~
-SAY 0x0c ~Judgement of the Faithful~
+SAY 0x0c ~Judgment of the Faithful~
 SAY 0x54 ~Set within a delicate band of gold, this pearl produces a faint, protective hum. It calms the mind, sharpens thought, and wards against corruption.
 
 When asked about the Celestial glyphs engraved along its curve, Thalassia says this: "Your faith is a shield that protects yourself and others."
