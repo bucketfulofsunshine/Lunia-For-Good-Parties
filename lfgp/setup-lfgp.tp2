@@ -64,6 +64,7 @@ UNLESS ~bffea~
 
 /* dialogues */
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/d~
+  USING "%MOD_FOLDER%/tra/%LANGUAGE%/dialogue.tra"
 
 /* cutscenes */
 COMPILE ~%MOD_FOLDER%/cutscenes~
