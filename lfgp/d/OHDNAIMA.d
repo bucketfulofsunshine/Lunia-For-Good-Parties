@@ -357,7 +357,7 @@ END
 IF ~~ EXTERN OHDNAIMA bfs.trialhub
 
 CHAIN OHDNAIMA bfs.checkmate
-~It does sound rather counter-productive.~
+~It does sound rather counterproductive.~
 END
 IF ~~ EXTERN OHDNAIMA bfs.trialhub
 
@@ -372,7 +372,7 @@ END
 IF ~~ EXTERN OHDNAIMA bfs.trialhub
 
 CHAIN OHDNAIMA bfs.goodpoint
-~Statistically it is highly unlikely. Given your good-natured disposition, I'm inclined to concede your point.~
+~Statistically, it is highly unlikely. Given your good-natured disposition, I'm inclined to concede your point.~
 END
 IF ~~ EXTERN OHDNAIMA bfs.trialhub
 
@@ -567,26 +567,26 @@ END
 CHAIN OHDNAIMA bfs.iknowthisandloveyou
 ~A grave error has been made. <CHARNAME> you are, by all accounts, a paragon of virtue. Your name should never have been added to the Scroll.~
 == OHDNAIMA ~Please take this ink and sand - the tools by which names are recorded or erased. Use them to amend the list. I offer my sincerest apologies for this injustice.~
-== OHDNAIMA ~I must report this oversight to my superiors. Such a travesty cannot be repeated. But I urge you to seek out the Planetar who first named you, only then can we learn who's responsible for framing you.~
-== OHDNAIMA ~Fare you well on the remainder of your quest.~
+== OHDNAIMA ~I must report this oversight to my superiors. Such a travesty cannot be repeated. But I urge you to seek out the planetar who first named you. Only then can we learn who is responsible for framing you.~
+== OHDNAIMA ~Fare thee well on the remainder of your quest.~
 DO ~AddJournalEntry(@100003, QUEST) SetGlobal("bfsinnocenceproven","GLOBAL",1) GiveItem("OHDINK",Player1) EscapeAreaNoSee()~ EXIT
 
 CHAIN OHDNAIMA bfs.doesntengendertrust
 ~You have offered your arguments but I am unconvinced. Your name shall remain inscribed unless you offer irrefutable proof.~
-== OHDNAIMA ~Seek out the Planetar who first spoke against you. Perhaps, in doing so, you will find the clarity.~
-== OHDNAIMA ~Fare you well on the remainder of your quest.~
+== OHDNAIMA ~Seek out the planetar who first spoke against you. Perhaps, in doing so, you will find the clarity.~
+== OHDNAIMA ~Fare thee well on the remainder of your quest.~
 DO ~AddJournalEntry(@100004, QUEST) SetGlobal("bfsinnocenceprovesnothing","GLOBAL",1)~ EXIT
 
 /* second talk */
 CHAIN IF ~Global("bfsspoketoscribe","GLOBAL",1) Global("bfsluniaaccepted","GLOBAL",1)~ THEN OHDNAIMA bfs.secondattempt
 ~Good evening to you, <CHARNAME>. Have you returned with further testimony or evidence?~ [BFLU1]
 END
-+ ~PartyHasItem("bftea")~ + ~I found the Planetar responsible. I have no concrete proof beyond their confession, but after attacking me, they dropped this gem.~ EXTERN OHDNAIMA bfs.tearsoftriad
++ ~PartyHasItem("bftea")~ + ~I found the planetar responsible. I have no concrete proof beyond their confession, but after attacking me, they dropped this gem.~ EXTERN OHDNAIMA bfs.tearsoftriad
 ++ ~I'll return later.~ EXIT
 
 CHAIN OHDNAIMA bfs.tearsoftriad
 ~You hold a Tear of the Triad. A gem formed when divine servants act in error or stray from justice. Such a token, when shrouded in shadow, marks Tyr's disapproval.~
-== OHDNAIMA ~But to see one so utterly devoid of light is rare. If this was held by the Planetar who named you, then I must accept the error of my own judgment.~
+== OHDNAIMA ~But to see one so utterly devoid of light is rare. If this was held by the planetar who named you, then I must accept the error of my own judgment.~
 == OHDNAIMA ~<CHARNAME>, I was wrong to doubt you. Your name does not belong upon the Scroll of Divine Retribution.~
 == OHDNAIMA ~Please take this ink and sand - the tools by which names are recorded or erased. Use them to amend the list. I offer my sincerest apologies for this injustice.~
 == OHDNAIMA ~I must report this oversight to my superiors. Such a travesty cannot be repeated.~
