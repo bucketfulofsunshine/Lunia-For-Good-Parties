@@ -1,0 +1,41 @@
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Allegiance("ohdplanj",ENEMY)  // Planetar of Justice - Planetar
+    !Allegiance(Myself,ENEMY)
+    AreaCheck("OH5400")  // Dorn - Forest Clearing
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    AreaCheck("OH5500")  // Dorn - Lunia
+    !Global("OHD_finished","GLOBAL",1)
+    Delay(10)
+THEN
+    RESPONSE #100
+        RandomWalk()
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	See([PC])
+    Dead("ohdbald")  // Baldwin
+    Global("OHD_finished","GLOBAL",1)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+/* lfgp - make ally instead */
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	See([PC])
+    Dead("bfbald")  // Baldwin
+    Global("OHD_finished","GLOBAL",1)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Ally()
+END
