@@ -18,7 +18,7 @@ UNLESS ~CD_STATE_NOTVALID~
 ADD_JOURNAL TITLE (@100000) @100001 @100002 @100003 @100004 USING ~%MOD_FOLDER%/tra/english/Journal.tra~
 ADD_JOURNAL TITLE (@9000) @9001 USING ~%MOD_FOLDER%/tra/english/Journal.tra~
 
-/* taking a sledgehammer to some things */
+/* adding & altering a few creatures */
 COPY ~%MOD_FOLDER%/creature~ ~override~
 
 COPY ~%MOD_FOLDER%/creature/BFSTHA.cre~ ~override~
@@ -120,7 +120,7 @@ Requires:
 
 Weight: 2~
 
-/* cog of logic - still needs to be edited in Near Infinity */
+/* cog of logic */
 COPY ~%MOD_FOLDER%/items/bfcog.ITM~ ~override~
 SAY 0x0c ~Cog of Absolute Order~
 SAY 0x54 ~This small brass cog turns with steady precision. Forged in the foundries of Mechanus, it embodies the principle of absolute order. When worn its wielder's thoughts follow flawless logic, shielding their mind from outside influence.
