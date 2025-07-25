@@ -20,10 +20,10 @@ IF ~~ THEN BEGIN 6
 END
 
 IF ~~ THEN BEGIN 7
-  SAY #92128 /* ~Then it's fortunate we are not gods.~ [OH92128] */
-  IF ~~ THEN REPLY #92160 /* ~No. You just represent one.~ */ EXTERN ~BFDIXTH~ 4
-  IF ~~ THEN REPLY #92162 /* ~Do you seriously want to cross Ao?~ */ EXTERN ~BFDIXTH~ 4
-  IF ~~ THEN REPLY #92163 /* ~You think so? Gods might have survived this encounter.~ */ GOTO 9
+  SAY ~Then it's fortunate we are not gods.~ [OH92128]
+  IF ~~ THEN REPLY ~No. You just represent one.~ EXTERN ~BFDIXTH~ 4
+  IF ~~ THEN REPLY ~Do you seriously want to cross Ao?~ EXTERN ~BFDIXTH~ 4
+  IF ~~ THEN REPLY ~You think so? Gods might have survived this encounter.~ GOTO 9
 END
 
 IF ~~ THEN BEGIN 8
