@@ -29,7 +29,7 @@ A: In theory, no. The vanilla dialogues I use have new branches attached to them
 
 ## CHANGELOG
 
-* **20250725 - Alpha**. Pre-Release Candidate. Sharpening up dialogues & testing for final bugs before the full release. 
+* **20250725 - Alpha**. Pre-Release 0.9 Candidate. Sharpening up dialogues & testing for final bugs before the full release. 
 
 ## LICENSING
 
