@@ -8,7 +8,7 @@ This mod provides an alternate path for Lawful Good, Neutral Good, Chaotic Good 
 
 ### Q: Is this a counterpart to [Fight the Heavens](https://www.morpheus-mart.com/fight-the-heavens)?
 
-A: I wasn't aware of *Fight the Heavens* where I started creating *Lunia For Good Parties*. I feel both mods have their place, as FtH is intended for Evil Parties, & LFGP exists on the opposite spectrum. At present these mods are not compatible since I override essential scripts. After LFGP V2.0 drops they can both be installed but won't be viable on the same playthrough. That said FtH is an excellent mod - so well worth the download.
+A: I wasn't aware of *Fight the Heavens* where I started creating *Lunia For Good Parties*. I feel both mods have their place, as FtH is intended for Evil Parties, & LFGP exists on the opposite spectrum. That said FtH is an excellent mod - so well worth the download - even if both mods aren't viable on the same playthrough. 
 
 ### Q: When does the quest start?
 
@@ -16,11 +16,11 @@ A: The quest kicks off when you enter Amkethran. A Planetar of Justice will appe
 
 ### Q: Any known bugs?
 
-A: *Yes*. This literally steals Dorn's TOB quest & alters the content so Lunia can be accessed without him. That means, if you have Dorn in your party, the quest **won't start**. And, if the mod is installed, then Dorn's normal quest won't function as intended. *Please* don't install this if you intend to use him as a companion.
+A: *Yes*. This literally steals Dorn's TOB quest & alters the content so Lunia can be accessed without him. That means, if you have Dorn in your party, the quest **won't start** even if you otherwise meet the requirements. 
 
 ### Q: So would this break custom companion interjections?
 
-A: In theory no. The vanilla talks I bypass have new file names. That means you won't see the companion interjections at all. Any talks that check for the AreaName ("OH5500") will still fire though. And will have tonal discrepancies. All of this will cease being a problem in V2.0 since I'll be renaming both the area & all the scripts / characters I use.
+A: In theory, no. The vanilla dialogues I use have new branches attached to them. That means you won't see the companion interjections unless they check for these new branches. Any talks that check for the AreaName ("OH5500") will still fire though - and will have tonal discrepancies without crossmod.
 
 ### Q: Any future plans?
 
@@ -29,7 +29,7 @@ A: In theory no. The vanilla talks I bypass have new file names. That means you 
 
 ## CHANGELOG
 
-* **20250723 - Alpha**. Nearing full release. Mercy Whitedove & final conversation adjustments (+enemies) still have to be added.
+* **20250725 - Alpha**. Nearing full release. Started on sweeping compatiblity updates. Still not content complete (need to finish final dialogues & item descriptions). 
 
 ## LICENSING
 
@@ -37,5 +37,6 @@ A: In theory no. The vanilla talks I bypass have new file names. That means you 
 
 ## CREDITS
 
-* *RoyalProtector* for fixing all my coding errors & offering expertise on item design.
-* *Zenblack* for teaching me how to create custom BAM files & creating an image for the Harp-Bow - taken from [Critical Role](https://criticalrole.fandom.com/wiki/Harp_of_Valor).
+* *RoyalProtector* for fixing all my coding errors & creating the best new items. <3 
+* *Zenblack* for teaching me how to create custom BAM files.
+* The Harp-Bow image is taken from [Critical Role](https://criticalrole.fandom.com/wiki/Harp_of_Valor).
