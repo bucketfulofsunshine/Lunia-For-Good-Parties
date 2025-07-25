@@ -14,4 +14,3 @@ CreateCreatureObject("BFSSOL",Player1,0,0,0)
 SetGlobal("BFSSolSpawn","AR5500",1)
 Continue()
 END
-

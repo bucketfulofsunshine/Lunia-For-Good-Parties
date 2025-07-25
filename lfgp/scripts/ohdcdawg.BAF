@@ -1,8 +1,16 @@
 IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_finished","GLOBAL",1)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
     !Allegiance(Myself,ENEMY)
     Delay(5)
 THEN
     RESPONSE #100
         RandomWalk()
 END
-

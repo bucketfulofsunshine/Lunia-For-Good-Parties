@@ -26,13 +26,13 @@ IF ~~ EXTERN BFSTRA bfs.judgejuryandexecutioner
 CHAIN BFSTRA bfs.judgejuryandexecutioner
 ~Your existence threatens my true master, Cyric. Lord Ao decreed that no god may interfere in your destiny - but no such law prohibits their followers.~
 END
-+ ~Global("bfsinnocenceprovesnothing","GLOBAL",1)~ + ~So Cyric couldn't act himself, and you decided to do it for him?~ EXTERN BFSTRA bfs.truecalling1
++ ~Global("bfsinnocenceprovesnothing","GLOBAL",1)~ + ~So Cyric couldn't act himself, and you decided to do it for him?~ DO ~AddJournalEntry(@100005, QUEST)~ EXTERN BFSTRA bfs.truecalling1
 + ~!Global("bfsinnocenceprovesnothing","GLOBAL",1)~ + ~So Cyric couldn't act himself, and you decided to do it for him?~ EXTERN BFSTRA bfs.truecalling2
 
 CHAIN BFSTRA bfs.truecalling1
 ~Tyr's faithful have stayed their hand. In their absence, I will carry out the sentence myself. The Scroll of Retribution calls for your blood and I will answer.~
 = ~Let us see what burns brighter, Child of Murder, your tainted light or mine.~
-DO ~GiveItemCreate("bftea",Player1,1,0,0) AddJournalEntry(@100005, QUEST) Enemy()~ EXIT
+DO ~GiveItemCreate("bftea",Player1,1,0,0) Enemy()~ EXIT
 
 CHAIN BFSTRA bfs.truecalling2
 ~Tyr's faithful have stayed their hand. In their absence, I will carry out the sentence myself. The Scroll of Retribution calls for your blood and I will answer.~
