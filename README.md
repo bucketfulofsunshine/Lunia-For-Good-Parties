@@ -25,11 +25,10 @@ A: In theory, no. The vanilla dialogues I use have new branches attached to them
 ### Q: Any future plans?
 
 * Version 1.0 will allow the party to travel to Lunia & complete an altered version of Dorn's questline.
-* Version 2.0 will provide compatibility without taking a sledgehammer to the dialogue & area scripts. Aka allow you to install the mod without breaking ALL THE THINGS.
 
 ## CHANGELOG
 
-* **20250725 - Alpha**. Nearing full release. Started on sweeping compatiblity updates. Still not content complete (need to finish final dialogues & item descriptions). 
+* **20250725 - Alpha**. Nearing full release. Still not content complete (need to finish final dialogues & item descriptions). 
 
 ## LICENSING
 
