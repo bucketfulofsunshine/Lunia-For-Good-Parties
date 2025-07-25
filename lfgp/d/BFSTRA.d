@@ -11,7 +11,7 @@ END
 ++ ~You speak of arrogance, yet your words drip with it.~ EXTERN BFSTRA bfs.natureofnames
 
 CHAIN BFSTRA bfs.natureofnames
-~Names are not trivial. In the planes they hold power. You bear many: <CHARNAME>, Bhaalspawn, God-child.~
+~Names are not trivial. In the planes, they hold power. You bear many: <CHARNAME>, Bhaalspawn, God-child.~
 = ~To scribe a name upon the Scroll of Retribution is to summon judgment and death. You seek the one who named you? Then look no further.~
 END
 ++ ~Why would a being of Celestia subvert justice? You betrayed your purpose.~ EXTERN BFSTRA bfs.judgejuryandexecutioner

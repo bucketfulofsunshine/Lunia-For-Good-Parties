@@ -307,7 +307,7 @@ IF ~~ THEN BEGIN 28 // from: 27.1
 ~ THEN REPLY #91524 /* ~That's unfortunate. If you had, you might have survived the next few minutes.~ */ EXTERN ~DORN25J~ 169
 END
 
-/* lfgp */ 
+/* lfgp */
 /* you have been weighed, you have been measured, & you MAY be found wanting. */
 
 CHAIN IF ~Global("bfsspoketoscribe","GLOBAL",0) Global("bfsluniaaccepted","GLOBAL",1)~ THEN OHDNAIMA bfs.trialstart
@@ -323,7 +323,7 @@ END
 ++ ~I am known as <CHARNAME> and I've come to see my name removed from the scroll.~ EXTERN OHDNAIMA bfs.trial2
 
 CHAIN OHDNAIMA bfs.trial2
-~Rare is the mortal who is given such a chance. Were your name placed by divine decree, I would not contest it. Yet, in this instance, a Planetar spoke your name and I sensed a greater purpose behind the request.~
+~Rare is the mortal who is given such a chance. Were your name placed by divine decree, I would not contest it. Yet, in this instance, a planetar spoke your name and I sensed a greater purpose behind the request.~
 == OHDNAIMA ~Yet Tyr's justice is not without mercy. Your alleged transgressions are as follows.~
 /* add more options based on EVIL choices in SOA / TOB */
 == OHDNAIMA IF ~GlobalGT("SlavingJerk","GLOBAL",0)~ THEN ~Complicity in Athkatla's slave trade.~
