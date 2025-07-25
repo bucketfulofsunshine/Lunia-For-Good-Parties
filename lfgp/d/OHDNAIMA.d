@@ -573,7 +573,7 @@ DO ~AddJournalEntry(@100003, QUEST) SetGlobal("bfsinnocenceproven","GLOBAL",1) G
 
 CHAIN OHDNAIMA bfs.doesntengendertrust
 ~You have offered your arguments but I am unconvinced. Your name shall remain inscribed unless you offer irrefutable proof.~
-== OHDNAIMA ~Seek out the planetar who first spoke against you. Perhaps, in doing so, you will find the clarity.~
+== OHDNAIMA ~Seek out the planetar who first spoke against you. Perhaps, in doing so, you will find clarity.~
 == OHDNAIMA ~Fare thee well on the remainder of your quest.~
 DO ~AddJournalEntry(@100004, QUEST) SetGlobal("bfsinnocenceprovesnothing","GLOBAL",1)~ EXIT
 
