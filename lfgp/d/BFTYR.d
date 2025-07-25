@@ -30,7 +30,7 @@ END
 CHAIN IF ~Global("bfstyrtalksecond","GLOBAL",0)~ THEN BFTYR bfs.divinereckoning
 ~The shadow of Cyric's brood darkens Lunia's shores no further. You have earned my gratitude, <CHARNAME>. Not merely for your assistance in dealing with these invaders, but for the grace with which you bore false accusations.~ [BFBLANK]
 DO ~SetGlobal("bfstyrtalksecond","GLOBAL",1)~
-= ~A word of caution. Many gazes turn upon you. Some envious of the power you now hold, some afraid of what you might yet become. Such is the burden of divine blood. Know this: You have won my regard, and with it an ally in the heavens should you ever choose to ascend.~
+= ~A word of caution. Many gazes turn upon you. Some envious of the power you now hold, some afraid of what you might yet become. Such is the burden of divine blood. Know this: You have won my regard, and with it, an ally in the heavens should you ever choose to ascend.~
 == KELDO25J IF ~InParty("KELDORN") InMyArea("KELDORN") !StateCheck("KELDORN",CD_STATE_NOTVALID)~ THEN ~Tyr's grace is not bestowed lightly. We carried the burden of upholding justice, and we have not faltered in that duty this day.~
 == ANOME25J IF ~InParty("ANOMEN") InMyArea("ANOMEN") !StateCheck("ANOMEN",CD_STATE_NOTVALID) Alignment("ANOMEN",LAWFUL_GOOD)~ THEN ~'Tis an honor to stand before the god of justice and know that one's cause is righteous.~
 == VALYG25J IF ~InParty("VALYGAR") InMyArea("VALYGAR") !StateCheck("VALYGAR",CD_STATE_NOTVALID)~ THEN ~Strange to be called an ally by a god. But I suspect things will grow stranger with you still.~
@@ -39,11 +39,11 @@ DO ~SetGlobal("bfstyrtalksecond","GLOBAL",1)~
 == HAERD25J IF ~InParty("HAERDALIS") InMyArea("HAERDALIS") !StateCheck("HAERDALIS",CD_STATE_NOTVALID)~ THEN ~...And so this play draws to its conclusion, with the choirs singing your name, and a deity's favor bestowed.~
 == EDWIN25J IF ~InParty("EDWIN") InMyArea("EDWIN") !StateCheck("EDWIN",CD_STATE_NOTVALID)~ THEN ~Pfah! The next time the gods need a mop and bucket, I'll be sure to send them your way, <CHARNAME>.~
 END
-++ ~Someday I may hope to avail myself of that assistance.~ EXTERN BFTYR bfs.divinefavor
-++ ~I don't seek power only peace. But still I thank you for your words.~ EXTERN BFTYR bfs.divinefavor
+++ ~Someday, I may hope to avail myself of that assistance.~ EXTERN BFTYR bfs.divinefavor
+++ ~I don't seek power, only peace. But still, I thank you for your words.~ EXTERN BFTYR bfs.divinefavor
 ++ ~Just make sure no more *broods* find their way into your court.~ EXTERN BFTYR bfs.divinefavor
 
 CHAIN BFTYR bfs.divinefavor
 ~I have reopened the way to the Prime. Go with my blessing - and may your path be one of your own choosing.~
-DO ~AddJournalEntry(@100007, QUEST_DONE) GiveItemCreate("bftplat0",Player1,1,0,0) DestroySelf()~ 
+DO ~AddJournalEntry(@100007, QUEST_DONE) GiveItemCreate("bftplat0",Player1,1,0,0) DestroySelf()~
 EXIT

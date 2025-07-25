@@ -23,7 +23,7 @@ IF ~~ EXTERN bfssol bfs.iobject
 CHAIN bfssol bfs.iobject
 ~The greatest charge laid against you is thus: the destruction of Saradush and the death of those trapped within its walls.~
 == bfssol ~Yet even in Lunia, word of your righteous deeds has reached us. Many faithful believe that you wouldn't partake in such a massacre.~
-== bfssol ~You are summoned, as a guest not a condemned soul, to help us ascertain the truth. Speak in your defense. Aid in finding those who would make a mockery of Tyr's justice.~
+== bfssol ~You are summoned as a guest and not a condemned soul, to help us ascertain the truth. Speak in your defense. Aid in finding those who would make a mockery of Tyr's justice.~
 == KELDO25J IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~To be named on the Scroll of Retribution is no trivial matter. But I have taken your measure, <CHARNAME>, and I will stand beside you wherever your path leads.~
 == ANOME25J IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) Alignment("ANOMEN",LAWFUL_GOOD)~ THEN ~I do not wish such a punishment on anyone lightly. But perhaps this is merely another trial. A final test to prove our worth before the eyes of the gods.~
 == JAHEI25J IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN ~Tyr's servants do not act without reason, but neither are they infallible. I suggest we solve this misunderstanding before we fight a war on multiple fronts.~

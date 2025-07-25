@@ -60,7 +60,7 @@ CHAIN BFSMOD bfs.secondquery
 == MAZZY25J IF ~InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN ~Justice must account for circumstance. If punishment causes greater harm than the crime, then the law is wrong not the people.~
 == EDWIN25J IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN ~Why stop at exile? Brand the thief. Lash them. You must set an example.~
 END
-++ ~Only if mercy is absent. Punishment without context is cruelty not justice.~ EXTERN BFSMOD bfs.lawquestconclude
+++ ~Only if mercy is absent. Punishment without context is cruelty, not justice.~ EXTERN BFSMOD bfs.lawquestconclude
 ++ ~You have the right of it. The law is clear. Emotion must not interfere.~ EXTERN BFSMOD bfs.lawquestconclude
 ++ ~No, we should feed the hungry, not cast them out.~ EXTERN BFSMOD bfs.lawquestconclude
 ++ ~*Poetic* justice would be exiling the lawmaker, not the thief.~ EXTERN BFSMOD bfs.lawquestconclude
