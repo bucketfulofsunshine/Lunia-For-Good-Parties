@@ -1,0 +1,548 @@
+IF
+    Global("ohd_portaloff","OH5400",0)  // Dorn - Forest Clearing
+THEN
+    RESPONSE #100
+        AmbientActivate("portal",FALSE)
+        AmbientActivate("portal2",FALSE)
+        TriggerActivation("luniaportal",FALSE)
+        SetGlobal("ohd_portaloff","OH5400",1)  // Dorn - Forest Clearing
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("ohd_portalon","OH5400",1)  // Dorn - Forest Clearing
+THEN
+    RESPONSE #100
+        AmbientActivate("portal",TRUE)
+        AmbientActivate("portal2",TRUE)
+        TriggerActivation("luniaportal",TRUE)
+        SetGlobal("ohd_portalon","OH5400",2)  // Dorn - Forest Clearing
+END
+
+IF
+    Global("OHD_LeaveLunia","GLOBAL",1)
+THEN
+    RESPONSE #100
+        AmbientActivate("portal",FALSE)
+        AmbientActivate("portal2",FALSE)
+        RemoveMapNote([911.217],100211)  // Portal to Lunia
+        TriggerActivation("luniaportal",FALSE)
+        SetGlobal("OHD_LeaveLunia","GLOBAL",2)
+END
+
+IF
+    Global("OHD_planetar","OH5400",2)  // Dorn - Forest Clearing
+    Global("OHD_urgothoz_sword","GLOBAL",0)
+    Global("OHD_azothet_sword","GLOBAL",1)
+	!Global("bfsluniaaccepted","GLOBAL",1)
+THEN
+    RESPONSE #100
+        CreateCreature("ohdswaz",[919.630],S)  // Azothet
+        SetGlobal("summaz","oh5400",1)  // Dorn - Forest Clearing
+        Continue()
+END
+
+IF
+    Global("OHD_planetar","OH5400",2)  // Dorn - Forest Clearing
+    Global("OHD_urgothoz_sword","GLOBAL",1)
+    Global("OHD_azothet_sword","GLOBAL",0)
+	!Global("bfsluniaaccepted","GLOBAL",1)
+THEN
+    RESPONSE #100
+        CreateCreature("ohdswur",[919.630],S)  // Ur-Gothoz
+        SetGlobal("summur","oh5400",1)  // Dorn - Forest Clearing
+        Continue()
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_planetar","OH5400",2)  // Dorn - Forest Clearing
+    Global("OHD_urgothoz_sword","GLOBAL",1)
+    Global("OHD_azothet_sword","GLOBAL",1)
+    RandomNum(2,1)
+THEN
+    RESPONSE #100
+        CreateCreature("ohdswur",[919.630],S)  // Ur-Gothoz
+        SetGlobal("summur","oh5400",1)  // Dorn - Forest Clearing
+        Continue()
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_planetar","OH5400",2)  // Dorn - Forest Clearing
+    Global("OHD_urgothoz_sword","GLOBAL",1)
+    Global("OHD_azothet_sword","GLOBAL",1)
+    RandomNum(2,2)
+THEN
+    RESPONSE #100
+        CreateCreature("ohdswaz",[919.630],S)  // Azothet
+        SetGlobal("summaz","oh5400",1)  // Dorn - Forest Clearing
+        Continue()
+END
+
+IF
+    Global("OHD_planetar","OH5400",2)  // Dorn - Forest Clearing
+	!Global("bfsluniaaccepted","GLOBAL",1)
+THEN
+    RESPONSE #100
+        ClearAllActions()
+        StartCutSceneMode()
+        Explore()
+        SetGlobal("OHD_planetar","OH5400",3)  // Dorn - Forest Clearing
+        SmallWait(4)
+        ActionOverride(Player1,Face(NE))
+        ActionOverride(Player2,Face(NE))
+        ActionOverride(Player3,Face(NE))
+        ActionOverride(Player4,Face(NE))
+        ActionOverride(Player5,Face(NE))
+        ActionOverride(Player6,Face(NE))
+        SmallWait(2)
+        CreateCreature("ohdcru01",[1022.302],S)  // Crusader
+        CreateCreature("ohdcru02",[931.295],S)  // Crusader
+        CreateCreature("ohdcru03",[934.305],S)  // Crusader
+        CreateCreature("ohdcru04",[1072.323],S)  // Crusader
+        Wait(1)
+        ActionOverride("ohdcru01",MoveToPointNoInterrupt([775.466]))
+        ActionOverride("ohdcru02",MoveToPointNoInterrupt([923.473]))
+        ActionOverride("ohdcru03",MoveToPointNoInterrupt([798.529]))
+        ActionOverride("ohdcru04",MoveToPointNoInterrupt([926.524]))
+        SmallWait(4)
+        CreateCreature("ohdplanj",[1004.304],S)  // Planetar of Justice - Planetar
+        ActionOverride("ohdplanj",MoveToPoint([860.545]))
+        SmallWait(4)
+        MoveViewPoint([940.465],BD_NORMAL)
+        EndCutSceneMode()
+        Continue()
+END
+
+IF
+    Global("OHD_planetar","OH5400",7)  // Dorn - Forest Clearing
+	!Global("bfsluniaaccepted","GLOBAL",1)
+THEN
+    RESPONSE #100
+        ActionOverride("dorn",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("OHD_planetar","OH5400",0)  // Dorn - Forest Clearing
+	!Global("bfsluniaaccepted","GLOBAL",1)
+THEN
+    RESPONSE #100
+        StartCutSceneMode()
+        FadeToColor([5.0],0)
+        SetGlobal("OHD_planetar","OH5400",1)  // Dorn - Forest Clearing
+        ActionOverride(Player1,JumpToPoint([805.715]))
+        ActionOverride(Player2,JumpToPoint([855.750]))
+        ActionOverride(Player3,JumpToPoint([775.760]))
+        ActionOverride(Player4,JumpToPoint([825.785]))
+        ActionOverride(Player5,JumpToPoint([745.785]))
+        ActionOverride(Player6,JumpToPoint([790.810]))
+        SmallWait(2)
+        MoveViewObject(Player1,INSTANT)
+        ActionOverride(Player1,Face(NE))
+        ActionOverride(Player2,Face(NE))
+        ActionOverride(Player3,Face(NE))
+        ActionOverride(Player4,Face(NE))
+        ActionOverride(Player5,Face(NE))
+        ActionOverride(Player6,Face(NE))
+        SmallWait(4)
+        FadeFromColor([10.0],0)
+        EndCutSceneMode()
+END
+
+IF
+    OR(2)
+        Global("OHD_planetar","OH5400",4)  // Dorn - Forest Clearing
+        Global("OHD_planetar","OH5400",8)  // Dorn - Forest Clearing
+    Exists("ohdswaz")  // Glowing Portal
+	!Global("bfsluniaaccepted","GLOBAL",1)
+THEN
+    RESPONSE #100
+        ActionOverride("ohdswaz",DestroySelf())
+END
+
+IF
+    OR(2)
+        Global("OHD_planetar","OH5400",4)  // Dorn - Forest Clearing
+        Global("OHD_planetar","OH5400",8)  // Dorn - Forest Clearing
+		!Global("bfsluniaaccepted","GLOBAL",1)
+    Exists("ohdswur")
+THEN
+    RESPONSE #100
+        ActionOverride("ohdswur",DestroySelf())
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_finished","GLOBAL",1)
+    Global("OHD_homeagain_dorn","OH5400",0)  // Dorn - Forest Clearing
+    IfValidForPartyDialog("dorn")  // Dorn
+THEN
+    RESPONSE #100
+        SetGlobal("OHD_homeagain_dorn","OH5400",1)  // Dorn - Forest Clearing
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain_dorn","OH5400",1)  // Dorn - Forest Clearing
+    IfValidForPartyDialog("dorn")  // Dorn
+THEN
+    RESPONSE #100
+        ActionOverride("dorn",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("OHD_finished","GLOBAL",1)
+    Global("OHD_homeagain","OH5400",0)  // Dorn - Forest Clearing
+    !IfValidForPartyDialog("dorn")  // Dorn
+THEN
+    RESPONSE #100
+        Wait(1)
+        SetGlobal("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+END
+
+/* normal block */
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+    Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("neera")  // Neera
+    IfValidForPartyDialog("neera")  // Neera
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("neera",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("viconia")  // Viconia
+    IfValidForPartyDialog("viconia")  // Viconia
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("viconia",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("haerdalis")  // Haer'Dalis
+    IfValidForPartyDialog("haerdalis")  // Haer'Dalis
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("haerdalis",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("hexxat")  // Hexxat
+    IfValidForPartyDialog("hexxat")  // Hexxat
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("hexxat",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("rasaad")  // Rasaad
+    IfValidForPartyDialog("rasaad")  // Rasaad
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("rasaad",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("imoen2")  // Imoen
+    IfValidForPartyDialog("imoen2")  // Imoen
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("imoen2",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("aerie")  // Aerie
+    IfValidForPartyDialog("aerie")  // Aerie
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("aerie",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("cernd")  // Cernd
+    IfValidForPartyDialog("cernd")  // Cernd
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("cernd",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("edwin")  // Edwin
+    IfValidForPartyDialog("edwin")  // Edwin
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("edwin",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("jaheira")  // Jaheira
+    IfValidForPartyDialog("jaheira")  // Jaheira
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("jaheira",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("minsc")  // Minsc
+    IfValidForPartyDialog("minsc")  // Minsc
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("minsc",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("korgan")  // Korgan
+    IfValidForPartyDialog("korgan")  // Korgan
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("korgan",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("mazzy")  // Mazzy
+    IfValidForPartyDialog("mazzy")  // Mazzy
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("mazzy",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("nalia")  // Nalia
+    IfValidForPartyDialog("nalia")  // Nalia
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("nalia",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("valygar")  // Valygar
+    IfValidForPartyDialog("valygar")  // Valygar
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("valygar",StartDialogueNoSet(Player1))
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("jan")  // Jan
+    IfValidForPartyDialog("jan")  // Jan
+THEN
+    RESPONSE #100
+        AddJournalEntry(92243,INFO)  // I am returned to the Prime, with a tale to tell that is worthy of legend. I have defied the will of the gods and sullied the heavens themselves.
+        ActionOverride("jan",StartDialogueNoSet(Player1))
+END
+
+/* bfs lunia block */
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("neera")  // Neera
+    IfValidForPartyDialog("neera")  // Neera
+THEN
+    RESPONSE #100
+        ActionOverride("neera",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("viconia")  // Viconia
+    IfValidForPartyDialog("viconia")  // Viconia
+THEN
+    RESPONSE #100
+        ActionOverride("viconia",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("haerdalis")  // Haer'Dalis
+    IfValidForPartyDialog("haerdalis")  // Haer'Dalis
+THEN
+    RESPONSE #100
+        ActionOverride("haerdalis",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("hexxat")  // Hexxat
+    IfValidForPartyDialog("hexxat")  // Hexxat
+THEN
+    RESPONSE #100
+        ActionOverride("hexxat",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("rasaad")  // Rasaad
+    IfValidForPartyDialog("rasaad")  // Rasaad
+THEN
+    RESPONSE #100
+        ActionOverride("rasaad",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("imoen2")  // Imoen
+    IfValidForPartyDialog("imoen2")  // Imoen
+THEN
+    RESPONSE #100
+        ActionOverride("imoen2",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("aerie")  // Aerie
+    IfValidForPartyDialog("aerie")  // Aerie
+THEN
+    RESPONSE #100
+        ActionOverride("aerie",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("cernd")  // Cernd
+    IfValidForPartyDialog("cernd")  // Cernd
+THEN
+    RESPONSE #100
+        ActionOverride("cernd",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("edwin")  // Edwin
+    IfValidForPartyDialog("edwin")  // Edwin
+THEN
+    RESPONSE #100
+        ActionOverride("edwin",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("jaheira")  // Jaheira
+    IfValidForPartyDialog("jaheira")  // Jaheira
+THEN
+    RESPONSE #100
+        ActionOverride("jaheira",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("minsc")  // Minsc
+    IfValidForPartyDialog("minsc")  // Minsc
+THEN
+    RESPONSE #100
+        ActionOverride("minsc",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("korgan")  // Korgan
+    IfValidForPartyDialog("korgan")  // Korgan
+THEN
+    RESPONSE #100
+        ActionOverride("korgan",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("mazzy")  // Mazzy
+    IfValidForPartyDialog("mazzy")  // Mazzy
+THEN
+    RESPONSE #100
+        ActionOverride("mazzy",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("nalia")  // Nalia
+    IfValidForPartyDialog("nalia")  // Nalia
+THEN
+    RESPONSE #100
+        ActionOverride("nalia",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("valygar")  // Valygar
+    IfValidForPartyDialog("valygar")  // Valygar
+THEN
+    RESPONSE #100
+        ActionOverride("valygar",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("jan")  // Jan
+    IfValidForPartyDialog("jan")  // Jan
+THEN
+    RESPONSE #100
+        ActionOverride("jan",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+THEN
+    RESPONSE #100
+        SetGlobal("OHD_homeagain","OH5400",2)  // Dorn - Forest Clearing
+END
+

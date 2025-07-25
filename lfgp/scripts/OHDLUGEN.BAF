@@ -1,0 +1,155 @@
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	OR(2)
+        AttackedBy([ANYONE],DEFAULT)
+        Heard([ANYONE],777)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+        Shout(777)
+        StartTimer(23,10)
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	OR(2)
+        TimerExpired(23)
+        OnCreation()
+    Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Shout(777)
+        StartTimer(23,10)
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Heard([ANYONE],777)
+    Range(LastHeardBy(Myself),30)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_LuniaHostile","GLOBAL",1)
+    AreaCheck("OH5500")  // Dorn - Lunia
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Heard([ANYONE],181)
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Allegiance("ohdddolr",ENEMY)  // Dolrassa - Silver Dragon
+    Range("ohdddolr",30)  // Dolrassa - Silver Dragon
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Allegiance("ohddixth",ENEMY)  // Ixthezzys - Silver Dragon
+    Range("ohddixth",30)  // Ixthezzys - Silver Dragon
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Allegiance("ohdpplan",ENEMY)  // Planetar
+    Range("ohdpplan",30)  // Planetar
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Allegiance("ohdplanl",ENEMY)  // Planetar
+    Range("ohdplanl",30)  // Planetar
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Allegiance("ohdrdef",ENEMY)  // Priest of Tyr
+    Range("ohdrdef",30)  // Priest of Tyr
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Allegiance("ohdbald",ENEMY)  // Baldwin
+    Range("ohdbald",30)  // Baldwin
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Allegiance("ohdboll",ENEMY)  // Bollard Firejaw
+    Range("ohdboll",30)  // Bollard Firejaw
+    !Allegiance(Myself,ENEMY)
+THEN
+    RESPONSE #100
+        Enemy()
+        Shout(777)
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	Allegiance(Myself,ENEMY)
+    Global("helpohgodpolice","LOCALS",0)
+THEN
+    RESPONSE #100
+        SetGlobalTimer("helpohgodpolicetimer","LOCALS",TWO_MINUTES)
+        SetGlobal("helpohgodpolice","LOCALS",1)
+END
+
+IF
+    !Global("bfsluniaaccepted","GLOBAL",1)
+	GlobalTimerExpired("helpohgodpolicetimer","LOCALS")
+    Global("helpohgodpolice","LOCALS",1)
+    GlobalTimerExpired("ohd_policesummoned_timer","OH5500")  // Dorn - Lunia
+THEN
+    RESPONSE #100
+        SetGlobalTimer("OHD_policesummoned_timer","OH5500",ONE_HOUR)  // Dorn - Lunia
+        SetGlobal("helpohgodpolice","LOCALS",2)
+        CreateCreatureObjectDoor("ohdpplan",Myself,0,0,0)  // Planetar
+        CreateCreatureObjectDoor("ohdppe01",Myself,0,0,0)  // Priest of Tyr
+        CreateCreatureObjectDoor("ohdppal",Myself,0,0,0)  // Paladin of Tyr
+    RESPONSE #100
+        SetGlobalTimer("OHD_policesummoned_timer","OH5500",ONE_HOUR)  // Dorn - Lunia
+        SetGlobal("helpohgodpolice","LOCALS",2)
+        CreateCreatureObjectDoor("ohdpplan",Myself,0,0,0)  // Planetar
+        CreateCreatureObjectDoor("ohdppe02",Myself,0,0,0)  // Priest of Tyr
+        CreateCreatureObjectDoor("ohdppal",Myself,0,0,0)  // Paladin of Tyr
+        CreateCreatureObjectDoor("ohdppet",Myself,0,0,0)  // Fighter of Tyr
+END
