@@ -1,6 +1,6 @@
 # Lunia-For-Good-Parties
 
-Lunia's map is a refreshing contrast to the many hellish locales present in Baldur's Gate II. Unfortunately, only parties who travel with Dorn - typically those of neutral or evil alignment - gain access to it.
+Lunia's map is a refreshing contrast to the many hellish locales present in Baldur's Gate II. Unfortunately only parties who travel with Dorn - typically those of neutral or evil alignment - gain access to it.
 
 This mod provides an alternate path for Lawful Good, Neutral Good, Chaotic Good & Lawful Neutral characters (with a reputation of 14 or higher) to enter Lunia & assist Tyr's faithful in doling out his justice.
 
@@ -37,6 +37,9 @@ A: In theory, no. The vanilla dialogues I use have new branches attached to them
 
 ## CREDITS
 
-* *RoyalProtector* for fixing all my coding errors & creating the best new items. <3 
+* *RoyalProtector* for **innumerable things**. Among them fixing all my coding errors, creating the best new items, & helping me sharpen the text. The list goes on. <3 
+* *Dark0Dave* for Baeloth's crossmod - & being the silent guardian of all my mods on Github. 
 * *Zenblack* for teaching me how to create custom BAM files. I hope I have done your teachings justice, sensei. 
+* The usual suspects. Wes Weimer for Weidu & Argent77 for Near Infinity + WeiDU Notepad++ Highlighters. 
+* *CamDawg* for answering silly questions I had on Discord. 
 * The Harp-Bow image is taken from [Critical Role](https://criticalrole.fandom.com/wiki/Harp_of_Valor).
