@@ -247,11 +247,9 @@ COPY ~%MOD_FOLDER%/items/bftplat1.EFF~ ~override~
 
 COPY ~%MOD_FOLDER%/items/bftplat0.ITM~ ~override~
 SAY 0x0c ~Aegis of the Even-Handed~
-SAY 0x54 ~This regal armor was forged not by mortal craft, but shaped by Tyr's divine will in the heart of Lunia. 
+SAY 0x54 ~This regal armor was not wrought by mortal hands, but shaped by Tyr's divine will in the heart of Lunia - as a token of gratitude for service in his name. Its enchantments shield the wearer from the chaos of the planes, embodying the clarity and balance of true justice.
 
-It is gratitude made manifest for services rendered in his name. The armor's enchantments shield its wearer against the chaos of the planes.
-
-To paladins, Tyr grants even greater favor, for their oaths align more closely with his justice.
+Paladins, whose oaths most closely mirror Tyr's ideals, receive even greater favor from the armor's blessings.
 
 STATISTICS:
 
