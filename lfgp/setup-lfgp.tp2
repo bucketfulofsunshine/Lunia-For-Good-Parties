@@ -98,6 +98,17 @@ Blessed for 1 hour
 Weight: 1~
 
 /* harp */
+COPY ~%MOD_FOLDER%/items/bfharp0.eff~ ~override~
+COPY ~%MOD_FOLDER%/items/bfharp1.spl~ ~override~
+COPY ~%MOD_FOLDER%/items/bfharp2.spl~ ~override~
+
+COPY ~%MOD_FOLDER%/items/bfharp3.spl~ ~override~
+     ~%MOD_FOLDER%/items/bfharp4.spl~ ~override~
+  PATCH_FOR_EACH p1 IN 1 2 3 4 5 6 BEGIN
+    LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 139 match_parameter1 = p1
+    parameter1 = RESOLVE_STR_REF("Takes %p1% radiant damage from Nocturne of Frost") END
+  END
+
 COPY ~%MOD_FOLDER%/items/bfharp.ITM~ ~override~
 SAY 0x0c ~Nocturne of Frost~
 SAY 0x54 ~The soft sound of harp strings emit with every arrow loosened from this bow. A faint aura of chill radiates from its column, delivering shards of ice upon those struck.
