@@ -66,6 +66,11 @@ UNLESS ~bffea~
 /* dialogues */
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/d~
   USING "%MOD_FOLDER%/tra/%LANGUAGE%/dialogue.tra"
+  
+/* wilson fix */
+ACTION_IF NOT (FILE_EXISTS_IN_GAME ~BWILSO25.dlg~) THEN BEGIN
+  COMPILE ~%MOD_FOLDER%/d/wilso25j.d~
+END
 
 /* cutscenes */
 COMPILE ~%MOD_FOLDER%/cutscenes~

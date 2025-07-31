@@ -417,7 +417,7 @@ END
 + ~GlobalLT("bfssarevoktrial","GLOBAL",1) InParty("SAREVOK") InMyArea("SAREVOK") !StateCheck("SAREVOK",CD_STATE_NOTVALID) Alignment("SAREVOK",CHAOTIC_GOOD)~ + @253 /* Sarevok. */ DO ~IncrementGlobal("bfssarevoktrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN SAREV25J bfssarevokcgtrial
 + ~GlobalLT("bfssarevoktrial","GLOBAL",1) InParty("SAREVOK") InMyArea("SAREVOK") !StateCheck("SAREVOK",CD_STATE_NOTVALID) Alignment("SAREVOK",CHAOTIC_EVIL)~ + @253 /* Sarevok. */ DO ~IncrementGlobal("bfssarevoktrial","GLOBAL",1)~ EXTERN SAREV25J bfssarevokcetrial
 + ~GlobalLT("bfsvalygartrial","GLOBAL",1) InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ + @254 /* Valygar. */ DO ~IncrementGlobal("bfsvalygartrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN VALYG25J bfsvalygartrial
-// + ~GlobalLT("bfsbeartrial","GLOBAL",1) InParty("WILSON") InMyArea("WILSON") !StateCheck("WILSON",CD_STATE_NOTVALID)~ + ~Wilson.~ EXTERN WILSO25J bfsbeartrial
++ ~GlobalLT("bfsbeartrial","GLOBAL",1) InParty("WILSON") InMyArea("WILSON") !StateCheck("WILSON",CD_STATE_NOTVALID)~ + @517 /* Wilson. */ DO ~SetGlobal("bfsbeartrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN WILSO25J bfsbeartrial
 ++ @255 /* That is all. */ EXTERN OHDNAIMA bfs.trialhub
 
 CHAIN AERIE25J bfsaerietrial
@@ -524,14 +524,11 @@ CHAIN VALYG25J bfsvalygartrial
 END
 IF ~~ EXTERN OHDNAIMA bfs.companionhub
 
-/* wilson doesn't have a TOB override script & i'm too scared to add one
-editing this out in the meantime */
-/* CHAIN WILSO25J bfsbeartrial
-~*Wilson grunts and scuffles his paws*~
-== OHDNAIMA ~He says you shared your rations with him. ...And let him maul those who would harm others. In bear circles that apparently earns you his respect.~
-DO ~SetGlobal("bfsbeartrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~
+CHAIN WILSO25J bfsbeartrial
+@518 /* ~*Wilson grunts and scuffles his paws*~ */
+== OHDNAIMA @519 /* ~He says you shared your rations with him. ...And let him maul those who would harm others. In bear circles that apparently earns you his respect.~ */
 END
-IF ~~ EXTERN OHDNAIMA bfs.companionhub */
+IF ~~ EXTERN OHDNAIMA bfs.companionhub 
 
 CHAIN OHDNAIMA bfs.trialhub
 @290 /* Do you have anything else to say in your defense? */
