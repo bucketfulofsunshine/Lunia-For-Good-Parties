@@ -478,7 +478,7 @@ IF ~~ EXTERN OHDNAIMA bfs.companionhub
 
 CHAIN MAZZY25J bfsmazzytrial
 @275 /* <CHARNAME> helped avenge the deaths of my stalwart companions. If this Scroll of Retribution names only the vilest of criminals, then <PRO_HISHER> name has no place among it. */
-== OHDNAIMA @276 /* You are small of stature, halfling, but large of heart. I sense the truth in your words and will give them due consideration. */
+== OHDNAIMA @276 /* You may not be formally recognized as a holy warrior, but your virtue and honor are beyond reproach. */
 END
 IF ~~ EXTERN OHDNAIMA bfs.companionhub
 
