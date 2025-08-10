@@ -1,4 +1,4 @@
-@0    = ~nightly~
+@0    = ~V1.0~
 @1    = ~Lunia for Good Parties~
 @2    = ~This mod requires BG2EE~
 @3    = ~Thalassia~
@@ -158,3 +158,4 @@ Requires:
  15 Strength
 
 Weight: 70~
+
