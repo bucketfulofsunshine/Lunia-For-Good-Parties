@@ -26,9 +26,9 @@ Blessed for 1 hour
 Weight: 1~
 @13   = ~Takes %p1% radiant damage from Nocturne of Light~
 @14   = ~Nocturne of Light~
-@15   = ~Each arrow loosed from this bow is accompanied by a gentle chime. Once wielded by a Deva of Lunia, Nocturne of Light now serves as an instrument of destruction in the hands of the Just. 
+@15   = ~Each arrow loosed from this bow is accompanied by a gentle chime. Once wielded by a Deva of Lunia, Nocturne of Light now serves as an instrument of destruction in the hands of the Just.
 
-Its radiant aura proves particularly potent against the wicked. 
+Its radiant aura proves particularly potent against the wicked.
 
 STATISTICS:
 
@@ -56,7 +56,8 @@ Weight: 2~
 
 STATISTICS:
 
-Special: Immunity to charm and confusion
+Equipped abilities:
+– Immunity to charm and confusion
 
 Weight: 1~
 @18   = ~Unknown Tear~
