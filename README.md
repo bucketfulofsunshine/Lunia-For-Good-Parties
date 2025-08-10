@@ -24,12 +24,11 @@ A: In theory, no. The vanilla dialogues I use have new branches attached to them
 
 ### Q: Any future plans?
 
-* Version 1.0 will allow the party to travel to Lunia & complete an altered version of Dorn's questline.
-* Any version beyond that will be bugfixes & further additions based on player suggestions (if any).
+* Any version beyond V1.0 will be bugfixes & further additions based on player suggestions (if any).
 
 ## CHANGELOG
 
-* **20250725 - Alpha**. Pre-Release 0.9 Candidate. Sharpening up dialogues & testing for final bugs before the full release. 
+* **20250810** - V1.0 Release. Yolo. 
 
 ## LICENSING
 
