@@ -36,9 +36,9 @@ A: In theory, no. The vanilla dialogues I use have new branches attached to them
 
 ## CREDITS
 
-* *RoyalProtector* for **innumerable things**. Among them fixing all my coding errors, creating the best new items, & helping me sharpen the text. The list goes on. <3 
-* *Dark0Dave* for Baeloth's crossmod - & being the silent guardian of all my mods on Github. 
-* *Zenblack* for teaching me how to create custom BAM files. I hope I have done your teachings justice, sensei. 
+* [@royalprotector](https://github.com/szaumoor) for **innumerable things**. Among them fixing all my coding errors, creating the best new items, & helping me sharpen the text. The list goes on. <3 
+* [@dark0dave](https://github.com/dark0dave) for Baeloth's crossmod - & being the silent guardian of all my mods on Github. 
+* [@zenblack](https://github.com/zenblack) for teaching me how to create custom BAM files. I hope I have done your teachings justice, sensei. 
 * The usual suspects. Wes Weimer for Weidu & Argent77 for Near Infinity + WeiDU Notepad++ Highlighters. 
 * *CamDawg* for answering silly questions I had on Discord. 
 * The Harp-Bow image is taken from [Critical Role](https://criticalrole.fandom.com/wiki/Harp_of_Valor).
