@@ -28,7 +28,7 @@ A: In theory, no. The vanilla dialogues I use have new branches attached to them
 
 ## CHANGELOG
 
-* **20250810** - V1.0 Release. Yolo. 
+* **20250909** - V1.1 Release. Fixed script that overwrote AR5500 (Amkethran)'s script files. YIKES!
 
 ## LICENSING
 
