@@ -76,33 +76,28 @@ END
 BUT_ONLY
 
 // oh5500 - extend_bottom later
-/* COPY_EXISTING ~OH5500.BCS~ ~override~
+COPY_EXISTING ~OH5500.BCS~ ~override~
   DECOMPILE_AND_PATCH BEGIN
     REPLACE_TEXTUALLY ~\b\(Global("OHD_policeinit","OH5500",0)\)~
                       ~!Global("bfsluniaaccepted","GLOBAL",1) \1~
-	REPLACE_TEXTUALLY ~\(Global("OHD_finished_comments","OH5500",1)\)~
+	REPLACE_TEXTUALLY ~\b\(Global("OHD_finished","GLOBAL",1)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~					  
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_Planetar_Attack","OH5500",1)\)~
                       ~!Global("bfsluniaaccepted","GLOBAL",1) \1~		
-	REPLACE_TEXTUALLY ~\(Global("OHD_finished_comments","OH5500",0)\)~
-                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~	
-	REPLACE_TEXTUALLY ~\(Global("OHD_finished","GLOBAL",1)\)~
-                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~	
-    REPLACE_TEXTUALLY ~\(Global("OHD_Planetar_Attack","OH5500",1)\)~
+	REPLACE_TEXTUALLY ~\b\(Global("OHD_bollreturns","OH5500",2)\)~
                       ~!Global("bfsluniaaccepted","GLOBAL",1) \1~		
-	REPLACE_TEXTUALLY ~\(Global("OHD_bollreturns","OH5500",2)\)~
+	REPLACE_TEXTUALLY ~\b\(Global("OHD_bollreturns","OH5500",0)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~	
+    REPLACE_TEXTUALLY ~\b\(Global("OH_journal_ink","Global",0)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~	
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_silver","OH5500",2)\)~
                       ~!Global("bfsluniaaccepted","GLOBAL",1) \1~		
-	REPLACE_TEXTUALLY ~\(Global("OHD_bollreturns","OH5500",0)\)~
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_silver","OH5500",5)\)~
                       ~!Global("bfsluniaaccepted","GLOBAL",1) \1~	
-    REPLACE_TEXTUALLY ~\(Global("OH_journal_ink","Global",0)\)~
-                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~	
-    REPLACE_TEXTUALLY ~\(Global("OHD_silver","OH5500",2)\)~
-                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~		
-    REPLACE_TEXTUALLY ~\(Global("OHD_silver","OH5500",5)\)~
-                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~	
-    REPLACE_TEXTUALLY ~\(Global("OHD_Arrived","OH5500",0)\)~
-                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~						  
-					  
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_Arrived","OH5500",0)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~ 			  			  
 END
-BUT_ONLY */
+BUT_ONLY
 
 // ohdcdawg
 COPY_EXISTING ~OHDCDAWG.BCS~ ~override~
@@ -150,8 +145,8 @@ BUT_ONLY
 EXTEND_BOTTOM ~OHDSILVE.bcs~ ~%MOD_FOLDER%/scripts/OHDSILVE.baf~
 EXTEND_BOTTOM ~OHDCRU.bcs~ ~%MOD_FOLDER%/scripts/OHDCRU.baf~
 EXTEND_BOTTOM ~OHDAPORT.bcs~ ~%MOD_FOLDER%/scripts/OHDAPORT.baf~
-// EXTEND_BOTTOM ~OHD5400.bcs~ ~%MOD_FOLDER%/scripts/OH5400.baf~
-// EXTEND_BOTTOM ~OHD5400.bcs~ ~%MOD_FOLDER%/scripts/OH5500.baf~
+EXTEND_BOTTOM ~OHD5400.bcs~ ~%MOD_FOLDER%/scripts/OH5400.baf~
+EXTEND_BOTTOM ~OHD5400.bcs~ ~%MOD_FOLDER%/scripts/OH5500.baf~
 
 // compile scripts
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/BFSTYR.baf~
