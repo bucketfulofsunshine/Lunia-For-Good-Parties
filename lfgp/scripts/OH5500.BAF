@@ -1,0 +1,323 @@
+/* lfgp */ 
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_finished","GLOBAL",1)
+	Global("bfstraitorconvo","GLOBAL",1)
+	Global("bfstyrtalkfirst","GLOBAL",1)
+    Global("OHD_silver_save","OH5500",0)
+THEN
+    RESPONSE #100
+        SetGlobal("OHD_silver_save","OH5500",1)  
+        SaveGame(0)
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_finished","GLOBAL",1)
+	Global("bfstyrtalkfirst","GLOBAL",1)
+	Global("bfstraitorconvo","GLOBAL",1)
+    Global("OHD_silver","OH5500",0)
+THEN
+    RESPONSE #100
+        SetGlobal("OHD_silver","OH5500",1)
+        SetMusic(COMBAT_NORMAL,Dorn1)
+        CreateCreature("BFDOLR",[1817.2338],NE)  // Dolrassa
+        CreateCreature("BFDIXTH",[2049.2469],N)  // Ixthezzys
+        CreateCreature("BFBALD",[1972.2215],SW)  // Baldwin
+        CreateCreature("BFCRU01",[1343.2902],SE)  // Crusader
+        CreateCreature("BFCRU02",[1379.2928],NNW)  // Crusader
+        CreateCreature("BFCRU01",[1415.2896],SSE)  // Crusader
+        ActionOverride("OHDPLANL",DestroySelf())
+        TriggerActivation("Scroll",FALSE)
+        TriggerActivation("SilverDragons",TRUE)
+        TriggerActivation("SilverDragons2",TRUE)
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OH_journal_ink","Global",0)
+    PartyHasItem("OHDINK")  // Ink and Sand
+THEN
+    RESPONSE #100
+        SetGlobal("OH_journal_ink","Global",1)
+        AddJournalEntry(92036,INFO)  // From the Scroll of Retribution's scribe I acquired the ink and sand required to alter it.
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_silver","OH5500",2)
+THEN
+    RESPONSE #100
+        ClearAllActions()
+        StartCutSceneMode()
+        CutSceneId(Player1)
+        MoveViewObject("BFBALD",BD_SLOW)  // Baldwin
+        SetGlobal("OHD_silver","OH5500",3)
+        ActionOverride("BFBALD",MoveToPointNoInterrupt([1384.2871]))
+        Wait(2)
+        FadeToColor([20.0],0)
+        Wait(1)
+        MoveViewObject(Player1,INSTANT)
+        ActionOverride("cutspy",DestroySelf())
+        Wait(1)
+        FadeFromColor([20.0],0)
+        EndCutSceneMode()
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_silver","OH5500",5)  // Dorn - Lunia
+THEN
+    RESPONSE #100
+        ClearAllActions()
+        StartCutSceneMode()
+        CreateVisualEffectObject("SPPORTAL","BFDIXTH")  // Ixthezzys - Silver Dragon
+        CreateVisualEffectObject("SPPORTAL","BFDOLR")  // Dolrassa - Silver Dragon
+        SetGlobal("OHD_silver","OH5500",6)  // Dorn - Lunia
+        Wait(2)
+        ActionOverride("BFDIXTH",DestroySelf())
+        ActionOverride("BFDOLR",DestroySelf())
+        EndCutSceneMode()
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_LuniaTravel","GLOBAL",1)
+    Global("OHD_Arrived","OH5500",0)  // Dorn - Lunia
+THEN
+    RESPONSE #100
+        AmbientActivate("Portal1A",TRUE)
+        AmbientActivate("Portal1B",TRUE)
+        AmbientActivate("Portal2A",FALSE)
+        AmbientActivate("Portal2B",FALSE)
+        AmbientActivate("Portal3A",FALSE)
+        AmbientActivate("Portal3B",FALSE)
+        AmbientActivate("Portal4A",FALSE)
+        AmbientActivate("Portal4B",FALSE)
+        AmbientActivate("Portal5A",FALSE)
+        AmbientActivate("Portal5B",FALSE)
+        AmbientActivate("Portal6A",FALSE)
+        AmbientActivate("Portal6B",FALSE)
+        TriggerActivation("Portal01",TRUE)
+        TriggerActivation("Portal02",FALSE)
+        TriggerActivation("Portal03",FALSE)
+        TriggerActivation("Portal04",FALSE)
+        TriggerActivation("Portal05",FALSE)
+        TriggerActivation("Portal06",FALSE)
+        SetGlobal("OHD_Arrived","OH5500",1)  // Dorn - Lunia
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_LuniaTravel","GLOBAL",2)
+    Global("OHD_Arrived","OH5500",0)  // Dorn - Lunia
+THEN
+    RESPONSE #100
+        AmbientActivate("Portal1A",FALSE)
+        AmbientActivate("Portal1B",FALSE)
+        AmbientActivate("Portal2A",TRUE)
+        AmbientActivate("Portal2B",TRUE)
+        AmbientActivate("Portal3A",FALSE)
+        AmbientActivate("Portal3B",FALSE)
+        AmbientActivate("Portal4A",FALSE)
+        AmbientActivate("Portal4B",FALSE)
+        AmbientActivate("Portal5A",FALSE)
+        AmbientActivate("Portal5B",FALSE)
+        AmbientActivate("Portal6A",FALSE)
+        AmbientActivate("Portal6B",FALSE)
+        TriggerActivation("Portal01",FALSE)
+        TriggerActivation("Portal02",TRUE)
+        TriggerActivation("Portal03",FALSE)
+        TriggerActivation("Portal04",FALSE)
+        TriggerActivation("Portal05",FALSE)
+        TriggerActivation("Portal06",FALSE)
+        SetGlobal("OHD_Arrived","OH5500",1)  // Dorn - Lunia
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_LuniaTravel","GLOBAL",3)
+    Global("OHD_Arrived","OH5500",0)  // Dorn - Lunia
+THEN
+    RESPONSE #100
+        AmbientActivate("Portal1A",FALSE)
+        AmbientActivate("Portal1B",FALSE)
+        AmbientActivate("Portal2A",FALSE)
+        AmbientActivate("Portal2B",FALSE)
+        AmbientActivate("Portal3A",TRUE)
+        AmbientActivate("Portal3B",TRUE)
+        AmbientActivate("Portal4A",FALSE)
+        AmbientActivate("Portal4B",FALSE)
+        AmbientActivate("Portal5A",FALSE)
+        AmbientActivate("Portal5B",FALSE)
+        AmbientActivate("Portal6A",FALSE)
+        AmbientActivate("Portal6B",FALSE)
+        TriggerActivation("Portal01",FALSE)
+        TriggerActivation("Portal02",FALSE)
+        TriggerActivation("Portal03",TRUE)
+        TriggerActivation("Portal04",FALSE)
+        TriggerActivation("Portal05",FALSE)
+        TriggerActivation("Portal06",FALSE)
+        SetGlobal("OHD_Arrived","OH5500",1)  // Dorn - Lunia
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_LuniaTravel","GLOBAL",4)
+    Global("OHD_Arrived","OH5500",0)  // Dorn - Lunia
+THEN
+    RESPONSE #100
+        AmbientActivate("Portal1A",FALSE)
+        AmbientActivate("Portal1B",FALSE)
+        AmbientActivate("Portal2A",FALSE)
+        AmbientActivate("Portal2B",FALSE)
+        AmbientActivate("Portal3A",FALSE)
+        AmbientActivate("Portal3B",FALSE)
+        AmbientActivate("Portal4A",TRUE)
+        AmbientActivate("Portal4B",TRUE)
+        AmbientActivate("Portal5A",FALSE)
+        AmbientActivate("Portal5B",FALSE)
+        AmbientActivate("Portal6A",FALSE)
+        AmbientActivate("Portal6B",FALSE)
+        TriggerActivation("Portal01",FALSE)
+        TriggerActivation("Portal02",FALSE)
+        TriggerActivation("Portal03",FALSE)
+        TriggerActivation("Portal04",TRUE)
+        TriggerActivation("Portal05",FALSE)
+        TriggerActivation("Portal06",FALSE)
+        SetGlobal("OHD_Arrived","OH5500",1)  // Dorn - Lunia
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_LuniaTravel","GLOBAL",5)
+    Global("OHD_Arrived","OH5500",0)  // Dorn - Lunia
+THEN
+    RESPONSE #100
+        AmbientActivate("Portal1A",FALSE)
+        AmbientActivate("Portal1B",FALSE)
+        AmbientActivate("Portal2A",FALSE)
+        AmbientActivate("Portal2B",FALSE)
+        AmbientActivate("Portal3A",FALSE)
+        AmbientActivate("Portal3B",FALSE)
+        AmbientActivate("Portal4A",FALSE)
+        AmbientActivate("Portal4B",FALSE)
+        AmbientActivate("Portal5A",TRUE)
+        AmbientActivate("Portal5B",TRUE)
+        AmbientActivate("Portal6A",FALSE)
+        AmbientActivate("Portal6B",FALSE)
+        TriggerActivation("Portal01",FALSE)
+        TriggerActivation("Portal02",FALSE)
+        TriggerActivation("Portal03",FALSE)
+        TriggerActivation("Portal04",FALSE)
+        TriggerActivation("Portal05",TRUE)
+        TriggerActivation("Portal06",FALSE)
+        SetGlobal("OHD_Arrived","OH5500",1)  // Dorn - Lunia
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_LuniaTravel","GLOBAL",6)
+    Global("OHD_Arrived","OH5500",0)  // Dorn - Lunia
+THEN
+    RESPONSE #100
+        AmbientActivate("Portal1A",FALSE)
+        AmbientActivate("Portal1B",FALSE)
+        AmbientActivate("Portal2A",FALSE)
+        AmbientActivate("Portal2B",FALSE)
+        AmbientActivate("Portal3A",FALSE)
+        AmbientActivate("Portal3B",FALSE)
+        AmbientActivate("Portal4A",FALSE)
+        AmbientActivate("Portal4B",FALSE)
+        AmbientActivate("Portal5A",FALSE)
+        AmbientActivate("Portal5B",FALSE)
+        AmbientActivate("Portal6A",TRUE)
+        AmbientActivate("Portal6B",TRUE)
+        TriggerActivation("Portal01",FALSE)
+        TriggerActivation("Portal02",FALSE)
+        TriggerActivation("Portal03",FALSE)
+        TriggerActivation("Portal04",FALSE)
+        TriggerActivation("Portal05",FALSE)
+        TriggerActivation("Portal06",TRUE)
+        SetGlobal("OHD_Arrived","OH5500",1)  // Dorn - Lunia
+END
+
+/* rip bollard it's been real */
+IF
+Global("bfsbollardyeeted","GLOBAL",0)
+Global("bfsluniaaccepted","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("bfsbollardyeeted","GLOBAL",1)
+ActionOverride("OHDBOLL",DestroySelf())
+Continue()
+END
+
+/* merchant */
+IF
+Global("BFSSeaElfSpawn","OH5500",0)
+Global("bfsluniaaccepted","GLOBAL",1)
+THEN
+RESPONSE #100
+CreateCreature("BFSTHA",[1531.1372],1)
+SetGlobal("BFSSeaElfSpawn","OH5500",1)
+Continue()
+END
+
+/* inevitable */
+IF
+Global("BFSGolSpawn","OH5500",0)
+Global("bfsluniaaccepted","GLOBAL",1)
+THEN
+RESPONSE #100
+CreateCreature("BFSMOD",[2234.3150],1)
+SetGlobal("BFSGolSpawn","OH5500",1)
+Continue()
+END
+
+/* spawn traitor after speaking to naiman */
+IF
+Global("BFSTraitorSpawn","OH5500",0)
+Global("bfsspoketoscribe","GLOBAL",1)
+Global("bfsluniaaccepted","GLOBAL",1)
+OR(2)
+Global("bfsinnocenceprovesnothing","GLOBAL",1)
+Global("bfsinnocenceproven","GLOBAL",1)
+THEN
+RESPONSE #100
+CreateCreature("BFSTRA",[2756.642],1)
+SetGlobal("BFSTraitorSpawn","OH5500",1)
+Continue()
+END
+
+/* casually blaspheming / ruining d&d lore by adding tyr
+don't boo me - we can talk to cyric in tob too */
+IF
+Global("bfsluniaaccepted","GLOBAL",1)
+Global("BFSTyrSpawn","OH5500",0)
+Global("OHD_finished","GLOBAL",1)
+Global("bfstraitorconvo","GLOBAL",1)
+Dead("BFSTRA")
+THEN
+RESPONSE #100
+CreateCreatureObject("BFSTYR",Player1,0,0,0)
+CreateVisualEffectObject("SPPORTAL","BFSTYR")
+Wait(1)
+SetGlobal("BFSTyrSpawn","OH5500",1)
+Continue()
+END
+
+/* tyr v2.0 electric boogaloo*/
+IF
+Global("bfsluniaaccepted","GLOBAL",1)
+Global("BFSTyrSpawn2","OH5500",0)
+Dead("BFBALD")
+CombatCounter(0)
+THEN
+RESPONSE #100
+CreateCreatureObject("BFSTYR",Player1,0,0,0)
+CreateVisualEffectObject("SPPORTAL","BFSTYR")
+Wait(1)
+SetGlobal("BFSTyrSpawn2","OH5500",1)
+Continue()
+END
