@@ -28,7 +28,7 @@ A: In theory, no. The vanilla dialogues I use have new branches attached to them
 
 ## CHANGELOG
 
-* **20250909** - V1.1 Release. Fixed script that overwrote AR5500 (Amkethran)'s script files. YIKES!
+* **20250909** - V1.2 Release. More scripting fixes.
 
 ## LICENSING
 
@@ -37,8 +37,8 @@ A: In theory, no. The vanilla dialogues I use have new branches attached to them
 ## CREDITS
 
 * [@royalprotector](https://github.com/szaumoor) for **innumerable things**. Among them fixing all my coding errors, creating the best new items, & helping me sharpen the text. The list goes on. <3 
-* [@dark0dave](https://github.com/dark0dave) for Baeloth's crossmod - & being the silent guardian of all my mods on Github. 
+* [@dark0dave](https://github.com/dark0dave) for being the silent guardian of all my mods on Github. And for figuring out a way to use REPLACE_TEXTUALLY despite the text being used in a setglobal later. You are a wizard!
 * [@zenblack](https://github.com/zenblack) for teaching me how to create custom BAM files. I hope I have done your teachings justice, sensei. 
 * The usual suspects. Wes Weimer for Weidu & Argent77 for Near Infinity + WeiDU Notepad++ Highlighters. 
-* *CamDawg* for answering silly questions I had on Discord. 
+* *CamDawg* for answering silly questions I had on Discord. *Argent* & *Jastey* for giving me code examples to improve this mod's compatiblity. 
 * The Harp-Bow image is taken from [Critical Role](https://criticalrole.fandom.com/wiki/Harp_of_Valor).
