@@ -1,6 +1,6 @@
-@0    = ~V1.0~
+@0    = ~V1.1~
 @1    = ~Lunia for Good Parties~
-@2    = ~This mod requires BG2EE~
+@2    = ~This mod requires BG2EE or EET~
 @3    = ~Thalassia~
 @4    = ~Edict-7X~
 @5    = ~False Crusader~
@@ -158,4 +158,3 @@ Requires:
  15 Strength
 
 Weight: 70~
-

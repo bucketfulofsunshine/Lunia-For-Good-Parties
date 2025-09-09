@@ -10,7 +10,7 @@ LANGUAGE ~English~
          ~lfgp/tra/english/weidu.tra~
 
 BEGIN @1 /* Lunia for Good Parties */ DESIGNATED 0
-REQUIRE_PREDICATE GAME_IS ~bg2ee~ @2 /* This mod requires BG2EE */
+REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @2 /* This mod requires BG2EE */
 
 /* CamDawg's code for State.ids */
 APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
