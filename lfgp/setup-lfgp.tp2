@@ -145,8 +145,8 @@ BUT_ONLY
 EXTEND_BOTTOM ~OHDSILVE.bcs~ ~%MOD_FOLDER%/scripts/OHDSILVE.baf~
 EXTEND_BOTTOM ~OHDCRU.bcs~ ~%MOD_FOLDER%/scripts/OHDCRU.baf~
 EXTEND_BOTTOM ~OHDAPORT.bcs~ ~%MOD_FOLDER%/scripts/OHDAPORT.baf~
-EXTEND_BOTTOM ~OHD5400.bcs~ ~%MOD_FOLDER%/scripts/OH5400.baf~
-EXTEND_BOTTOM ~OHD5400.bcs~ ~%MOD_FOLDER%/scripts/OH5500.baf~
+EXTEND_BOTTOM ~OH5400.bcs~ ~%MOD_FOLDER%/scripts/OH5400.baf~
+EXTEND_BOTTOM ~OH5500.bcs~ ~%MOD_FOLDER%/scripts/OH5500.baf~
 
 // compile scripts
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/BFSTYR.baf~
@@ -369,3 +369,4 @@ Requires:
  15 Strength
 
 Weight: 70 */
+
