@@ -53,8 +53,10 @@ SAY 0xc @7 /* Trinkets of the Sea */
 /* bams */
 COPY ~%MOD_FOLDER%/bam~ ~override~
 
+/* area extension */ 
+EXTEND_BOTTOM ~AR5500.bcs~   ~%MOD_FOLDER%/area/AR5500.baf~
+
 /* scripts */
-EXTEND_BOTTOM ~AR5500.bcs~   ~%MOD_FOLDER%/scripts/AR5500.baf~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts~
 
 /* make feather conversable */
