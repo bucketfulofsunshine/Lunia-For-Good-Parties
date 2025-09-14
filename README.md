@@ -28,7 +28,7 @@ A: In theory, no. The vanilla dialogues I use have new branches attached to them
 
 ## CHANGELOG
 
-* **20250909** - V1.2 Release. More scripting fixes.
+* **20250914** - V1.3 Release. 
 
 ## LICENSING
 
