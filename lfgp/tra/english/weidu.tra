@@ -1,0 +1,160 @@
+@0    = ~V1.2~
+@1    = ~Lunia for Good Parties~
+@2    = ~This mod requires BG2EE or EET~
+@3    = ~Thalassia~
+@4    = ~Edict-7X~
+@5    = ~False Crusader~
+@6    = ~Tyr~
+@7    = ~Trinkets of the Sea~
+@8    = ~Plane Shift~
+@9    = ~Feather of Celestial Passage~
+@10   = ~This feather, gifted to you by a Planetar of Justice, resonates with the essence of Lunia itself. When held by one deemed worthy, it permits instant passage to the Silver Heaven.
+
+STATISTICS:
+
+Special: Allows planar travel to Lunia
+
+Weight: 1~
+@11   = ~Essence of Lunia~
+@12   = ~A vial of holy water drawn from the Silver Sea itself.
+
+STATISTICS:
+
+Special: Completely heals and removes disease, poison, blindness, deafness, and level drain from the user
+Blessed for 1 hour
+
+Weight: 1~
+@13   = ~Takes %p1% radiant damage from Nocturne of Light~
+@14   = ~Nocturne of Light~
+@15   = ~Each arrow loosed from this bow is accompanied by a gentle chime. Once wielded by a Deva of Lunia, Nocturne of Light now serves as an instrument of destruction in the hands of the Just.
+
+Its radiant aura proves particularly potent against the wicked.
+
+STATISTICS:
+
+Equipped abilities:
+– Charisma: +2
+– Cold Resistance: +30%
+– Cavaliers may use this bow
+
+Combat abilities:
+– When no arrows are equipped, the bow fires missiles that are treated as +4 for the purposes of determining what enemies they can damage. The missiles receive a +4 to hit including the bonus listed below
+– Extra damage vs. non-undead: 1d6 magic damage, plus 1d6 cold damage
+– Extra damage vs. undead: 1d6 magic damage, plus 1d6 radiant damage (cannot be resisted)
+
+THAC0: +5
+Damage: 2 piercing, +6 extra vs. chaotic evil
+Speed Factor: 3
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2~
+@16   = ~Cog of Absolute Order~
+@17   = ~This small brass cog turns with steady precision. Forged in the foundries of Mechanus, it embodies the principle of absolute order. When worn, it allows the wearer's thoughts to follow flawless logic, shielding their mind from outside influence.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to charm and confusion
+
+Weight: 1~
+@18   = ~Unknown Tear~
+@19   = ~This smooth, translucent gem resembles a teardrop. Shadows swirl ominously within its core. Though its purpose remains unclear, holding it fills you with unease.
+
+STATISTICS:
+
+Weight: 1~
+@20   = ~Grace of the Just~
+@21   = ~Set within a delicate band of gold, this pearl glows with an inner light, soothing pain and mending that which is broken.
+
+When asked about the Celestial glymphs engraved along its curve, Thalassia says this: "Justice may demand retribution but mercy gives it meaning. The Just comfort as often as they judge."
+
+STATISTICS:
+
+Equipped abilities:
+– Regenerate 1 Hit Point per round
+– Constitution: +2
+
+Charge abilities:
+– Greater Restoration once per day
+  Special: Reverses any previous level drain; cures feeblemindedness, confusion, berserk, disease, and poison; and fully heals the target
+  Range: Touch
+  Area of Effect: 1 creature
+
+Weight: 0~
+@22   = ~Flame of the Righteous~
+@23   = ~Set within a delicate band of gold, this pearl burns with an inner fire. Though warm to the touch, it does not harm the one who dons it, as only the guilty will endure its wrath.
+
+When asked about the Celestial glyphs engraved along its curve, Thalassia says this: "The flame that warms the virtuous may scour the wicked. Never let the fire of your convictions dim."
+
+STATISTICS:
+
+Equipped abilities:
+– +50% fire resistance
+– THAC0: +2
+– Strength: +2
+
+Charge abilities:
+– Flame Strike once per day
+  Damage: 20d8 fire (Save vs. Spell for half)
+  Area of Effect: 1 creature
+
+Weight: 0~
+@24   = ~Judgment of the Faithful~
+@25   = ~Set within a delicate band of gold, this pearl produces a faint, protective hum. It calms the mind, sharpens thought, and wards against corruption.
+
+When asked about the Celestial glyphs engraved along its curve, Thalassia says this: "Your faith is a shield that protects yourself and others."
+
+STATISTICS:
+
+Equipped abilities:
+– Protection From Evil
+– Intelligence: +2
+
+Charge abilities:
+– Holy Word once per day
+
+Weight: 0~
+@26   = ~Wisdom of the Luminous~
+@27   = ~Set within a delicate band of gold, this pearl radiates starlight. When worn it dispels shadows and doubts alike, illuminating more than the mere eye can see.
+
+When asked about the Celestial glyphs engraved along its curve, Thalassia says this: "Justice must never be blind. Only with clarity may one know whom to absolve and whom to condemn."
+
+STATISTICS:
+
+Equipped Abilities:
+– Wisdom: +2
+
+Charge abilities:
+– True Sight once per day
+  Special: Once per round, all hostile Illusion/Phantasm spells in the area of effect will be dispelled
+  Duration: 1 turn
+  Area of Effect: 120-ft. radius
+
+– Detect Evil once per day
+  Special: Any evil creature within the range of the spell will glow red briefly
+  Duration: Instant
+  Area of Effect: 30-ft. radius
+
+Weight: 0~
+@28   = ~Aegis of the Even-Handed~
+@29   = ~This regal armor was not wrought by mortal hands, but shaped by Tyr's divine will in the heart of Lunia - as a token of gratitude for service in his name. Its enchantments shield the wearer from the chaos of the planes, embodying the clarity and balance of true justice.
+
+Paladins, whose oaths most closely mirror Tyr's ideals, receive even greater favor from the armor's blessings.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2 vs. chaotically aligned creatures
+– Rebuke: Chaotic or evil enemies hitting the wearer take 1d6 magic damage
+– +5 Hit Points (triple for paladins)
+– +2 bonus to damage and THAC0 vs. chaotically aligned creatures (paladins only)
+– +10% Magic Resistance (paladins only)
+
+Armor Class: 1 (-3 vs. slashing, -2 vs. piercing and missile)
+Requires:
+ 15 Strength
+
+Weight: 70~
