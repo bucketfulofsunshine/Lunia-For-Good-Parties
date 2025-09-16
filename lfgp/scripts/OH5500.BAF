@@ -253,6 +253,17 @@ ActionOverride("OHDBOLL",DestroySelf())
 Continue()
 END
 
+/* mercy whitedove */
+IF
+Global("BFSMercySpawn","OH5500",0)
+Global("bfsluniaaccepted","GLOBAL",1)
+THEN
+RESPONSE #100
+CreateCreature("BFMERC",[3868.2575],SE)
+SetGlobal("BFSMercySpawn","OH5500",1)
+Continue()
+END
+
 /* merchant */
 IF
 Global("BFSSeaElfSpawn","OH5500",0)

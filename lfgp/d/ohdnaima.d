@@ -18,6 +18,11 @@ CHAIN OHDNAIMA bfs.trial2
 == OHDNAIMA @214 /* Yet Tyr's justice is not without mercy. Your alleged transgressions are as follows. */
 /* add more options based on EVIL choices in SOA / TOB */
 == OHDNAIMA IF ~GlobalGT("SlavingJerk","GLOBAL",0)~ THEN @215 /* Complicity in Athkatla's slave trade. */
+DO ~IncrementGlobal("bfsnaimanconvinced","GLOBAL",-1)~
+== OHDNAIMA IF ~Global("SolaDead","GLOBAL",1)~ THEN ~The drow Solaufein, who dared to show compassion in the blackest depths of the Underdark, was slain by your hand.~
+DO ~IncrementGlobal("bfsnaimanconvinced","GLOBAL",-1)~
+== OHDNAIMA IF ~Global("GrovePoisoned","GLOBAL",1)~ THEN ~You poisoned a sacred grove, upending the harmony of nature.~
+DO ~IncrementGlobal("bfsnaimanconvinced","GLOBAL",-1)~
 /* ends list of possible crimes, the next line always shows up */
 == OHDNAIMA @216 /* The destruction of Saradush and all who dwelled within it. */
 == OHDNAIMA @217 /* You stand accused. What say you in your defense? */
@@ -32,10 +37,23 @@ END
 /* add more options to improve the score based on GOOD choices in SOA / TOB */
 + ~GlobalLT("bfscctrial","GLOBAL",1) GlobalGT("FreeSlaves","GLOBAL",0)~ + @225 /* I broke the chains of slavery in Athkatla, freeing many who were held captive within the Copper Coronet. */ DO ~IncrementGlobal("bfscctrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.strikeone
 + ~GlobalLT("bfssuldtrial","GLOBAL",1)~ + @226 /* I assisted in saving the elven city of Suldanessellar. */ DO ~IncrementGlobal("bfssuldtrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.strikethree
-+ ~GlobalLT("bfasatrial","GLOBAL",1) !Global("amasanaDead","GLOBAL",1) Global("AsanaPlot","GLOBAL",3)~ + @227 /* I paid a group of mercenaries, using my personal coin, to save the life of an innocent. I upheld the spirit of the law without condemning others to needlessly suffer. */ DO ~IncrementGlobal("bfasatrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.striketwo
++ ~GlobalLT("bfstradestrial","GLOBAL",1) Global("loganmantle","GLOBAL",2)~ + ~I gave Waukeen's Mantle to Lord Coprith, Trademeet's current ruler, rather than curry noble favor.~ DO ~IncrementGlobal("bfstradestrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.nobleintent
++ ~GlobalLT("bfasatrial","GLOBAL",1) !Global("amasanaDead","GLOBAL",1) Global("AsanaPlot","GLOBAL",3)~ + @227 /* I paid a group of mercenaries, using my personal coin, to save the life of an innocent. I upheld the spirit of the law without condemning others to needlessly suffer. */ DO ~IncrementGlobal("bfasatrial","GLOBAL",1) 
+IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.striketwo
++ ~GlobalLT("bfswellyntrial","GLOBAL",1) Global("WellynPeace","GLOBAL",1)~ + ~I helped the child Wellyn's spirit find peace.~ DO ~IncrementGlobal("bfswellynntrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.bearygoodofyou
 /* add options to improve the score based on quests completed in lunia itself */
 + ~GlobalLT("bfscogtrial","GLOBAL",1) Global("bfslawquest","GLOBAL",2)~ + @228 /* I assisted the malfunctioning Inevitable in restoring its function. Does that not prove I'm inclined to help others? */ DO ~IncrementGlobal("bfscogtrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.coginwheel
 ++ @229 /* I have no further proof. */ EXTERN OHDNAIMA bfs.ihavedonenothingwrong
+
+CHAIN OHDNAIMA bfs.bearygoodofyou
+~The innocent are most deserving of compassion. Your kindness will not be forgotten.~
+END
+IF ~~ EXTERN OHDNAIMA bfs.trialhub
+
+CHAIN OHDNAIMA bfs.nobleintent
+~Your judgment spared Trademeet further civil discord. It shall be weighed in your favor.~
+END
+IF ~~ EXTERN OHDNAIMA bfs.trialhub
 
 CHAIN OHDNAIMA bfs.flawlessreputation
 @230 /* I have heard of your deeds. Some among the faithful swore adding your name to the scroll would be an injustice. It is likely one of them summoned you here. How irresponsible of me to forget such a detail. */
