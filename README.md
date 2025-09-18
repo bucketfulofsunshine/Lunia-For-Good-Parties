@@ -4,7 +4,17 @@
 
 Lunia's map is a refreshing contrast to the many hellish locales present in Baldur's Gate II. Unfortunately only parties who travel with Dorn - typically those of neutral or evil alignment - gain access to it.
 
-This mod provides an alternate path for Lawful Good, Neutral Good, Chaotic Good & Lawful Neutral characters (with a reputation of 14 or higher) to enter Lunia & assist Tyr's faithful in doling out his justice.
+This quest mod provides an alternate path for Lawful Good, Neutral Good, Chaotic Good & Lawful Neutral characters (with a reputation of 14 or higher) to enter Lunia & assist Tyr's faithful in doling out his justice.
+
+**V1.3 adds** 
+- A rewritten questline where the player has to get their name removed from the Scroll of Retribution.
+- A short conversation-based sidequest with a malfunctioning Inevitable.
+- A merchant with a few unique items.
+
+**V2.0 will add**
+- Pick up two bounties from Mercy Whitedove & assist Tyr's faithful in further hunting down the wicked.
+- Stop Dorn from burning down the Silver Apple Tree while he's invading Lunia.
+- More sidequests & unique items!
 
 ## FAQ
 
