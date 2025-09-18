@@ -156,7 +156,6 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/BFSTYR.baf~
                         ~%MOD_FOLDER%/scripts/BFSSOL.baf~
                         ~%MOD_FOLDER%/scripts/BFDIXTH.baf~
                         ~%MOD_FOLDER%/scripts/BFDOLR.baf~
-						~%MOD_FOLDER%/scripts/BFAMK.baf~
 
 /* make feather conversable */
 OUTER_SET label = RESOLVE_STR_REF(@8 /* Plane Shift */)
@@ -388,4 +387,5 @@ Requires:
  15 Strength
 
 Weight: 70 */
+
 
