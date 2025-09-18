@@ -1,3 +1,5 @@
+![A map of Lunia, the area from Dorn's TOB quest](https://static.wikia.nocookie.net/baldursgategame/images/5/5a/Lunia_BG2EE.png/revision/latest/scale-to-width-down/1000?cb=20220129201030)
+
 # Lunia For Good Parties (for BG2EE or EET)
 
 Lunia's map is a refreshing contrast to the many hellish locales present in Baldur's Gate II. Unfortunately only parties who travel with Dorn - typically those of neutral or evil alignment - gain access to it.
