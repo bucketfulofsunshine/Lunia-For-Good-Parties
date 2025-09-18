@@ -56,6 +56,9 @@ COPY ~%MOD_FOLDER%/bam~ ~override~
 /* area extension */ 
 EXTEND_BOTTOM ~AR5500.bcs~   ~%MOD_FOLDER%/area/AR5500.baf~
 
+/* new areas */
+COPY ~%MOD_FOLDER%/areaext~ ~override~
+
 /* script adjustments */
 // oh5400 - extend bottom later
 COPY_EXISTING ~OH5400.BCS~ ~override~
@@ -153,6 +156,7 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/BFSTYR.baf~
                         ~%MOD_FOLDER%/scripts/BFSSOL.baf~
                         ~%MOD_FOLDER%/scripts/BFDIXTH.baf~
                         ~%MOD_FOLDER%/scripts/BFDOLR.baf~
+						~%MOD_FOLDER%/scripts/BFAMK.baf~
 
 /* make feather conversable */
 OUTER_SET label = RESOLVE_STR_REF(@8 /* Plane Shift */)
