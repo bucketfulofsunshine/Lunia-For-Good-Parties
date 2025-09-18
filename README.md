@@ -14,6 +14,7 @@ This quest mod provides an alternate path for Lawful Good, Neutral Good, Chaotic
 **V2.0 will add**
 - Pick up two bounties from Mercy Whitedove & assist Tyr's faithful in further hunting down the wicked.
 - Stop Dorn from burning down the Silver Apple Tree while he's invading Lunia.
+- Reactivity to Lunia's prequel mod - [The Pursuit of Justice](https://github.com/bucketfulofsunshine/the-pursuit-of-justice).
 - More sidequests & unique items!
 
 ## FAQ
