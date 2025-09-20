@@ -1,28 +1,28 @@
 IF
-    Global("OHB_401","GLOBAL",1)
-    Global("OHB_START_BATTLE","GLOBAL",2)
-    Global("ohb_spawn_gladiators","myarea",0)
+    Global("bfscelestialspawn","BFLEXT",0)
 THEN
     RESPONSE #100
-        StartCutSceneMode()
-        SetGlobal("ohb_spawn_gladiators","myarea",1)
-        SmallWait(5)
-        ActionOverride(Player1,JumpToPoint([935.1036]))
-        ActionOverride(Player2,JumpToPoint([935.1096]))
-        ActionOverride(Player3,JumpToPoint([872.1013]))
-        ActionOverride(Player4,JumpToPoint([792.989]))
-        ActionOverride(Player5,JumpToPoint([857.1080]))
-        ActionOverride(Player6,JumpToPoint([929.1157]))
-        SmallWait(5)
-        FadeFromColor([20.0],0)
-        CreateCreature("OHBCEL03",[1584.695],SSW)  // Fallen Monadic Deva
-        CreateCreature("OHBCEL01",[1644.734],SSW)  // Ariziel
-        CreateCreature("OHBCEL03",[1716.775],SSW)  // Fallen Monadic Deva
-        CreateCreature("OHBCEL03",[1625.657],SSW)  // Fallen Monadic Deva
-        CreateCreature("OHBCEL02",[1695.694],SSW)  // Fallen Astral Deva
-        CreateCreature("OHBCEL02",[1753.736],SSW)  // Fallen Astral Deva
-        SmallWait(25)
-        MoveViewPoint([1700.723],BD_NORMAL)
-        SmallWait(75)
-        ActionOverride("ohbdenna",StartDialogueNoSet(Player1))
+        SetGlobal("bfscelestialspawn","BFLEXT",1)
+        CreateCreature("BFCEL03",[619.522],N)  // Fallen Monadic Deva
+        CreateCreature("BFCEL01",[747.487],N)  // Fallen Celestial Leader
+        CreateCreature("BFCEL03",[733.584],N)  // Fallen Monadic Deva
+        CreateCreature("BFCEL03",[855.535],N)  // Fallen Monadic Deva
+        CreateCreature("BFCEL02",[621.621],N)  // Fallen Astral Deva
+        CreateCreature("BFCEL02",[825.626],N)  // Fallen Astral Deva
+		Continue()
 END
+
+IF
+    Global("bfscelestialdefeat","BFLEXT",0)
+	Dead("BFCEL01")
+	CombatCounter(0)
+THEN
+    RESPONSE #100
+        SetGlobal("bfscelestialdefeat","BFLEXT",1)
+		Wait(2)
+		CreateCreatureEffect("BFCDOG","AM0411RN",[847.664],N)
+		PlaySound("WWOLF03")
+		AddJournalEntry(@100009, QUEST)
+		Continue()
+END
+

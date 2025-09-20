@@ -1,0 +1,11 @@
+IF
+  Global("bfbestboyhelps","LOCALS",0)
+  See(Player1)
+THEN
+  RESPONSE #100
+    SetGlobal("bfbestboyhelps","LOCALS",1)
+	Wait(2)
+	MoveToPoint([1465.371])
+	Wait(1)
+	PlaySound("WWOLF03")
+END

@@ -18,9 +18,15 @@ UNLESS ~CD_STATE_NOTVALID~
 
 ADD_JOURNAL TITLE (@100000) @100001 @100002 @100003 @100004 @100005 @100006 @100007 USING ~%MOD_FOLDER%/tra/english/Journal.tra~
 ADD_JOURNAL TITLE (@9000) @9001 USING ~%MOD_FOLDER%/tra/english/Journal.tra~
+ADD_JOURNAL TITLE (@100008) @100009 @100010 USING ~%MOD_FOLDER%/tra/english/Journal.tra~
+ADD_JOURNAL TITLE (@100011) @100012 @100013 USING ~%MOD_FOLDER%/tra/english/Journal.tra~
 
 /* adding & altering a few creatures */
 COPY ~%MOD_FOLDER%/creature~ ~override~
+
+COPY ~%MOD_FOLDER%/creature/BFCDOG.cre~ ~override~
+SAY NAME1 ~Valiant~
+SAY NAME2 ~Valiant~
 
 COPY ~%MOD_FOLDER%/creature/BFSTHA.cre~ ~override~
 SAY NAME1 @3 /* Thalassia */
@@ -42,6 +48,10 @@ COPY ~%MOD_FOLDER%/creature/BFSTYR.cre~ ~override~
 SAY NAME1 @6 /* Tyr */
 SAY NAME2 @6 /* Tyr */
 
+COPY ~%MOD_FOLDER%/creature/BFCEL01.cre~ ~override~
+SAY NAME1 ~Fallen Celestial~
+SAY NAME2 ~Fallen Celestial~
+
 /* sounds */
 COPY ~%MOD_FOLDER%/sound~ ~override~
 
@@ -54,7 +64,7 @@ SAY 0xc @7 /* Trinkets of the Sea */
 COPY ~%MOD_FOLDER%/bam~ ~override~
 
 /* area extension */ 
-EXTEND_BOTTOM ~AR5500.bcs~   ~%MOD_FOLDER%/area/AR5500.baf~
+EXTEND_TOP ~AR5500.bcs~   ~%MOD_FOLDER%/area/AR5500.baf~
 
 /* new areas */
 COPY ~%MOD_FOLDER%/areaext~ ~override~
@@ -150,12 +160,16 @@ EXTEND_BOTTOM ~OHDCRU.bcs~ ~%MOD_FOLDER%/scripts/OHDCRU.baf~
 EXTEND_BOTTOM ~OHDAPORT.bcs~ ~%MOD_FOLDER%/scripts/OHDAPORT.baf~
 EXTEND_BOTTOM ~OH5400.bcs~ ~%MOD_FOLDER%/scripts/OH5400.baf~
 EXTEND_BOTTOM ~OH5500.bcs~ ~%MOD_FOLDER%/scripts/OH5500.baf~
+EXTEND_BOTTOM ~BFLEXT.bcs~ ~%MOD_FOLDER%/scripts/BFLEXT.baf~
 
 // compile scripts
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/BFSTYR.baf~
                         ~%MOD_FOLDER%/scripts/BFSSOL.baf~
                         ~%MOD_FOLDER%/scripts/BFDIXTH.baf~
                         ~%MOD_FOLDER%/scripts/BFDOLR.baf~
+						~%MOD_FOLDER%/scripts/BFT401.baf~
+						~%MOD_FOLDER%/scripts/BFDEVAF.baf~
+						~%MOD_FOLDER%/scripts/BFCDOG.baf~
 
 /* make feather conversable */
 OUTER_SET label = RESOLVE_STR_REF(@8 /* Plane Shift */)
@@ -387,5 +401,4 @@ Requires:
  15 Strength
 
 Weight: 70 */
-
 
