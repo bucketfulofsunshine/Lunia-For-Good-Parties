@@ -6,7 +6,7 @@ SAY @84 /* Wares from the Silver Sea! Treasures and trinkets cast ashore by the 
 ++ @85 /* Let me see what you've gathered. */ DO ~StartStore("BFELF",LastTalkedToBy())~ EXIT
 + ~Global("bfsaskedaboutharp","LOCALS",0)~ + @86 /* A harp bow? That's... unusual. */ DO ~SetGlobal("bfsaskedaboutharp","LOCALS",1)~ + bfs.thalharp
 + ~Global("bfsaskedaboutfaith","LOCALS",0)~ + @87 /* What brings you to Lunia? Are you one of the faithful? */ DO ~SetGlobal("bfsaskedaboutfaith","LOCALS",1)~ + bfs.thalfaith
-+ ~Global("bfsaskedaboutscales","LOCALS",0)~ + ~How did those silver dragon scales come into your keeping?~ DO ~SetGlobal("bfsaskedaboutscales","LOCALS",1)~ + bfs.thalscales
++ ~Global("bfsaskedaboutscales","LOCALS",0)~ + @520 /* How did those silver dragon scales come into your keeping? */ DO ~SetGlobal("bfsaskedaboutscales","LOCALS",1)~ + bfs.thalscales
 ++ @88 /* Farewell. */ EXIT
 END
 
@@ -24,8 +24,8 @@ IF ~~ + bfs.thalhub
 END
 
 IF ~~ bfs.thalscales
-SAY ~Two wyrms of argent hue parted with them willingly, for even dragons shed their loosened scales.~
-= ~In return, I offered them gems from the trenches where sunlight never dares to swim. A fair trade, I think. Gleam for gleam, treasure for treasure.~
+SAY @521 /* Two wyrms of argent hue parted with them willingly, for even dragons shed their loosened scales. */
+= @522 /* In return, I offered them gems from the trenches where sunlight never dares to swim. A fair trade, I think. Gleam for gleam, treasure for treasure. */
 IF ~~ + bfs.thalhub
 END
 

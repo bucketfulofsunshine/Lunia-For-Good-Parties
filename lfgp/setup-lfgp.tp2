@@ -175,6 +175,7 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/BFSTYR.baf~
 						~%MOD_FOLDER%/scripts/BFDEVAF.baf~
 						~%MOD_FOLDER%/scripts/BFCDOG.baf~
 						~%MOD_FOLDER%/scripts/BFDOGC.baf~
+						~%MOD_FOLDER%/scripts/BFBALD.baf~
 
 /* make feather conversable */
 OUTER_SET label = RESOLVE_STR_REF(@8 /* Plane Shift */)
@@ -427,7 +428,7 @@ Charge abilities:
   Range: 20 ft
   Duration: 1 hour
   
-  Valiant can phase during combat. He attacks three times per round at 2d8 (piercing damage). He is immune to charm, domination, morale failure, poison, and weapons of +1 enchantment or lower. He has a permanent Aura of True Seeing. 
+  Valiant can phase during combat. He attacks three times per round at 2d8 (piercing damage). He is immune to charm, domination, morale failure, poison, and weapons of +1 enchantment or lower.  
   
   Valiant has the following innate powers:
   – Mirror Image (3/day): As per the spell

@@ -9,6 +9,7 @@ THEN
 	MoveToPoint([1465.371])
 	Wait(1)
 	PlaySound("WWOLF03")
+	ContainerEnable("Hidden Notes",TRUE)
 END
 
 /* second stash */
@@ -23,6 +24,7 @@ THEN
 	MoveToPoint([263.756])
 	Wait(1)
 	PlaySound("WWOLF03")
+	ContainerEnable("Hound Figurine",TRUE)
 END
 
 /* be well, buddy */

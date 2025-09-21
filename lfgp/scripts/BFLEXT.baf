@@ -13,6 +13,16 @@ THEN
 END
 
 IF
+    Global("bfscontainershide","BFLEXT",0)
+THEN
+    RESPONSE #100
+    ContainerEnable("Hidden Notes",FALSE)
+	ContainerEnable("Hound Figurine",FALSE)
+	SetGlobal("bfscontainershide","BFLEXT",1)
+	Continue()
+END
+
+IF
     Global("bfscelestialdefeat","BFLEXT",0)
 	Dead("BFCEL01")
 	CombatCounter(0)
@@ -25,4 +35,3 @@ THEN
 		AddJournalEntry(@100009, QUEST)
 		Continue()
 END
-

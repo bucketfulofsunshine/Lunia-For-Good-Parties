@@ -19,9 +19,9 @@ CHAIN OHDNAIMA bfs.trial2
 /* add more options based on EVIL choices in SOA / TOB */
 == OHDNAIMA IF ~GlobalGT("SlavingJerk","GLOBAL",0)~ THEN @215 /* Complicity in Athkatla's slave trade. */
 DO ~IncrementGlobal("bfsnaimanconvinced","GLOBAL",-1)~
-== OHDNAIMA IF ~Global("SolaDead","GLOBAL",1)~ THEN ~The drow Solaufein, who dared to show compassion in the blackest depths of the Underdark, was slain by your hand.~
+== OHDNAIMA IF ~Global("SolaDead","GLOBAL",1)~ THEN @523 /* The drow Solaufein, who dared to show compassion in the blackest depths of the Underdark, was slain by your hand. */
 DO ~IncrementGlobal("bfsnaimanconvinced","GLOBAL",-1)~
-== OHDNAIMA IF ~Global("GrovePoisoned","GLOBAL",1)~ THEN ~You poisoned a sacred grove, upending the harmony of nature.~
+== OHDNAIMA IF ~Global("GrovePoisoned","GLOBAL",1)~ THEN @524 /* You poisoned a sacred grove, upending the harmony of nature. */
 DO ~IncrementGlobal("bfsnaimanconvinced","GLOBAL",-1)~
 /* ends list of possible crimes, the next line always shows up */
 == OHDNAIMA @216 /* The destruction of Saradush and all who dwelled within it. */
@@ -37,21 +37,21 @@ END
 /* add more options to improve the score based on GOOD choices in SOA / TOB */
 + ~GlobalLT("bfscctrial","GLOBAL",1) GlobalGT("FreeSlaves","GLOBAL",0)~ + @225 /* I broke the chains of slavery in Athkatla, freeing many who were held captive within the Copper Coronet. */ DO ~IncrementGlobal("bfscctrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.strikeone
 + ~GlobalLT("bfssuldtrial","GLOBAL",1)~ + @226 /* I assisted in saving the elven city of Suldanessellar. */ DO ~IncrementGlobal("bfssuldtrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.strikethree
-+ ~GlobalLT("bfstradestrial","GLOBAL",1) Global("loganmantle","GLOBAL",2)~ + ~I gave Waukeen's Mantle to Lord Coprith, Trademeet's current ruler, rather than curry noble favor.~ DO ~IncrementGlobal("bfstradestrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.nobleintent
++ ~GlobalLT("bfstradestrial","GLOBAL",1) Global("loganmantle","GLOBAL",2)~ + @525 /* I gave Waukeen's Mantle to Lord Coprith, Trademeet's current ruler, rather than curry noble favor. */ DO ~IncrementGlobal("bfstradestrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.nobleintent
 + ~GlobalLT("bfasatrial","GLOBAL",1) !Global("amasanaDead","GLOBAL",1) Global("AsanaPlot","GLOBAL",3)~ + @227 /* I paid a group of mercenaries, using my personal coin, to save the life of an innocent. I upheld the spirit of the law without condemning others to needlessly suffer. */ DO ~IncrementGlobal("bfasatrial","GLOBAL",1) 
 IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.striketwo
-+ ~GlobalLT("bfswellyntrial","GLOBAL",1) Global("WellynPeace","GLOBAL",1)~ + ~I helped the child Wellyn's spirit find peace.~ DO ~IncrementGlobal("bfswellynntrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.bearygoodofyou
++ ~GlobalLT("bfswellyntrial","GLOBAL",1) Global("WellynPeace","GLOBAL",1)~ + @526 /* I helped the child Wellyn's spirit find peace. */ DO ~IncrementGlobal("bfswellynntrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.bearygoodofyou
 /* add options to improve the score based on quests completed in lunia itself */
 + ~GlobalLT("bfscogtrial","GLOBAL",1) Global("bfslawquest","GLOBAL",2)~ + @228 /* I assisted the malfunctioning Inevitable in restoring its function. Does that not prove I'm inclined to help others? */ DO ~IncrementGlobal("bfscogtrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN OHDNAIMA bfs.coginwheel
 ++ @229 /* I have no further proof. */ EXTERN OHDNAIMA bfs.ihavedonenothingwrong
 
 CHAIN OHDNAIMA bfs.bearygoodofyou
-~The innocent are most deserving of compassion. Your kindness will not be forgotten.~
+@527 /* The innocent are most deserving of compassion. Your kindness will not be forgotten. */
 END
 IF ~~ EXTERN OHDNAIMA bfs.trialhub
 
 CHAIN OHDNAIMA bfs.nobleintent
-~Your judgment spared Trademeet further civil discord. It shall be weighed in your favor.~
+@528 /* Your judgment spared Trademeet further civil discord. It shall be weighed in your favor. */
 END
 IF ~~ EXTERN OHDNAIMA bfs.trialhub
 
@@ -111,8 +111,8 @@ END
 + ~GlobalLT("bfsaerietrial","GLOBAL",1) InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ + @241 /* Aerie. */ DO ~IncrementGlobal("bfsaerietrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN AERIE25J bfsaerietrial
 + ~GlobalLT("bfsanotrial","GLOBAL",1) InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) Alignment("ANOMEN",LAWFUL_GOOD)~ + @242 /* Anomen. */ DO ~IncrementGlobal("bfsanotrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN ANOME25J bfsanolgtrial
 + ~GlobalLT("bfsanotrial","GLOBAL",1) InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) Alignment("ANOMEN",CHAOTIC_NEUTRAL)~ + @242 /* Anomen. */ DO ~IncrementGlobal("bfsanotrial","GLOBAL",1)~ EXTERN ANOME25J bfsanocntrial
-+ ~GlobalLT("bfscerndtrial","GLOBAL",1) InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ + ~Cernd.~ DO ~IncrementGlobal("bfscerndtrial","GLOBAL",1)~ EXTERN CERND25J bfscerndtrial
-+ ~GlobalLT("bfsedwintrial","GLOBAL",1) InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ + ~Edwin.~ DO ~IncrementGlobal("bfsedwintrial","GLOBAL",1)~ EXTERN EDWIN25J bfsedwintrial
++ ~GlobalLT("bfscerndtrial","GLOBAL",1) InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ + @529 /* Cernd. */ DO ~IncrementGlobal("bfscerndtrial","GLOBAL",1)~ EXTERN CERND25J bfscerndtrial
++ ~GlobalLT("bfsedwintrial","GLOBAL",1) InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ + @530 /* Edwin. */ DO ~IncrementGlobal("bfsedwintrial","GLOBAL",1)~ EXTERN EDWIN25J bfsedwintrial
 + ~GlobalLT("bfshaertrial","GLOBAL",1) InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ + @243 /* Haer'Dalis. */ DO ~IncrementGlobal("bfshaertrial","GLOBAL",1)~ EXTERN HAERD25J bfshaertrial
 + ~GlobalLT("bfsimmytrial","GLOBAL",1) InParty("Imoen2") InMyArea("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID) !InParty("SAREVOK") !InMyArea("SAREVOK")~ + @244 /* Imoen. */ DO ~IncrementGlobal("bfsimmytrial","GLOBAL",1)~ EXTERN IMOEN25J bfsimmytrial
 + ~GlobalLT("bfsimmytrial","GLOBAL",1) InParty("Imoen2") InMyArea("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID) InParty("SAREVOK") InMyArea("SAREVOK") !StateCheck("SAREVOK",CD_STATE_NOTVALID) Alignment("SAREVOK",CHAOTIC_EVIL)~ + @244 /* Imoen. */ DO ~IncrementGlobal("bfsimmytrial","GLOBAL",1)~ EXTERN IMOEN25J bfsimmytrial
@@ -120,7 +120,7 @@ END
 + ~GlobalLT("bfsjaheiratrial","GLOBAL",1) InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ + @245 /* Jaheira. */ DO ~IncrementGlobal("bfsjaheiratrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN JAHEI25J bfsjaheiratrial
 + ~GlobalLT("bfsjantrial","GLOBAL",1) InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ + @246 /* Jan. */ DO ~IncrementGlobal("bfsjantrial","GLOBAL",1)~ EXTERN JAN25J bfsjantrial
 + ~GlobalLT("bfskeldorntrial","GLOBAL",1) InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ + @247 /* Keldorn. */ DO ~SetGlobal("bfskeldorntrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN KELDO25J bfskeldorntrial
-+ ~GlobalLT("bfskorgantrial","GLOBAL",1) InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ + ~Korgan.~ DO ~IncrementGlobal("bfskorgantrial","GLOBAL",1)~ EXTERN KORGA25J bfskorgantrial
++ ~GlobalLT("bfskorgantrial","GLOBAL",1) InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ + @531 /* Korgan. */ DO ~IncrementGlobal("bfskorgantrial","GLOBAL",1)~ EXTERN KORGA25J bfskorgantrial
 + ~GlobalLT("bfsmazzytrial","GLOBAL",1) InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ + @248 /* Mazzy. */ DO ~IncrementGlobal("bfsmazzytrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN MAZZY25J bfsmazzytrial
 + ~GlobalLT("bfsminsctrial","GLOBAL",1) InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ + @249 /* Minsc. */ DO ~IncrementGlobal("bfsminsctrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN MINSC25J bfsminsctrial
 + ~GlobalLT("bfsnaliatrial","GLOBAL",1) InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ + @250 /* Nalia. */ DO ~IncrementGlobal("bfsnaliatrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN NALIA25J bfsnaliatrial
@@ -129,8 +129,8 @@ END
 + ~GlobalLT("bfssarevoktrial","GLOBAL",1) InParty("SAREVOK") InMyArea("SAREVOK") !StateCheck("SAREVOK",CD_STATE_NOTVALID) Alignment("SAREVOK",CHAOTIC_GOOD)~ + @253 /* Sarevok. */ DO ~IncrementGlobal("bfssarevoktrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN SAREV25J bfssarevokcgtrial
 + ~GlobalLT("bfssarevoktrial","GLOBAL",1) InParty("SAREVOK") InMyArea("SAREVOK") !StateCheck("SAREVOK",CD_STATE_NOTVALID) Alignment("SAREVOK",CHAOTIC_EVIL)~ + @253 /* Sarevok. */ DO ~IncrementGlobal("bfssarevoktrial","GLOBAL",1)~ EXTERN SAREV25J bfssarevokcetrial
 + ~GlobalLT("bfsvalygartrial","GLOBAL",1) InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ + @254 /* Valygar. */ DO ~IncrementGlobal("bfsvalygartrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN VALYG25J bfsvalygartrial
-+ ~GlobalLT("bfsviconiatrial","GLOBAL",1) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) Alignment("VICONIA",NEUTRAL_EVIL)~ + ~Viconia.~ DO ~IncrementGlobal("bfsviconiatrial","GLOBAL",1)~ EXTERN VICON25J bfsvickynetrial
-+ ~GlobalLT("bfsviconiatrial","GLOBAL",1) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) Alignment("VICONIA",NEUTRAL)~ + ~Viconia.~ DO ~IncrementGlobal("bfsviconiatrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN VICON25J bfsvickytntrial
++ ~GlobalLT("bfsviconiatrial","GLOBAL",1) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) Alignment("VICONIA",NEUTRAL_EVIL)~ + @532 /* Viconia. */ DO ~IncrementGlobal("bfsviconiatrial","GLOBAL",1)~ EXTERN VICON25J bfsvickynetrial
++ ~GlobalLT("bfsviconiatrial","GLOBAL",1) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) Alignment("VICONIA",NEUTRAL)~ + @532 /* Viconia. */ DO ~IncrementGlobal("bfsviconiatrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN VICON25J bfsvickytntrial
 + ~GlobalLT("bfsbeartrial","GLOBAL",1) InParty("WILSON") InMyArea("WILSON") !StateCheck("WILSON",CD_STATE_NOTVALID)~ + @517 /* Wilson. */ DO ~SetGlobal("bfsbeartrial","GLOBAL",1) IncrementGlobal("bfsnaimanconvinced","GLOBAL",1)~ EXTERN WILSO25J bfsbeartrial
 ++ @255 /* That is all. */ EXTERN OHDNAIMA bfs.trialhub
 
@@ -153,13 +153,13 @@ END
 IF ~~ EXTERN OHDNAIMA bfs.companionhub
 
 CHAIN CERND25J bfscerndtrial
-~I need add no words to what <CHARNAME>'s nature already reveals.~
+@533 /* I need add no words to what <CHARNAME>'s nature already reveals. */
 == OHDNAIMA @261 /* I...see. */
 END
 IF ~~ EXTERN OHDNAIMA bfs.companionhub
 
 CHAIN EDWIN25J bfsedwintrial
-~You would grant weight to the prattling of this scribe? Absurd! Find another fool to play your game.~
+@534 /* You would grant weight to the prattling of this scribe? Absurd! Find another fool to play your game. */
 == OHDNAIMA @263 /* Your preference is noted. */
 END
 IF ~~ EXTERN OHDNAIMA bfs.companionhub
@@ -203,7 +203,7 @@ END
 IF ~~ EXTERN OHDNAIMA bfs.companionhub
 
 CHAIN KORGA25J bfskorgantrial
-~Ye expect me t'bleat like some priest, praisin' <CHARNAME>'s virtue? Bugger that!~
+@535 /* Ye expect me t'bleat like some priest, praisin' <CHARNAME>'s virtue? Bugger that! */
 == OHDNAIMA @263 /* Your preference is noted. */
 END
 IF ~~ EXTERN OHDNAIMA bfs.companionhub
@@ -257,21 +257,21 @@ END
 IF ~~ EXTERN OHDNAIMA bfs.companionhub
 
 CHAIN VICON25J bfsvickynetrial
-~If you seek praise then look elsewhere, I won't waste my breath on this testimony.~
-== OHDNAIMA ~Such is your right.~
+@536 /* If you seek praise then look elsewhere, I won't waste my breath on this testimony. */
+== OHDNAIMA @537 /* Such is your right. */
 END
 IF ~~ EXTERN OHDNAIMA bfs.companionhub
 
 CHAIN VICON25J bfsvickytntrial
-~I once thought compassion a weakness, yet <CHARNAME> has shown me otherwise. Does that not attest to <PRO_HISHER> character?~
-== OHDNAIMA ~To teach another kindness is no small feat. It speaks well of <PRO_HIMHER>.~
+@538 /* I once thought compassion a weakness, yet <CHARNAME> has shown me otherwise. Does that not attest to <PRO_HISHER> character? */
+== OHDNAIMA @539 /* To teach another kindness is no small feat. It speaks well of <PRO_HIMHER>. */
 END
 IF ~~ EXTERN OHDNAIMA bfs.companionhub
 
 
 CHAIN WILSO25J bfsbeartrial
-@518 /* ~*Wilson grunts and scuffles his paws*~ */
-== OHDNAIMA @519 /* ~He says you shared your rations with him. ...And let him maul those who would harm others. In bear circles that apparently earns you his respect.~ */
+@518 /* *Wilson grunts and scuffles his paws* */ /* @518 /* *Wilson grunts and scuffles his paws* */ */
+== OHDNAIMA @519 /* He says you shared your rations with him. ...And let him maul those who would harm others. In bear circles that apparently earns you his respect. */ /* @519 /* He says you shared your rations with him. ...And let him maul those who would harm others. In bear circles that apparently earns you his respect. */ */
 END
 IF ~~ EXTERN OHDNAIMA bfs.companionhub 
 
