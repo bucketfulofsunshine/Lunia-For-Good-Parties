@@ -440,9 +440,22 @@ Charge abilities:
 Weight: 0~
 COPY ~%MOD_FOLDER%/items/BFDOG1.EFF~ ~override~
 
+/* silver dragon armor */
+COPY ~%MOD_FOLDER%/items/bfslva.ITM~ ~override~
+SAY 0x54 ~This armor, forged from the scales of a silver dragon, is a rare and highly coveted set. The scales seem to bolster the armor's wearer with their beauty & grace. 
 
+STATISTICS:
 
+Equipped Abilities:
+– Charisma: +2
+– Magic Resistance: +15%
+– Movement rate increased by 3
 
+Combat abilities:
+– Heals wearer 2 Hit Points each time damage is taken
 
+Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+Requires:
+ 8 Strength
 
-
+Weight: 15~

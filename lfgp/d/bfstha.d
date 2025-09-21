@@ -24,8 +24,8 @@ IF ~~ + bfs.thalhub
 END
 
 IF ~~ bfs.thalscales
-SAY @521 /* Two wyrms of argent hue parted with them willingly, for even dragons shed their loosened scales. */
-= @522 /* In return, I offered them gems from the trenches where sunlight never dares to swim. A fair trade, I think. Gleam for gleam, treasure for treasure. */
+SAY @521 /* Two wyrms of argent hue parted with them willingly, for even dragons shed their loosened scales. In return, I offered them gems from the trenches where sunlight never dares to swim. */
+= @522 /* Should you have any interest in procuring them, I shall shape the scales into an armor worthy of their grace. */
 IF ~~ + bfs.thalhub
 END
 
