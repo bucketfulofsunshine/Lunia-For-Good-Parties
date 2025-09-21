@@ -5,7 +5,7 @@ THEN
         CutSceneId(Player1)
         SetCutSceneBreakable(FALSE)
         Wait(1)
-		CreateVisualEffectObject("SPDISPMA",Player1)
+		CreateVisualEffectObject("SPPORTAL",Player1)
 		Wait(2)
         LeaveAreaLUAPanic("BFLEXT","",[615.225],SE)
         LeaveAreaLUA("BFLEXT","",[615.225],SE)

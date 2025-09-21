@@ -28,6 +28,10 @@ COPY ~%MOD_FOLDER%/creature/BFCDOG.cre~ ~override~
 SAY NAME1 ~Valiant~
 SAY NAME2 ~Valiant~
 
+COPY ~%MOD_FOLDER%/creature/BFCDOS.cre~ ~override~ /* you can summon him now */
+SAY NAME1 ~Valiant~
+SAY NAME2 ~Valiant~
+
 COPY ~%MOD_FOLDER%/creature/BFSTHA.cre~ ~override~
 SAY NAME1 @3 /* Thalassia */
 SAY NAME2 @3 /* Thalassia */
@@ -170,6 +174,7 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/BFSTYR.baf~
 						~%MOD_FOLDER%/scripts/BFT401.baf~
 						~%MOD_FOLDER%/scripts/BFDEVAF.baf~
 						~%MOD_FOLDER%/scripts/BFCDOG.baf~
+						~%MOD_FOLDER%/scripts/BFDOGC.baf~
 
 /* make feather conversable */
 OUTER_SET label = RESOLVE_STR_REF(@8 /* Plane Shift */)
@@ -205,6 +210,9 @@ END
 COMPILE ~%MOD_FOLDER%/cutscenes~
 
 /* items */
+/* dog attack item */
+COPY ~%MOD_FOLDER%/items/VALAT.ITM~ ~override~
+
 /* feather of plane shift */
 COPY ~%MOD_FOLDER%/items/bffea.ITM~ ~override~
 SAY 0x08 @9 /* Feather of Celestial Passage */ // for consistency
@@ -401,4 +409,39 @@ Requires:
  15 Strength
 
 Weight: 70 */
+
+/* petitioner's prayer */
+COPY ~%MOD_FOLDER%/items/bfpepr.ITM~ ~override~
+SAY 0x0c ~Petitioner's Prayer~
+SAY 0x54 ~A single page, seemingly torn from a journal, upon which a petitioner has inscribed several prayers. Mercy Whitedove may wish to see it returned, for it holds not only the petitioner's devotion but also their final wishes.~
+
+/* doge */
+COPY ~%MOD_FOLDER%/items/bfdoge.ITM~ ~override~
+SAY 0x0c ~Celestial Hound Figurine~
+SAY 0x54 ~This Celestial Hound figurine fits in the palm of your hand. When the command word is spoken, the figurine comes to life as a semi-intelligent hound called Valiant. The hound will obey its master's commands for the duration of the spell or until slain. After one hour, regardless of whether Valiant lived or died, the figurine returns. It takes a day to recharge the figurine.
+
+STATISTICS:
+
+Charge abilities:
+– Summon Valiant once per day
+  Range: 20 ft
+  Duration: 1 hour
+  
+  Valiant can phase during combat. He attacks three times per round at 2d8 (piercing damage). He is immune to charm, domination, morale failure, poison, and weapons of +1 enchantment or lower. He has a permanent Aura of True Seeing. 
+  
+  Valiant has the following innate powers:
+  – Mirror Image (3/day): As per the spell
+  – Improved Invisibility (1/day): As per the spell
+  – Moon Dog Sight (3/day): The moon dog can see through (and therefore dispel) all forms of illusion and invisibility, detecting traps and evil in the vicinity
+  – Healing Lick (3/day): Heals 20 Hit Points and cures disease, deafness, blindness, and poison
+  – Moon Dog Howl (1/day): Damages and instills fear in enemies who are evil while also dispelling fear and casting Protection From Evil on party members
+
+Weight: 0~
+COPY ~%MOD_FOLDER%/items/BFDOG1.EFF~ ~override~
+
+
+
+
+
+
 

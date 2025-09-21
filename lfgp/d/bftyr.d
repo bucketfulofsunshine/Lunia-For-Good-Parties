@@ -45,5 +45,5 @@ END
 
 CHAIN BFTYR bfs.divinefavor
 @135 /* I have reopened the way to the Prime. Go with my blessing - and may your path be one of your own choosing. */
-DO ~AddJournalEntry(@100007, QUEST_DONE) GiveItemCreate("bftplat0",Player1,1,0,0) DestroySelf()~
+DO ~AddJournalEntry(@100007, QUEST_DONE) GiveItemCreate("bftplat0",Player1,1,0,0) ReputationInc(2) DestroySelf()~
 EXIT

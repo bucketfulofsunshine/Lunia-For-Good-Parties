@@ -5,6 +5,8 @@ THEN
         CutSceneId(Player1)
         SetCutSceneBreakable(FALSE)
         Wait(1)
+		CreateVisualEffectObject("SPPORTAL",Player1)
+		Wait(2)
         LeaveAreaLUAPanic("OH5500","",[873.3315],NW)
         LeaveAreaLUA("OH5500","",[873.3315],NW)
         ActionOverride(Player2,LeaveAreaLUA("OH5500","",[920.3329],NW))

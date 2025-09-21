@@ -20,7 +20,7 @@ THEN
     RESPONSE #100
         SetGlobal("bfscelestialdefeat","BFLEXT",1)
 		Wait(2)
-		CreateCreatureEffect("BFCDOG","AM0411RN",[847.664],N)
+		CreateCreatureEffect("BFCDOG","SPPORTAL",[847.664],N)
 		PlaySound("WWOLF03")
 		AddJournalEntry(@100009, QUEST)
 		Continue()
