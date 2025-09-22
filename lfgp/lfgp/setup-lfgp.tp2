@@ -1,0 +1,471 @@
+BACKUP ~lfgp/backup~
+SUPPORT ~bucketfulofsunshine~
+VERSION @0 
+
+AUTO_TRA ~lfgp/tra/%s~
+
+LANGUAGE ~English~
+         ~english~
+         ~lfgp/tra/english/Journal.tra~
+         ~lfgp/tra/english/weidu.tra~
+
+BEGIN @1 /* Lunia for Good Parties */ DESIGNATED 0
+REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @2 /* This mod requires BG2EE or EET*/
+INCLUDE ~%MOD_FOLDER%/lib/functions.tpa~
+
+/* CamDawg's code for State.ids */
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+ADD_JOURNAL TITLE (@100000) @100001 @100002 @100003 @100004 @100005 @100006 @100007 USING ~%MOD_FOLDER%/tra/english/Journal.tra~
+ADD_JOURNAL TITLE (@9000) @9001 USING ~%MOD_FOLDER%/tra/english/Journal.tra~
+ADD_JOURNAL TITLE (@100008) @100009 @100010 USING ~%MOD_FOLDER%/tra/english/Journal.tra~
+ADD_JOURNAL TITLE (@100011) @100012 @100013 USING ~%MOD_FOLDER%/tra/english/Journal.tra~
+
+/* adding animation bams */
+COPY ~%MOD_FOLDER%/animbams~ ~override~
+
+/* adding & altering a few creatures */
+COPY ~%MOD_FOLDER%/creature~ ~override~
+
+COPY ~%MOD_FOLDER%/creature/BFCDOG.cre~ ~override~
+SAY NAME1 ~Valiant~
+SAY NAME2 ~Valiant~
+
+COPY ~%MOD_FOLDER%/creature/BFCDOS.cre~ ~override~ /* you can summon him now */
+SAY NAME1 ~Valiant~
+SAY NAME2 ~Valiant~
+
+COPY ~%MOD_FOLDER%/creature/BFSTHA.cre~ ~override~
+SAY NAME1 @3 /* Thalassia */
+SAY NAME2 @3 /* Thalassia */
+
+COPY ~%MOD_FOLDER%/creature/BFSMOD.cre~ ~override~
+SAY NAME1 @4 /* Edict-7X */
+SAY NAME2 @4 /* Edict-7X */
+
+COPY ~%MOD_FOLDER%/creature/BFCRU01.cre~ ~override~
+SAY NAME1 @5 /* False Crusader */
+SAY NAME2 @5 /* False Crusader */
+
+COPY ~%MOD_FOLDER%/creature/BFCRU02.cre~ ~override~
+SAY NAME1 @5 /* False Crusader */
+SAY NAME2 @5 /* False Crusader */
+
+COPY ~%MOD_FOLDER%/creature/BFSTYR.cre~ ~override~
+SAY NAME1 @6 /* Tyr */
+SAY NAME2 @6 /* Tyr */
+
+COPY ~%MOD_FOLDER%/creature/BFCEL01.cre~ ~override~
+SAY NAME1 ~Fallen Celestial~
+SAY NAME2 ~Fallen Celestial~
+
+COPY ~%MOD_FOLDER%/creature/BFLANT.cre~ ~override~
+SAY NAME1 ~Lantern Archon~
+SAY NAME2 ~Lantern Archon~
+
+
+/* sounds */
+COPY ~%MOD_FOLDER%/sound~ ~override~
+
+/* shop */
+COPY ~%MOD_FOLDER%/store~ ~override~
+
+SAY 0xc @7 /* Trinkets of the Sea */
+
+/* bams */
+COPY ~%MOD_FOLDER%/bam~ ~override~
+
+/* area extension */ 
+EXTEND_TOP ~AR5500.bcs~   ~%MOD_FOLDER%/area/AR5500.baf~
+
+/* new areas */
+COPY ~%MOD_FOLDER%/areaext~ ~override~
+
+/* script adjustments */
+// oh5400 - extend bottom later
+COPY_EXISTING ~OH5400.BCS~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~\(Global("ohd_portalon","OH5400",1)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~  
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_homeagain","OH5400",1)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~                  
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_planetar","OH5400",2)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~    
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_planetar","OH5400",0)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~    
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_planetar","OH5400",7)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~  
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_planetar","OH5400",1)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~ 				  
+END
+BUT_ONLY
+
+// oh5500 - extend_bottom later
+COPY_EXISTING ~OH5500.BCS~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_policeinit","OH5500",0)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~
+	REPLACE_TEXTUALLY ~\b\(Global("OHD_finished","GLOBAL",1)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~					  
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_Planetar_Attack","OH5500",1)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~		
+	REPLACE_TEXTUALLY ~\b\(Global("OHD_bollreturns","OH5500",2)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~		
+	REPLACE_TEXTUALLY ~\b\(Global("OHD_bollreturns","OH5500",0)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~	
+    REPLACE_TEXTUALLY ~\b\(Global("OH_journal_ink","Global",0)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~	
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_silver","OH5500",2)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~		
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_silver","OH5500",5)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~	
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_Arrived","OH5500",0)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~ 			  			  
+END
+BUT_ONLY
+
+// ohdcdawg
+COPY_EXISTING ~OHDCDAWG.BCS~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~\(Global("OHD_finished","GLOBAL",1)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~
+END
+BUT_ONLY
+
+// ohdsilve - extend_bottom later
+COPY_EXISTING ~OHDSILVE.BCS~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~\(Global("OHD_silver","OH5500",1)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~
+END
+BUT_ONLY
+
+// ohdcru - extend_bottom later
+COPY_EXISTING ~OHDCRU.BCS~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~\(!Allegiance(Myself,ENEMY)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~
+END
+BUT_ONLY
+
+// ohdaport - extend_bottom later
+COPY_EXISTING ~OHDAPORT.BCS~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~\(Global("OHD_LeaveLunia","GLOBAL",0)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~
+END
+BUT_ONLY 
+
+// ohdlugen 
+COPY_EXISTING ~OHDLUGEN.BCS~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+	REPLACE_TEXTUALLY ~\(!Allegiance(Myself,ENEMY)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~
+	REPLACE_TEXTUALLY ~\(GlobalTimerExpired("ohd_policesummoned_timer","OH5500")\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~
+END
+BUT_ONLY 
+
+// extend scripts
+EXTEND_BOTTOM ~OHDSILVE.bcs~ ~%MOD_FOLDER%/scripts/OHDSILVE.baf~
+EXTEND_BOTTOM ~OHDCRU.bcs~ ~%MOD_FOLDER%/scripts/OHDCRU.baf~
+EXTEND_BOTTOM ~OHDAPORT.bcs~ ~%MOD_FOLDER%/scripts/OHDAPORT.baf~
+EXTEND_BOTTOM ~OH5400.bcs~ ~%MOD_FOLDER%/scripts/OH5400.baf~
+EXTEND_BOTTOM ~OH5500.bcs~ ~%MOD_FOLDER%/scripts/OH5500.baf~
+EXTEND_BOTTOM ~BFLEXT.bcs~ ~%MOD_FOLDER%/scripts/BFLEXT.baf~
+
+// compile scripts
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/BFSTYR.baf~
+                        ~%MOD_FOLDER%/scripts/BFSSOL.baf~
+                        ~%MOD_FOLDER%/scripts/BFDIXTH.baf~
+                        ~%MOD_FOLDER%/scripts/BFDOLR.baf~
+						~%MOD_FOLDER%/scripts/BFT401.baf~
+						~%MOD_FOLDER%/scripts/BFDEVAF.baf~
+						~%MOD_FOLDER%/scripts/BFCDOG.baf~
+						~%MOD_FOLDER%/scripts/BFDOGC.baf~
+						~%MOD_FOLDER%/scripts/BFBALD.baf~
+						~%MOD_FOLDER%/scripts/BFLANT.baf~						
+
+/* make feather conversable */
+OUTER_SET label = RESOLVE_STR_REF(@8 /* Plane Shift */)
+APPEND ~ITEMDIAL.2da~
+~bffea %label% bffea~
+UNLESS ~bffea~
+
+/* dialogue adjustments */
+// ohdplanl
+COPY_EXISTING ~OHDPLANL.dlg~ ~override~
+  DECOMPILE_AND_PATCH BEGIN
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_lostsigil","LOCALS",1)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~  	
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_pavilion","OH5500",2)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~  			
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_pavilion","OH5500",0)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~  			
+    REPLACE_TEXTUALLY ~\b\(Global("OHD_pavilion","OH5500",1)\)~
+                      ~!Global("bfsluniaaccepted","GLOBAL",1) \1~  						  
+END
+BUT_ONLY
+
+/* dialogues */
+COMPILE ~%MOD_FOLDER%/d~
+  USING "%MOD_FOLDER%/tra/%LANGUAGE%/dialogue.tra"
+  
+/* wilson fix */
+ACTION_IF NOT (FILE_EXISTS_IN_GAME ~BWILSO25.dlg~) THEN BEGIN
+  COMPILE ~%MOD_FOLDER%/d/wilso25j.d~
+END
+
+/* cutscenes */
+COMPILE ~%MOD_FOLDER%/cutscenes~
+
+/* items */
+/* dog attack item */
+COPY ~%MOD_FOLDER%/items/VALAT.ITM~ ~override~
+
+/* feather of plane shift */
+COPY ~%MOD_FOLDER%/items/bffea.ITM~ ~override~
+SAY 0x08 @9 /* Feather of Celestial Passage */ // for consistency
+SAY 0x0c @9 /* Feather of Celestial Passage */
+SAY 0x50 @10 /* This feather, gifted to you by a Planetar of Justice, resonates with the essence of Lunia itself. When held by one deemed worthy, it permits instant passage to the Silver Heaven.
+
+STATISTICS:
+
+Special: Allows planar travel to Lunia
+
+Weight: 1 */
+
+/* holy water */
+COPY ~%MOD_FOLDER%/items/bfwatvfx.SPL~ ~override~
+COPY ~%MOD_FOLDER%/items/bfwat.ITM~ ~override~
+SAY 0x08 @11 /* Essence of Lunia */ // for consistency
+SAY 0x0c @11 /* Essence of Lunia */
+SAY 0x50 @12 /* A vial of holy water drawn from the Silver Sea itself.
+
+STATISTICS:
+
+Special: Completely heals and removes disease, poison, blindness, deafness, and level drain from the user
+Blessed for 1 hour
+
+Weight: 1 */
+
+/* harp */
+COPY ~%MOD_FOLDER%/items/bfharp0.eff~ ~override~
+COPY ~%MOD_FOLDER%/items/bfharp1.spl~ ~override~
+COPY ~%MOD_FOLDER%/items/bfharp2.spl~ ~override~
+
+COPY ~%MOD_FOLDER%/items/bfharp3.spl~ ~override~
+     ~%MOD_FOLDER%/items/bfharp4.spl~ ~override~
+  PATCH_FOR_EACH p1 IN 1 2 3 4 5 6 BEGIN
+    LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 139 match_parameter1 = p1
+    parameter1 = RESOLVE_STR_REF(@13 /* Takes %p1% radiant damage from Nocturne of Light */) END
+  END
+
+COPY ~%MOD_FOLDER%/items/bfharp.ITM~ ~override~
+SAY 0x0c @14 /* Nocturne of Light */
+SAY 0x54 @15 /* Each arrow loosed from this bow is accompanied by a gentle chime. Once wielded by a Deva of Lunia, Nocturne of Light now serves as an instrument of destruction in the hands of the Just. 
+
+Its radiant aura proves particularly potent against the wicked. 
+
+STATISTICS:
+
+Equipped abilities:
+– Charisma: +2
+– Cold Resistance: +30%
+– Cavaliers may use this bow
+
+Combat abilities:
+– When no arrows are equipped, the bow fires missiles that are treated as +4 for the purposes of determining what enemies they can damage. The missiles receive a +4 to hit including the bonus listed below
+– Extra damage vs. non-undead: 1d6 magic damage, plus 1d6 cold damage
+– Extra damage vs. undead: 1d6 magic damage, plus 1d6 radiant damage (cannot be resisted)
+
+THAC0: +5
+Damage: 2 piercing, +6 extra vs. chaotic evil
+Speed Factor: 3
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 6 Strength
+
+Weight: 2 */
+
+/* cog of logic */
+COPY ~%MOD_FOLDER%/items/bfcog.ITM~ ~override~
+SAY 0x0c @16 /* Cog of Absolute Order */
+SAY 0x54 @17 /* This small brass cog turns with steady precision. Forged in the foundries of Mechanus, it embodies the principle of absolute order. When worn, it allows the wearer's thoughts to follow flawless logic, shielding their mind from outside influence.
+
+STATISTICS:
+
+Special: Immunity to charm and confusion
+
+Weight: 1 */
+
+/* badge of shame */
+COPY ~%MOD_FOLDER%/items/bftea.ITM~ ~override~
+SAY 0x0c @18 /* Unknown Tear */
+SAY 0x54 @19 /* This smooth, translucent gem resembles a teardrop. Shadows swirl ominously within its core. Though its purpose remains unclear, holding it fills you with unease.
+
+STATISTICS:
+
+Weight: 1 */
+
+/* pearls */
+COPY ~%MOD_FOLDER%/items/bfprl1.ITM~ ~override~
+SAY 0x0c @20 /* Grace of the Just */
+SAY 0x54 @21 /* Set within a delicate band of gold, this pearl glows with an inner light, soothing pain and mending that which is broken.
+
+When asked about the Celestial glymphs engraved along its curve, Thalassia says this: "Justice may demand retribution but mercy gives it meaning. The Just comfort as often as they judge."
+
+STATISTICS:
+
+Equipped abilities:
+– Regenerate 1 Hit Point per round
+– Constitution: +2
+
+Charge abilities:
+– Greater Restoration once per day
+  Special: Reverses any previous level drain; cures feeblemindedness, confusion, berserk, disease, and poison; and fully heals the target
+  Range: Touch
+  Area of Effect: 1 creature
+
+Weight: 0 */
+
+COPY ~%MOD_FOLDER%/items/bfprl2.ITM~ ~override~
+SAY 0x0c @22 /* Flame of the Righteous */
+SAY 0x54 @23 /* Set within a delicate band of gold, this pearl burns with an inner fire. Though warm to the touch, it does not harm the one who dons it, as only the guilty will endure its wrath.
+
+When asked about the Celestial glyphs engraved along its curve, Thalassia says this: "The flame that warms the virtuous may scour the wicked. Never let the fire of your convictions dim."
+
+STATISTICS:
+
+Equipped abilities:
+– +50% fire resistance
+– THAC0: +2
+– Strength: +2
+
+Charge abilities:
+– Flame Strike once per day
+  Damage: 20d8 fire (Save vs. Spell for half)
+  Area of Effect: 1 creature
+
+Weight: 0 */
+
+COPY ~%MOD_FOLDER%/items/bfprl3.ITM~ ~override~
+SAY 0x0c @24 /* Judgment of the Faithful */
+SAY 0x54 @25 /* Set within a delicate band of gold, this pearl produces a faint, protective hum. It calms the mind, sharpens thought, and wards against corruption.
+
+When asked about the Celestial glyphs engraved along its curve, Thalassia says this: "Your faith is a shield that protects yourself and others."
+
+STATISTICS:
+
+Equipped abilities:
+– Protection From Evil
+– Intelligence: +2
+
+Charge abilities:
+– Holy Word once per day
+
+Weight: 0 */
+
+COPY ~%MOD_FOLDER%/items/bfprl4.ITM~ ~override~
+SAY 0x0c @26 /* Wisdom of the Luminous */
+SAY 0x54 @27 /* Set within a delicate band of gold, this pearl radiates starlight. When worn it dispels shadows and doubts alike, illuminating more than the mere eye can see.
+
+When asked about the Celestial glyphs engraved along its curve, Thalassia says this: "Justice must never be blind. Only with clarity may one know whom to absolve and whom to condemn."
+
+STATISTICS:
+
+Equipped Abilities:
+– Wisdom: +2
+
+Charge abilities:
+– True Sight once per day
+  Special: Once per round, all hostile Illusion/Phantasm spells in the area of effect will be dispelled
+  Duration: 1 turn
+  Area of Effect: 120-ft. radius
+
+– Detect Evil once per day
+  Special: Any evil creature within the range of the spell will glow red briefly
+  Duration: Instant
+  Area of Effect: 30-ft. radius
+
+Weight: 0 */
+
+// should be organized better to avoid having to multiply COPY statements (TODO!)
+COPY ~%MOD_FOLDER%/items/bftplat1.EFF~ ~override~
+     ~%MOD_FOLDER%/items/bftplat2.EFF~ ~override~
+     ~%MOD_FOLDER%/items/bftplat3.EFF~ ~override~
+     ~%MOD_FOLDER%/items/bftplat4.EFF~ ~override~
+     ~%MOD_FOLDER%/items/bftplat5.SPL~ ~override~
+     ~%MOD_FOLDER%/items/bftplat6.EFF~ ~override~
+
+COPY ~%MOD_FOLDER%/items/bftplat0.ITM~ ~override~
+SAY 0x0c @28 /* Aegis of the Even-Handed */
+SAY 0x54 @29 /* This regal armor was not wrought by mortal hands, but shaped by Tyr's divine will in the heart of Lunia - as a token of gratitude for service in his name. Its enchantments shield the wearer from the chaos of the planes, embodying the clarity and balance of true justice.
+
+Paladins, whose oaths most closely mirror Tyr's ideals, receive even greater favor from the armor's blessings.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2 vs. chaotically aligned creatures
+– Rebuke: Chaotic or evil enemies hitting the wearer take 1d6 magic damage
+– +5 Hit Points (triple for paladins)
+– +2 bonus to damage and THAC0 vs. chaotically aligned creatures (paladins only)
+– +10% Magic Resistance (paladins only)
+
+Armor Class: 1 (-3 vs. slashing, -2 vs. piercing and missile)
+Requires:
+ 15 Strength
+
+Weight: 70 */
+
+/* petitioner's prayer */
+COPY ~%MOD_FOLDER%/items/bfpepr.ITM~ ~override~
+SAY 0x0c ~Petitioner's Prayer~
+SAY 0x54 ~A single page, seemingly torn from a journal, upon which a petitioner has inscribed several prayers. Mercy Whitedove may wish to see it returned, for it holds not only the petitioner's devotion but also their final wishes.~
+
+/* doge */
+COPY ~%MOD_FOLDER%/items/bfdoge.ITM~ ~override~
+SAY 0x0c ~Celestial Hound Figurine~
+SAY 0x54 ~This Celestial Hound figurine fits in the palm of your hand. When the command word is spoken, the figurine comes to life as a semi-intelligent hound called Valiant. The hound will obey its master's commands for the duration of the spell or until slain. After one hour, regardless of whether Valiant lived or died, the figurine returns. It takes a day to recharge the figurine.
+
+STATISTICS:
+
+Charge abilities:
+– Summon Valiant once per day
+  Range: 20 ft
+  Duration: 1 hour
+  
+  Valiant can phase during combat. He attacks three times per round at 2d8 (piercing damage). He is immune to charm, domination, morale failure, poison, and weapons of +1 enchantment or lower.  
+  
+  Valiant has the following innate powers:
+  – Mirror Image (3/day): As per the spell
+  – Improved Invisibility (1/day): As per the spell
+  – Moon Dog Sight (3/day): The moon dog can see through (and therefore dispel) all forms of illusion and invisibility, detecting traps and evil in the vicinity
+  – Healing Lick (3/day): Heals 20 Hit Points and cures disease, deafness, blindness, and poison
+  – Moon Dog Howl (1/day): Damages and instills fear in enemies who are evil while also dispelling fear and casting Protection From Evil on party members
+
+Weight: 0~
+COPY ~%MOD_FOLDER%/items/BFDOG1.EFF~ ~override~
+
+/* silver dragon armor */
+COPY ~%MOD_FOLDER%/items/bfslva.ITM~ ~override~
+SAY 0x54 ~This armor, forged from the scales of a silver dragon, is a rare and highly coveted set. The scales seem to bolster the armor's wearer with their beauty & grace. 
+
+STATISTICS:
+
+Equipped Abilities:
+– Charisma: +2
+– Magic Resistance: +15%
+– Movement rate increased by 3
+
+Combat abilities:
+– Heals wearer 2 Hit Points each time damage is taken
+
+Armor Class: -2 (-5 vs. slashing, -3 vs. piercing and missile)
+Requires:
+ 8 Strength
+
+Weight: 15~
