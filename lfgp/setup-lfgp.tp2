@@ -11,6 +11,7 @@ LANGUAGE ~English~
 
 BEGIN @1 /* Lunia for Good Parties */ DESIGNATED 0
 REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @2 /* This mod requires BG2EE or EET*/
+INCLUDE ~%MOD_FOLDER%/lib/functions.tpa~
 
 /* CamDawg's code for State.ids */
 APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
@@ -20,6 +21,9 @@ ADD_JOURNAL TITLE (@100000) @100001 @100002 @100003 @100004 @100005 @100006 @100
 ADD_JOURNAL TITLE (@9000) @9001 USING ~%MOD_FOLDER%/tra/english/Journal.tra~
 ADD_JOURNAL TITLE (@100008) @100009 @100010 USING ~%MOD_FOLDER%/tra/english/Journal.tra~
 ADD_JOURNAL TITLE (@100011) @100012 @100013 USING ~%MOD_FOLDER%/tra/english/Journal.tra~
+
+/* adding animation bams */
+COPY ~%MOD_FOLDER%/animbams~ ~override~
 
 /* adding & altering a few creatures */
 COPY ~%MOD_FOLDER%/creature~ ~override~
@@ -55,6 +59,11 @@ SAY NAME2 @6 /* Tyr */
 COPY ~%MOD_FOLDER%/creature/BFCEL01.cre~ ~override~
 SAY NAME1 ~Fallen Celestial~
 SAY NAME2 ~Fallen Celestial~
+
+COPY ~%MOD_FOLDER%/creature/BFLANT.cre~ ~override~
+SAY NAME1 ~Lantern Archon~
+SAY NAME2 ~Lantern Archon~
+
 
 /* sounds */
 COPY ~%MOD_FOLDER%/sound~ ~override~
@@ -176,6 +185,7 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/BFSTYR.baf~
 						~%MOD_FOLDER%/scripts/BFCDOG.baf~
 						~%MOD_FOLDER%/scripts/BFDOGC.baf~
 						~%MOD_FOLDER%/scripts/BFBALD.baf~
+						~%MOD_FOLDER%/scripts/BFLANT.baf~						
 
 /* make feather conversable */
 OUTER_SET label = RESOLVE_STR_REF(@8 /* Plane Shift */)

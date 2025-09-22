@@ -250,6 +250,8 @@ THEN
 RESPONSE #100
 SetGlobal("bfsbollardyeeted","GLOBAL",1)
 ActionOverride("OHDBOLL",DestroySelf())
+ActionOverride("OHDZARA",DestroySelf())
+ActionOverride("OHDRIKKO",DestroySelf())
 Continue()
 END
 

@@ -30,7 +30,10 @@ THEN
     RESPONSE #100
         SetGlobal("bfscelestialdefeat","BFLEXT",1)
 		Wait(2)
-		CreateCreatureEffect("BFCDOG","SPPORTAL",[847.664],N)
+		CreateCreature("BFLANT",[984.253],N)  // Lantern Archon
+        CreateCreature("BFLANT",[357.601],N)  // Lantern Archon
+		CreateCreature("BFLANT",[1068.520],N)  // Lantern Archon
+		CreateCreatureEffect("BFCDOG","SPPORTAL",[847.664],N) // Valiant
 		PlaySound("WWOLF03")
 		AddJournalEntry(@100009, QUEST)
 		Continue()
