@@ -64,6 +64,9 @@ COPY ~%MOD_FOLDER%/creature/BFLANT.cre~ ~override~
 SAY NAME1 ~Lantern Archon~
 SAY NAME2 ~Lantern Archon~
 
+COPY ~%MOD_FOLDER%/creature/BFGITH.cre~ ~override~
+SAY NAME1 ~Githzerai~
+SAY NAME2 ~Githzerai~
 
 /* sounds */
 COPY ~%MOD_FOLDER%/sound~ ~override~
@@ -185,7 +188,8 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/BFSTYR.baf~
 						~%MOD_FOLDER%/scripts/BFCDOG.baf~
 						~%MOD_FOLDER%/scripts/BFDOGC.baf~
 						~%MOD_FOLDER%/scripts/BFBALD.baf~
-						~%MOD_FOLDER%/scripts/BFLANT.baf~						
+						~%MOD_FOLDER%/scripts/BFLANT.baf~
+						~%MOD_FOLDER%/scripts/BFHELL.baf~
 
 /* make feather conversable */
 OUTER_SET label = RESOLVE_STR_REF(@8 /* Plane Shift */)
@@ -424,7 +428,7 @@ Weight: 70 */
 /* petitioner's prayer */
 COPY ~%MOD_FOLDER%/items/bfpepr.ITM~ ~override~
 SAY 0x0c ~Petitioner's Prayer~
-SAY 0x54 ~A single page, seemingly torn from a journal, upon which a petitioner has inscribed several prayers. Mercy Whitedove may wish to see it returned, for it holds not only the petitioner's devotion but also their final wishes.~
+SAY 0x54 ~A single page, seemingly torn from a journal, upon which a petitioner has inscribed several prayers. Mercy Whitedove may wish to see it returned, for it holds not only the petitioner's devotion but their final wishes as well.~
 
 /* doge */
 COPY ~%MOD_FOLDER%/items/bfdoge.ITM~ ~override~

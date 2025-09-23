@@ -288,6 +288,17 @@ SetGlobal("BFSGolSpawn","OH5500",1)
 Continue()
 END
 
+/* githzerai */
+IF
+Global("BFSGithSpawn","OH5500",0)
+Global("bfsluniaaccepted","GLOBAL",1)
+THEN
+RESPONSE #100
+CreateCreature("BFGITH",[628.3469],SW)
+SetGlobal("BFSGithSpawn","OH5500",1)
+Continue()
+END
+
 /* spawn traitor after speaking to naiman */
 IF
 Global("BFSTraitorSpawn","OH5500",0)

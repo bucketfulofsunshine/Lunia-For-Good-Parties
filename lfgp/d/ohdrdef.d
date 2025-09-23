@@ -17,6 +17,7 @@ END
 IF ~~ THEN BEGIN 1 
   SAY @310 /* Identify yourself. */
   IF ~Global("bfsluniaaccepted","GLOBAL",1)~ THEN REPLY @311 /* I am <CHARNAME>. I was sent here to speak with Naiman Alore. */ GOTO bfs.beourguest
+  IF ~Global("bfsluniaaccepted","GLOBAL",1)~ THEN REPLY @542 /* Spare me the pleasantries. I'm here to speak with Naiman Alore, nothing more. */ GOTO bfs.beourguest
   IF ~PartyHasItem("OHDSIGIL") !Global("bfsluniaaccepted","GLOBAL",1)~ THEN REPLY @312 /* I am <CHARNAME>, servant of Tyr. */ GOTO 2
   IF ~PartyHasItem("OHDSIGIL") !Global("bfsluniaaccepted","GLOBAL",1)~ THEN REPLY @313 /* I am Rodesi Ponz, servant of Tyr. */ GOTO 9
   IF ~!IfValidForPartyDialogue("hexxat") !Global("bfsluniaaccepted","GLOBAL",1)~ THEN REPLY @314 /* Of Righteous Wrath, you mean. */ GOTO 25
