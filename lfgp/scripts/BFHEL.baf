@@ -1,0 +1,15 @@
+IF
+    Global("bfsspawnfiends","BFAMK",0)
+THEN
+    RESPONSE #100
+        SetGlobal("bfsspawnfiends","BFAMK",1)
+        CreateCreature("ohbdem01",[710.393],S)  // T'alcor
+        CreateCreature("ohbdem02",[820.473],SW)  // Glabrezu
+        CreateCreature("ohbdem03",[724.229],S)  // Marilith
+        CreateCreature("ohbdem04",[413.302],SE)  // Succubus
+        CreateCreature("ohbdev01",[457.467],E)  // Maadrazel
+        CreateCreature("ohbdev02",[345.574],NE)  // Cornugon
+        CreateCreature("ohbdev03",[183.426],E)  // Gelugon
+        CreateCreature("ohbdev04",[199.500],E)  // Erinyes 
+END
+
