@@ -48,7 +48,9 @@ A: In theory, no. The vanilla dialogues I use have new branches attached to them
 
 * [@royalprotector](https://github.com/szaumoor) for **innumerable things**. Among them fixing all my coding errors, creating the best new items, & helping me sharpen the text. The list goes on. <3 
 * [@dark0dave](https://github.com/dark0dave) for being the silent guardian of all my mods on Github. And for figuring out a way to use REPLACE_TEXTUALLY despite the text being used in a setglobal later. You are a wizard!
-* [@zenblack](https://github.com/zenblack) for teaching me how to create custom BAM files. I hope I have done your teachings justice, sensei. 
+* [@zenblack](https://github.com/zenblack) for teaching me how to create custom BAM files. I hope I have done your teachings justice, sensei.
+* [@MephistoSatanDevil](https://github.com/MephistoSatanDevil) for the Simplified Chinese translation. 
+* jlan on Discord for reporting bugs / playtesting. 
 * The usual suspects. Wes Weimer for Weidu & Argent77 for Near Infinity + WeiDU Notepad++ Highlighters. 
 * *CamDawg* for answering silly questions I had on Discord. *Argent* & *Jastey* for giving me code examples to improve this mod's compatiblity. 
 * The Harp-Bow image is taken from [Critical Role](https://criticalrole.fandom.com/wiki/Harp_of_Valor).
