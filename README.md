@@ -35,13 +35,10 @@ A: *Yes*. This mod literally steals Dorn's TOB quest & alters it so Lunia can be
 
 A: In theory, no. The vanilla dialogues I use have new branches attached to them. That means you won't see the companion interjections unless they check for these new branches. Any talks that check for the AreaName ("OH5500") will still fire though - and may have tonal discrepancies without crossmod content.
 
-### Q: Any future plans?
-
-* Any version beyond V1.0 will be bugfixes & further additions based on player suggestions (if any).
-
 ## CHANGELOG
 
 * **20250914** - V1.3 Release. 
+* **20260215** - V1.3.1 Release. 
 
 ## LICENSING
 
