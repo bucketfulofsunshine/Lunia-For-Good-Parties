@@ -256,7 +256,8 @@ Continue()
 END
 
 /* mercy whitedove */
-IF
+// currently edited out until V2.0
+/* IF
 Global("BFSMercySpawn","OH5500",0)
 Global("bfsluniaaccepted","GLOBAL",1)
 THEN
@@ -264,7 +265,7 @@ RESPONSE #100
 CreateCreature("BFMERC",[3622.2900],SE)
 SetGlobal("BFSMercySpawn","OH5500",1)
 Continue()
-END
+END */ 
 
 /* merchant */
 IF
@@ -334,3 +335,4 @@ Wait(1)
 SetGlobal("BFSTyrSpawn2","OH5500",1)
 Continue()
 END
+
