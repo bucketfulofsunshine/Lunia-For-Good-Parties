@@ -68,10 +68,6 @@ COPY ~%MOD_FOLDER%/creature/BFLANT.cre~ ~override~
 SAY NAME1 ~Lantern Archon~
 SAY NAME2 ~Lantern Archon~
 
-COPY ~%MOD_FOLDER%/creature/BFGITH.cre~ ~override~
-SAY NAME1 ~Githzerai~
-SAY NAME2 ~Githzerai~
-
 /* sounds */
 COPY ~%MOD_FOLDER%/sound~ ~override~
 
@@ -477,3 +473,4 @@ Requires:
  8 Strength
 
 Weight: 15~
+
