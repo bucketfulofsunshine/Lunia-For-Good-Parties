@@ -19,7 +19,7 @@ This quest mod provides an alternate path for Lawful Good, Neutral Good, Chaotic
 
 ### Q: Is this a counterpart to [Fight the Heavens](https://www.morpheus-mart.com/fight-the-heavens)?
 
-A: I wasn't aware of *Fight the Heavens* when I started creating *Lunia For Good Parties*. I feel both mods have their place: FtH is intended for evil parties, while LFGP exists on the opposite spectrum. That said FtH is an excellent mod - well worth the download - even if both mods aren't viable on the same playthrough. 
+A: I wasn't aware of *Fight the Heavens* when I started creating *Lunia For Good Parties*. I feel both mods have their place: FtH is intended for evil parties, while LFGP exists on the opposite spectrum. That said FtH is an excellent mod - well worth the download - even if both mods aren't viable on the same playthrough. If you want to install both, install Lunia before Fight the Heavens, & install that later to have priority. 
 
 ### Q: When does the quest start?
 
