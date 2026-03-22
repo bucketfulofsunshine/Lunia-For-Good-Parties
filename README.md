@@ -37,6 +37,7 @@ A: No. The vanilla dialogues I use have new branches attached to them. That mean
 
 * **20250914** - V1.3 Release. 
 * **20260215** - V1.3.1 Release. 
+* **20260322** - V1.3.2 Release.
 
 ## LICENSING
 
