@@ -6,14 +6,14 @@ Lunia's map is a refreshing contrast to the many hellish locales present in Bald
 
 This quest mod provides an alternate path for all non-evil characters, with a reputation of 14 or higher, to enter Lunia & assist Tyr's faithful in doling out his justice.
 
-**V1.3 adds** 
+**V1.9 adds** 
 - A rewritten questline where the player has to get their name removed from the Scroll of Retribution.
 - A short conversation-based sidequest with a malfunctioning Inevitable.
 - A merchant with a few unique items.
+- Pick up a quick bounty from Mercy Whitedove. 
 
 **V2.0 will add**
-- Pick up two bounties from Mercy Whitedove & assist Tyr's faithful in further hunting down the wicked.
-- Stop invaders from burning down the Silver Apple Tree while they're invading Lunia.
+- Stop Dorn from burning down the Silver Apple Tree while he's invading Lunia.
 
 ## FAQ
 
@@ -42,6 +42,7 @@ A: Yes. But a request was made to open it up to more parties. While the dialogue
 * **20250914** - V1.3 Release. 
 * **20260215** - V1.3.1 Release. 
 * **20260322** - V1.3.2 Release.
+* **20260406** - V1.9 (Mongrel Dogs of the Empire Edition) Release. 
 
 ## LICENSING
 
