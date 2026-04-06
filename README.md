@@ -4,7 +4,7 @@
 
 Lunia's map is a refreshing contrast to the many hellish locales present in Baldur's Gate II. Unfortunately only parties who travel with Dorn - typically those of neutral or evil alignment - gain access to it.
 
-This quest mod provides an alternate path for Lawful Good, Neutral Good, Chaotic Good & Lawful Neutral characters (with a reputation of 14 or higher) to enter Lunia & assist Tyr's faithful in doling out his justice.
+This quest mod provides an alternate path for all non-evil characters, with a reputation of 14 or higher, to enter Lunia & assist Tyr's faithful in doling out his justice.
 
 **V1.3 adds** 
 - A rewritten questline where the player has to get their name removed from the Scroll of Retribution.
@@ -32,6 +32,10 @@ A: *Yes*. This mod literally steals Dorn's TOB quest & alters it so Lunia can be
 ### Q: Will this break custom companion interjections?
 
 A: No. The vanilla dialogues I use have new branches attached to them. That means you won't see interjections unless they check for these new branches. Any talks that check for the AreaName ("OH5500") will still fire though - but may have tonal discrepancies without crossmod content.
+
+### Q: Isn't the mod name ironic / incorrect given all non-evil character have access to the area now?
+
+A: Yes. But a request was made to open it up to more parties. While the dialogue might not suit a True Neutral or Chaotic Neutral main, I'm happy to expand those options if players have suggestions for them. 
 
 ## CHANGELOG
 
