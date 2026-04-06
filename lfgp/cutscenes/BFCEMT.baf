@@ -1,0 +1,20 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Player1)
+        SetCutSceneBreakable(FALSE)
+        Wait(1)
+		CreateVisualEffectObject("SPPORTAL",Player1)
+		Wait(2)
+        LeaveAreaLUAPanic("BFLEXT","",[489.223],SE)
+        LeaveAreaLUA("BFLEXT","",[489.223],SE)
+		ActionOverride(Player2,LeaveAreaLUA("BFLEXT","",[619.271],SE))
+        ActionOverride(Player3,LeaveAreaLUA("BFLEXT","",[550.229],SE))
+        ActionOverride(Player4,LeaveAreaLUA("BFLEXT","",[558.276],SE))
+        ActionOverride(Player5,LeaveAreaLUA("BFLEXT","",[504.232],SE))
+        ActionOverride(Player6,LeaveAreaLUA("BFLEXT","",[505.273],SE))
+        MultiPlayerSync()
+        SmallWait(25)
+        EndCutSceneMode()
+END
