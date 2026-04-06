@@ -1,0 +1,41 @@
+/* first stash */
+IF
+  Global("bfbestboyhelps","LOCALS",0)
+  See(Player1)
+THEN
+  RESPONSE #100
+    SetGlobal("bfbestboyhelps","LOCALS",1)
+	Wait(2)
+	MoveToPoint([1465.371])
+	Wait(1)
+	PlaySound("WWOLF03")
+	ContainerEnable("Hidden Notes",TRUE)
+END
+
+/* second stash */
+IF
+  Global("bfbestboyhelps","LOCALS",1)
+  See(Player1)
+  PartyHasItem("BFPEPR")
+THEN
+  RESPONSE #100
+    SetGlobal("bfbestboyhelps","LOCALS",2)
+	Wait(2)
+	MoveToPoint([263.756])
+	Wait(1)
+	PlaySound("WWOLF03")
+	ContainerEnable("Hound Figurine",TRUE)
+END
+
+/* be well, buddy */
+IF
+  Global("bfbestboyhelps","LOCALS",2)
+  See(Player1)
+  PartyHasItem("BFDOGE")
+THEN
+  RESPONSE #100
+    SetGlobal("bfbestboyhelps","LOCALS",3)
+	CreateVisualEffectObject("SPPORTAL","BFCDOG")
+	Wait(2)
+	DestroySelf()
+END

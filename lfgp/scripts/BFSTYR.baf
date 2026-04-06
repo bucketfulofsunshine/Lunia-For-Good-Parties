@@ -1,0 +1,21 @@
+/* talk 1 */
+IF
+  Global("bfstyrtalk1","GLOBAL",0)
+  See(Player1)
+THEN
+  RESPONSE #100
+    SetGlobal("bfstyrtalk1","GLOBAL",1)
+	MoveToObject(Player1)
+    StartDialogueNoSet(Player1)
+END
+
+/* talk 2 */
+IF
+  Global("bfstyrtalk2","GLOBAL",0)
+  See(Player1)
+THEN
+  RESPONSE #100
+    SetGlobal("bfstyrtalk2","GLOBAL",1)
+	MoveToObject(Player1)
+    StartDialogueNoSet(Player1)
+END

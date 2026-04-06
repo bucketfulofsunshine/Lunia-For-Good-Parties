@@ -1,0 +1,168 @@
+/* bfs lunia block */
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("neera")  // Neera
+    IfValidForPartyDialog("neera")  // Neera
+THEN
+    RESPONSE #100
+        ActionOverride("neera",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("viconia")  // Viconia
+    IfValidForPartyDialog("viconia")  // Viconia
+THEN
+    RESPONSE #100
+        ActionOverride("viconia",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("haerdalis")  // Haer'Dalis
+    IfValidForPartyDialog("haerdalis")  // Haer'Dalis
+THEN
+    RESPONSE #100
+        ActionOverride("haerdalis",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("hexxat")  // Hexxat
+    IfValidForPartyDialog("hexxat")  // Hexxat
+THEN
+    RESPONSE #100
+        ActionOverride("hexxat",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("rasaad")  // Rasaad
+    IfValidForPartyDialog("rasaad")  // Rasaad
+THEN
+    RESPONSE #100
+        ActionOverride("rasaad",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("imoen2")  // Imoen
+    IfValidForPartyDialog("imoen2")  // Imoen
+THEN
+    RESPONSE #100
+        ActionOverride("imoen2",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("aerie")  // Aerie
+    IfValidForPartyDialog("aerie")  // Aerie
+THEN
+    RESPONSE #100
+        ActionOverride("aerie",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("cernd")  // Cernd
+    IfValidForPartyDialog("cernd")  // Cernd
+THEN
+    RESPONSE #100
+        ActionOverride("cernd",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("edwin")  // Edwin
+    IfValidForPartyDialog("edwin")  // Edwin
+THEN
+    RESPONSE #100
+        ActionOverride("edwin",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("jaheira")  // Jaheira
+    IfValidForPartyDialog("jaheira")  // Jaheira
+THEN
+    RESPONSE #100
+        ActionOverride("jaheira",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("minsc")  // Minsc
+    IfValidForPartyDialog("minsc")  // Minsc
+THEN
+    RESPONSE #100
+        ActionOverride("minsc",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("korgan")  // Korgan
+    IfValidForPartyDialog("korgan")  // Korgan
+THEN
+    RESPONSE #100
+        ActionOverride("korgan",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("mazzy")  // Mazzy
+    IfValidForPartyDialog("mazzy")  // Mazzy
+THEN
+    RESPONSE #100
+        ActionOverride("mazzy",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("nalia")  // Nalia
+    IfValidForPartyDialog("nalia")  // Nalia
+THEN
+    RESPONSE #100
+        ActionOverride("nalia",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("valygar")  // Valygar
+    IfValidForPartyDialog("valygar")  // Valygar
+THEN
+    RESPONSE #100
+        ActionOverride("valygar",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("bfsluniaaccepted","GLOBAL",1)
+	Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+    InParty("jan")  // Jan
+    IfValidForPartyDialog("jan")  // Jan
+THEN
+    RESPONSE #100
+        ActionOverride("jan",StartDialogueNoSet(Player1))
+END
+
+IF
+    Global("OHD_homeagain","OH5400",1)  // Dorn - Forest Clearing
+THEN
+    RESPONSE #100
+        SetGlobal("OHD_homeagain","OH5400",2)  // Dorn - Forest Clearing
+END
+
