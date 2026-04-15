@@ -10,7 +10,7 @@
 @9    = ~Pluma del Tránsito Celestial~
 @10   = ~Esta pluma, otorgada por un planetar de la Justicia, resuena con la esencia misma de Lunia. Cuando la sostiene alguien considerado digno, permite el paso instantáneo al Cielo Plateado.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Permite viajar planarmente a Lunia
 
@@ -18,7 +18,7 @@ Peso: 1~
 @11   = ~Esencia de Lunia~
 @12   = ~Un vial de agua bendita extraída del propio Mar Plateado.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Cura completamente y elimina enfermedad, veneno, ceguera, sordera y drenaje de niveles del usuario
 Bendecido durante 1 hora
@@ -30,133 +30,164 @@ Peso: 1~
 
 Su aura radiante resulta especialmente poderosa contra los malvados.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-Habilidades al equiparse:
-– Carisma: +2
-– Resistencia al frío: +30%
-– Los caballeros pueden usar este arco
-
-Habilidades de combate:
-– Cuando no hay flechas equipadas, el arco dispara proyectiles que se consideran +4 a efectos de determinar qué enemigos pueden dañar. Los proyectiles reciben un +4 a la tirada de ataque además del bonificador indicado más abajo
-– Daño adicional vs. no muertos vivientes: 1d6 de daño mágico, más 1d6 de daño por frío
-– Daño adicional vs. muertos vivientes: 1d6 de daño mágico, más 1d6 de daño radiante (no puede resistirse)
-
+Aptitudes poseídas:
+ Carisma: bonificación +2
+ +30% de Resistencia al frío
+ Los caballeros pueden usar este arco
+Aptitudes de combate:
+ Cuando no hay flechas equipadas, el arco dispara proyectiles que se consideran +4 a efectos de determinar qué enemigos pueden dañar. Los proyectiles reciben un +4 a la tirada de ataque además del bonificador indicado más abajo
+ Daño adicional contra no muertos vivientes: 1d6 de daño mágico, más 1d6 de daño por frío
+ Daño adicional contra muertos vivientes: 1d6 de daño mágico, más 1d6 de daño radiante (no puede resistirse)
 GAC0: +5
 Daño: 2 perforante, +6 extra contra caótico malvado
 Factor de velocidad: 3
-Tipo de competencia: Arco largo
-Tipo: A dos manos
-Requiere:
- 6 de Fuerza
+Talento marcial: Arco largo
+Tipo de arma: A dos manos
+Requisitos: Fuerza 6
+Peso: 2 lbs~
 
-Peso: 2~
 @16   = ~Engranaje del Orden Absoluto~
 @17   = ~Este pequeño engranaje de latón gira con precisión constante. Forjado en las fundiciones de Mechanus, encarna el principio del orden absoluto. Cuando se lleva puesto, permite que los pensamientos de su portador sigan una lógica impecable, protegiendo su mente de influencias externas.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-Habilidades al equiparse:
-– Inmunidad a hechizar y confusión
+Aptitudes poseídas:
+ Inmunidad a hechizar y confusión
+Peso: 1 lb~
 
-Peso: 1~
 @18   = ~Lágrima desconocida~
 @19   = ~Esta gema lisa y translúcida tiene forma de lágrima. Sombras se arremolinan ominosamente en su interior. Aunque su propósito sigue siendo incierto, sostenerla te llena de una inquietud inexplicable.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-Peso: 1~
+Peso: 1 lb~
 @20   = ~Gracia de los Justos~
 @21   = ~Engastada en una delicada banda de oro, esta perla brilla con una luz interior que alivia el dolor y repara aquello que está roto.
 
 Cuando se le pregunta por los glifos celestiales grabados a lo largo de su curva, Thalassia dice esto: «La justicia puede exigir retribución, pero la misericordia le da sentido. Los Justos consuelan tan a menudo como juzgan».
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-Habilidades al equiparse:
-– Regenera 1 Punto de Golpe por asalto
-– Constitución: +2
-
-Habilidades con carga:
-– Restauración Mayor una vez al día
-  Especial: Revierte cualquier drenaje de niveles previo; cura debilidad mental, confusión, frenesí, enfermedad y veneno; y sana completamente al objetivo
-  Alcance: Toque
-  Área de efecto: 1 criatura
-
+Aptitudes poseídas:
+ Regenera 1 Punto de Golpe por asalto
+ Constitución: bonificación +2
+Habilidades con cargas:
+ Restauración Mayor
+ Uso: 1/día
+ Especial: Revierte cualquier drenaje de niveles previo; cura debilidad mental, confusión, frenesí, enfermedad y veneno; y sana completamente al objetivo
+ Alcance: Toque
+ Área de efecto: 1 criatura
 Peso: 0~
+
 @22   = ~Llama de los Justos~
 @23   = ~Engastada en una delicada banda de oro, esta perla arde con un fuego interior. Aunque es cálida al tacto, no daña a quien la lleva, pues solo los culpables sufrirán su ira.
 
 Cuando se le pregunta por los glifos celestiales grabados a lo largo de su curva, Thalassia dice esto: «La llama que reconforta a los virtuosos puede abrasar a los malvados. Nunca dejes que el fuego de tus convicciones se apague».
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-Habilidades al equiparse:
-– +50% de resistencia al fuego
-– GAC0: +2
-– Fuerza: +2
-
-Habilidades con carga:
-– Columna de llamas una vez al día
-  Daño: 20d8 de fuego (Salvación contra hechizo para la mitad)
-  Área de efecto: 1 criatura
-
+Aptitudes poseídas:
+ +50% de resistencia al fuego
+ GAC0: bonificación +2
+ Fuerza: bonificación +2
+Habilidades con cargas:
+ Columna de llamas
+ Uso: 1/día
+ Daño: 20d8 de fuego (Tirada de salvación contra conjuro para la mitad)
+ Área de efecto: 1 criatura
 Peso: 0~
 @24   = ~Juicio de los Fieles~
 @25   = ~Engastada en una delicada banda de oro, esta perla emite un tenue zumbido protector. Calma la mente, agudiza el pensamiento y protege contra la corrupción.
 
 Cuando se le pregunta por los glifos celestiales grabados a lo largo de su curva, Thalassia dice esto: «Tu fe es un escudo que te protege a ti y a los demás».
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-Habilidades al equiparse:
-– Protección contra el Mal
-– Inteligencia: +2
-
-Habilidades con carga:
-– Palabra Sagrada una vez al día
-
+Aptitudes poseídas:
+ Protección contra el Mal
+ Inteligencia: bonificación +2
+Habilidades con cargas:
+ Palabra Sagrada
+ Uso: 1/día
 Peso: 0~
+
 @26   = ~Sabiduría de los Luminosos~
 @27   = ~Engastada en una delicada banda de oro, esta perla irradia luz estelar. Cuando se lleva puesta, disipa tanto las sombras como las dudas, iluminando más de lo que el ojo puede ver.
 
 Cuando se le pregunta por los glifos celestiales grabados a lo largo de su curva, Thalassia dice esto: «La justicia nunca debe ser ciega. Solo con claridad puede saberse a quién absolver y a quién condenar».
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-Habilidades al equiparse:
-– Sabiduría: +2
+Aptitudes poseídas:
+ Sabiduría: bonificación +2
+Habilidades con cargas:
+ Visión Verdadera
+ Uso: 1/día
+ Especial: Una vez por asalto, todos los conjuros hostiles de Ilusión/Fantasmagoria en el área de efecto serán disipados
+ Duración: 1 turno
+ Área de efecto: radio de 36,5 metros
 
-Habilidades con carga:
-– Visión Verdadera una vez al día
-  Especial: Una vez por asalto, todos los conjuros hostiles de Ilusión/Fantasma en el área de efecto serán disipados
-  Duración: 1 turno
-  Área de efecto: radio de 36,5 metros
-
-– Detectar el Mal una vez al día
-  Especial: Cualquier criatura malvada dentro del alcance del conjuro brillará brevemente en rojo
-  Duración: Instantáneo
-  Área de efecto: radio de 9,1 metros
-
+ Detectar el Mal
+ Uso: 1/día
+ Especial: Cualquier criatura malvada dentro del alcance del conjuro brillará brevemente en rojo
+ Duración: Instantáneo
+ Área de efecto: radio de 9,1 metros
 Peso: 0~
+
 @28   = ~Égida del Imparcial~
 @29   = ~Esta majestuosa armadura no fue forjada por manos mortales, sino modelada por la voluntad divina de Tyr en el corazón de Lunia, como muestra de gratitud por el servicio prestado en su nombre. Sus encantamientos protegen a quien la lleva del caos de los planos, encarnando la claridad y el equilibrio de la verdadera justicia.
 
 Los paladines, cuyos juramentos reflejan más fielmente los ideales de Tyr, reciben un favor aún mayor de las bendiciones de la armadura.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-Habilidades al equiparse:
-– Clase de Armadura: +2 contra criaturas de alineamiento caótico
-– Reprensión: los enemigos caóticos o malvados que golpean al portador reciben 1d6 de daño mágico
-– +5 Puntos de Golpe (el triple para paladines)
-– +2 al daño y al GAC0 contra criaturas de alineamiento caótico (solo paladines)
-– +10% de Resistencia Mágica (solo paladines)
-
+Aptitudes poseídas:
+ Clase de Armadura: bonificación +2 contra criaturas de alineamiento caótico
+ Reprensión: los enemigos caóticos o malvados que golpean al portador reciben 1d6 de daño mágico
+ +5 Puntos de Golpe (el triple para paladines)
+ +2 al daño y al GAC0 contra criaturas de alineamiento caótico (solo paladines)
+ +10% de Resistencia Mágica (solo paladines)
 Clase de Armadura: 1 (-3 contra cortante, -2 contra perforante y proyectiles)
-Requiere:
- 15 de Fuerza
+Requisitos: Fuerza 15
+Peso: 70 lbs~
 
-Peso: 70~
+@30 = ~Oración del peticionario~
+@31 = ~Una sola página, aparentemente arrancada de un diario, en la que un peticionario ha inscrito varias oraciones. Es posible que Mercy Whitedove desee que se le devuelva, ya que contiene no solo la devoción del peticionario, sino también sus últimos deseos.~
 
+@32 = ~Figurilla de sabueso celestial~
+@33 = ~Esta figurilla de un sabueso celestial cabe en la palma de la mano. Cuando se pronuncia la palabra de mando, la figurilla cobra vida como un sabueso semiinteligente llamado Valiente. El sabueso obedecerá las órdenes de su amo durante la duración del hechizo o hasta que muera. Después de una hora, independientemente de si Valiente vivió o murió, la figurilla recupera su forma original. La figurilla tarda un día en recargarse.
+
+CARACTERÍSTICAS:
+
+Habilidades con cargas:
+ Convoca a Valiente
+ Uso: 1/día
+ Alcance: 6 metros
+ Duración: 1 hora
+
+Valiente puede usar "desfase" durante el combate. Ataca tres veces por asalto infligiendo 2d8 (daño perforante). Es inmune a encanto, dominación, fallos de moral, veneno y armas de encantamiento +1 o inferior.
+
+Valiente tiene los siguientes poderes innatos:
+ Imagen múltiple (3 veces al día): igual que el hechizo.
+ Invisibilidad mejorada (1 vez al día): igual que el hechizo.
+ Visión de perro lunar (3 veces al día): el perro lunar puede ver a través de (y por lo tanto disipar) todas las formas de ilusión e invisibilidad, detectando trampas y el mal en las cercanías.
+ Lametón curativo (3 veces al día): sana 20 puntos de golpe y cura enfermedades, sordera, ceguera y veneno.
+ Aullido de perro lunar (1 vez al día): daña e infunde miedo a los enemigos malvados, mientras que también disipa el miedo y lanza Protección contra el mal sobre los miembros del grupo.
+Peso: 0~
+
+@34 = ~Esta armadura, forjada con las escamas de un dragón de plata, es un conjunto raro y muy codiciado. Las escamas parecen reforzar al portador de la armadura con su belleza y gracia.
+
+CARACTERÍSTICAS:
+
+Aptitudes poseídas:
+ Carisma: bonificación +2
+ +15% de Resistencia mágica
+ Tasa de movimiento aumentada en 3
+Aptitudes de combate:
+ Sana al portador 2 puntos de golpe cada vez que recibe daño
+Clase de armadura: -2 (-5 contra cortante, -3 contra perforante y proyectil)
+Requiere: Fuerza 8
+Peso: 15 lbs~
 
