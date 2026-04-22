@@ -25,14 +25,14 @@ THEN
         Wait(2)
         FadeToColor([30.0],0)
         Wait(2)
-        ActionOverride(Player1,LeaveAreaLUAPanicEntry("OH5400","Entry1",[0.0],S))  // Dorn - Forest Clearing
+        ActionOverride(Player1,LeaveAreaLUAPanicEntry("OH5400","Entry1",[0.0],0))  // Dorn - Forest Clearing
         LeaveAreaLUAPanicEntry("OH5400","Entry1",[0.0],S)  // Dorn - Forest Clearing
-        ActionOverride(Player1,LeaveAreaLUAEntry("OH5400","Entry1",[0.0],S))  // Dorn - Forest Clearing
-        ActionOverride(Player2,LeaveAreaLUAEntry("OH5400","Entry1",[0.0],S))  // Dorn - Forest Clearing
-        ActionOverride(Player3,LeaveAreaLUAEntry("OH5400","Entry1",[0.0],S))  // Dorn - Forest Clearing
-        ActionOverride(Player4,LeaveAreaLUAEntry("OH5400","Entry1",[0.0],S))  // Dorn - Forest Clearing
-        ActionOverride(Player5,LeaveAreaLUAEntry("OH5400","Entry1",[0.0],S))  // Dorn - Forest Clearing
-        ActionOverride(Player6,LeaveAreaLUAEntry("OH5400","Entry1",[0.0],S))  // Dorn - Forest Clearing
+        ActionOverride(Player1,LeaveAreaLUAEntry("OH5400","Entry1",[0.0],0))  // Dorn - Forest Clearing
+        ActionOverride(Player2,LeaveAreaLUAEntry("OH5400","Entry1",[0.0],0))  // Dorn - Forest Clearing
+        ActionOverride(Player3,LeaveAreaLUAEntry("OH5400","Entry1",[0.0],0))  // Dorn - Forest Clearing
+        ActionOverride(Player4,LeaveAreaLUAEntry("OH5400","Entry1",[0.0],0))  // Dorn - Forest Clearing
+        ActionOverride(Player5,LeaveAreaLUAEntry("OH5400","Entry1",[0.0],0))  // Dorn - Forest Clearing
+        ActionOverride(Player6,LeaveAreaLUAEntry("OH5400","Entry1",[0.0],0))  // Dorn - Forest Clearing
         ActionOverride(Player1,Wait(2))
         ActionOverride(Player1,MultiPlayerSync())
         ActionOverride(Player1,FadeFromColor([30.0],0))
