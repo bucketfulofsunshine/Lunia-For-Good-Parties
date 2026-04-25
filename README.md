@@ -1,4 +1,6 @@
-![A map of Lunia, the area from Dorn's TOB quest](https://static.wikia.nocookie.net/baldursgategame/images/5/5a/Lunia_BG2EE.png/revision/latest/scale-to-width-down/1000?cb=20220129201030)
+<p align="center">
+  <img src="https://64.media.tumblr.com/abd4f6a181d952e45410192a3f2cb63e/f83467379c46b182-fc/s540x810/5d30d085954175b310e33879e3359c5f5bda9ac0.pnj" />
+</p>
 
 # Lunia For Good Parties (for BG2EE or EET)
 
@@ -59,3 +61,5 @@ A: Yes. But a request was made to open it up to more parties. While the dialogue
 * The usual suspects. Wes Weimer for Weidu & Argent77 for Near Infinity + WeiDU Notepad++ Highlighters. 
 * *CamDawg* for answering silly questions I had on Discord. *Argent* & *Jastey* for giving me code examples to improve this mod's compatiblity. 
 * The Harp-Bow image is taken from [Critical Role](https://criticalrole.fandom.com/wiki/Harp_of_Valor).
+
+![A map of Lunia, the area from Dorn's TOB quest](https://static.wikia.nocookie.net/baldursgategame/images/5/5a/Lunia_BG2EE.png/revision/latest/scale-to-width-down/1000?cb=20220129201030)
