@@ -39,6 +39,10 @@ A: No. The vanilla dialogues I use have new branches attached to them. That mean
 
 A: Yes. But a request was made to open it up to more parties. While the dialogue might not suit a True Neutral or Chaotic Neutral main, I'm happy to expand those options if players have suggestions for them. 
 
+### Q: Why is this not playable by evil protagonists?
+
+A: Originally, my intent was for only *good-aligned & lawful neutral characters* to be viable. But, on reflection, I allowed neutral-aligned characters too since there's already a party reputation check involved. LFGP's plot relies on the Planetars believing the party to be good & upstanding. They would sense an evil-aligned CHARNAME & that character might be named on the Scroll of Retribution for other reasons besides. Luckily Morpheus' mod already access to Lunia as an evil-aligned character. 
+
 ## CHANGELOG
 
 * **20250914** - V1.3 Release. 
