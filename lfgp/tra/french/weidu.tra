@@ -1,0 +1,199 @@
+@0    = ~V1.9~
+@1    = ~Lunia pour les groupes bons~
+@2    = ~Ce mod nécessite BG2EE ou EET~
+@3    = ~Thalassia~
+@4    = ~Edict-7X~
+@5    = ~Faux Croisé~
+@6    = ~Tyr~
+@7    = ~Babioles de la mer~
+@8    = ~Changement de plan~
+@9    = ~Plume de passage céleste~
+@10   = ~Cette plume, offerte par un planétaire de la Justice, résonne de l'essence même de Lunia. Lorsqu'elle est tenue par une personne qu'elle juge digne, elle permet un passage instantané vers le Ciel d'Argent.
+
+CARACTÉRISTIQUES :
+
+Spécial : permet de voyager jusqu'à Lunia
+
+Poids : 1~
+@11   = ~Essence de Lunia~
+@12   = ~Une fiole d'eau bénite puisée directement dans la Mer d'Argent.
+
+CARACTÉRISTIQUES :
+
+Spécial : soigne complètement l'utilisateur et guérit maladie, poison, cécité, surdité et perte de niveaux
+Bénédiction pendant 1 heure
+
+Poids : 1~
+@13   = ~Subit %p1% points de dégâts radiants de Nocturne de lumière~
+@14   = ~Nocturne de lumière~
+@15   = ~Chaque flèche tirée par cet arc s'accompagne d'un doux carillon. Autrefois manié par un déva de Lunia, Nocturne de lumière est désormais un instrument de destruction entre les mains des Justes.
+
+Son aura radiante se révèle particulièrement efficace contre les êtres malfaisants.
+
+CARACTÉRISTIQUES :
+
+Capacités d'équipement :
+– Charisme : +2
+– Résistance au froid : +30 %
+– Les Cavaliers peuvent utiliser cet arc
+
+Capacités de combat :
+– Si aucune flèche n'est équipée, l'arc tire des projectiles considérés comme des armes +4 pour déterminer les ennemis qu'ils peuvent blesser. Les projectiles reçoivent un bonus de +4 au toucher, en plus du bonus indiqué ci-dessous
+– Dégâts supplémentaires contre les non-morts : 1d6 points de dégâts magiques, plus 1d6 points de dégâts de froid
+– Dégâts supplémentaires contre les morts-vivants : 1d6 points de dégâts magiques, plus 1d6 points de dégâts radiants (irrésistibles)
+
+TAC0 : +5
+Dégâts : 2 perforants, +6 supplémentaires contre les créatures chaotiques mauvaises
+Facteur de vitesse : 3
+Type de compétence : arc long
+Type : à deux mains
+Requiert :
+ 6 en Force
+
+Poids : 2~
+@16   = ~Rouage de l'Ordre absolu~
+@17   = ~Ce petit rouage de laiton tourne avec une précision constante. Forgé dans les fonderies de Méchanus, il incarne le principe de l'ordre absolu. Lorsqu'il est porté, il permet aux pensées de son porteur de suivre une logique parfaite et protège son esprit des influences extérieures.
+
+CARACTÉRISTIQUES :
+
+Capacités d'équipement :
+– Immunité au charme et à la confusion
+
+Poids : 1~
+@18   = ~Larme inconnue~
+@19   = ~Cette gemme lisse et translucide ressemble à une larme. Des ombres tourbillonnent sinistrement en son cœur. Bien que son rôle reste inconnu, la tenir provoque un malaise inexplicable.
+
+CARACTÉRISTIQUES :
+
+Poids : 1~
+@20   = ~Grâce du Juste~
+@21   = ~Sertie dans un délicat anneau d'or, cette perle luit d'une lumière intérieure qui apaise la douleur et répare ce qui est brisé.
+
+Interrogée sur les glyphes célestes gravés sur son pourtour, Thalassia répond : « La justice peut exiger le châtiment, mais la clémence lui donne un sens. Les Justes consolent aussi souvent qu'ils jugent. »
+
+CARACTÉRISTIQUES :
+
+Capacités d'équipement :
+– Régénère 1 point de vie par round
+– Constitution : +2
+
+Capacités de charge :
+– Restauration majeure une fois par jour
+  Spécial : annule toute perte de niveaux antérieure ; guérit débilité mentale, confusion, berserk, maladie et poison ; et soigne complètement la cible
+  Portée : toucher
+  Zone d'effet : 1 créature
+
+Poids : 0~
+@22   = ~Flamme du Vertueux~
+@23   = ~Sertie dans un délicat anneau d'or, cette perle brûle d'un feu intérieur. Chaude au toucher, elle ne blesse pas celui qui la porte, car seuls les coupables subissent sa colère.
+
+Interrogée sur les glyphes célestes gravés sur son pourtour, Thalassia répond : « La flamme qui réchauffe les vertueux peut consumer les malfaisants. Ne laissez jamais s'éteindre le feu de vos convictions. »
+
+CARACTÉRISTIQUES :
+
+Capacités d'équipement :
+– Résistance au feu : +50 %
+– TAC0 : +2
+– Force : +2
+
+Capacités de charge :
+– Colonne de feu une fois par jour
+  Dégâts : 20d8 de feu (jet de sauvegarde contre les sorts pour réduire de moitié)
+  Zone d'effet : 1 créature
+
+Poids : 0~
+@24   = ~Jugement du Fidèle~
+@25   = ~Sertie dans un délicat anneau d'or, cette perle émet un léger bourdonnement protecteur. Elle apaise l'esprit, aiguise la pensée et protège contre la corruption.
+
+Interrogée sur les glyphes célestes gravés sur son pourtour, Thalassia répond : « Votre foi est un bouclier qui vous protège, vous et les autres. »
+
+CARACTÉRISTIQUES :
+
+Capacités d'équipement :
+– Protection contre le Mal
+– Intelligence : +2
+
+Capacités de charge :
+– Mot sacré une fois par jour
+
+Poids : 0~
+@26   = ~Sagesse du Lumineux~
+@27   = ~Sertie dans un délicat anneau d'or, cette perle rayonne d'une lumière stellaire. Lorsqu'elle est portée, elle dissipe les ombres et les doutes, éclairant bien davantage que ce que l'œil peut voir.
+
+Interrogée sur les glyphes célestes gravés sur son pourtour, Thalassia répond : « La justice ne doit jamais être aveugle. Seule la clairvoyance permet de savoir qui absoudre et qui condamner. »
+
+CARACTÉRISTIQUES :
+
+Capacités d'équipement :
+– Sagesse : +2
+
+Capacités de charge :
+– Vision véritable une fois par jour
+  Spécial : une fois par round, tous les sorts hostiles d'Illusion/Fantasme présents dans la zone d'effet sont dissipés
+  Durée : 1 tour
+  Zone d'effet : rayon de 36 mètres
+
+– Détection du Mal une fois par jour
+  Spécial : toute créature mauvaise à portée du sort luit brièvement en rouge
+  Durée : instantanée
+  Zone d'effet : rayon de 9 mètres
+
+Poids : 0~
+@28   = ~Égide de l'Impartial~
+@29   = ~Cette armure majestueuse n'a pas été forgée par des mains mortelles, mais façonnée par la volonté divine de Tyr au cœur de Lunia, en témoignage de gratitude pour les services rendus en son nom. Ses enchantements protègent son porteur du chaos des plans et incarnent la clarté et l'équilibre de la véritable justice.
+
+Les paladins, dont les serments reflètent au plus près les idéaux de Tyr, bénéficient davantage encore des bénédictions de l'armure.
+
+CARACTÉRISTIQUES :
+
+Capacités d'équipement :
+– Classe d'armure : +2 contre les créatures d'alignement chaotique
+– Réprimande : les ennemis chaotiques ou mauvais qui frappent le porteur subissent 1d6 points de dégâts magiques
+– +5 points de vie (triplés pour les paladins)
+– Bonus de +2 aux dégâts et au TAC0 contre les créatures d'alignement chaotique (paladins uniquement)
+– Résistance à la magie : +10 % (paladins uniquement)
+
+Classe d'armure : 1 (-3 contre les dégâts tranchants, -2 contre les dégâts perforants et les projectiles)
+Requiert :
+ 15 en Force
+
+Poids : 70~
+@30 = ~Prière du Suppliant~
+@31 = ~Une page unique, apparemment arrachée à un journal, sur laquelle un suppliant a inscrit plusieurs prières. Clémence Blanchecolombe souhaitera peut-être qu'on la lui rapporte, car elle contient non seulement la dévotion du suppliant, mais aussi ses dernières volontés.~
+@32 = ~Figurine de chien céleste~
+@33 = ~Cette figurine de chien céleste tient dans la paume de la main. Lorsque le mot de commande est prononcé, la figurine prend vie sous la forme d'un chien semi-intelligent nommé Vaillant. Le chien obéit aux ordres de son maître pendant toute la durée du sort ou jusqu'à sa mort. Au bout d'une heure, que Vaillant soit vivant ou mort, il redevient une figurine. Il faut une journée à la figurine pour se recharger.
+
+CARACTÉRISTIQUES :
+
+Capacités de charge :
+– Invoque Vaillant une fois par jour
+  Portée : 6 mètres
+  Durée : 1 heure
+  
+  Vaillant peut se déphaser pendant les combats. Il attaque trois fois par round et inflige 2d8 points de dégâts perforants. Il est immunisé au charme, à la domination, aux échecs de moral, au poison et aux armes d'enchantement +1 ou inférieur.
+  
+  Vaillant possède les pouvoirs innés suivants :
+  – Image miroir (3/jour) : comme le sort
+  – Invisibilité améliorée (1/jour) : comme le sort
+  – Vision du chien lunaire (3/jour) : le chien lunaire voit à travers toutes les formes d'illusion et d'invisibilité, qu'il peut donc dissiper, et détecte les pièges et le mal à proximité
+  – Léchage guérisseur (3/jour) : soigne 20 points de vie et guérit maladie, surdité, cécité et poison
+  – Hurlement du chien lunaire (1/jour) : blesse et effraie les ennemis mauvais, tout en dissipant la peur et en lançant Protection contre le Mal sur les membres du groupe
+
+Poids : 0~
+@34 = ~Cette armure, forgée à partir d'écailles de dragon d'argent, est un ensemble rare et extrêmement convoité. La beauté et la grâce des écailles semblent se transmettre au porteur de l'armure.
+
+CARACTÉRISTIQUES :
+
+Capacités d'équipement :
+– Charisme : +2
+– Résistance à la magie : +15 %
+– Vitesse de déplacement augmentée de 3
+
+Capacités de combat :
+– Soigne le porteur de 2 points de vie chaque fois qu'il subit des dégâts
+
+Classe d'armure : -2 (-5 contre les dégâts tranchants, -3 contre les dégâts perforants et les projectiles)
+Requiert :
+ 8 en Force
+
+Poids : 15~
